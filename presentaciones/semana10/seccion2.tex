@@ -1,0 +1,436 @@
+\section{Isometrías}
+
+\subsection{}
+
+\begin{frame}\frametitle{Matrices ortogonales}
+
+	\begin{block}{\textbf{Definición 1  }}
+		\justifying
+		Una matriz cuadrada $Q$ se dice que es  \textbf{\textit{ortogonal}} si es invertible y si 
+		\[
+			Q^{-1} = Q^T.
+		\]
+	\end{block}
+	
+	\begin{alertblock}{\textbf{Observación 1}}
+		Si $Q$ es una matriz cuadrada $n\times n$ invertible y
+		\[
+			 Q^TQ = I_n,
+		\]
+		entonces $Q$ es ortogonal.
+	\end{alertblock}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Matrices ortogonales}
+	
+	\begin{block}{\textbf{Definición 1  }}
+		\justifying
+		Una matriz cuadrada $Q$ se dice que es  \textbf{\textit{ortogonal}} si es invertible y si 
+		\[
+		Q^{-1} = Q^T.
+		\]
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 1}}
+		\justifying
+		Determine cuáles de las siguientes matrices son ortogonales.
+		\[
+			A = 
+			\left(
+			\begin{array}{@{\hspace{0\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			0 & 1  \\[1mm]
+			-1 & 0 
+			\end{array}
+			\right),\
+			%\quad 
+			B = 
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			3 & -2  \\[1mm]
+			2 & -1 
+			\end{array}
+			\right),\
+			%\quad 
+			C = 
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{0.5\tabcolsep}}}
+			\cos\theta & -\sen\theta  \\[1mm]
+			\sen\theta & \cos\theta 
+			\end{array}
+			\right),\
+			D = %\hspace{-1mm}
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{1.5\tabcolsep}}r@{\hspace{1.5\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			0 & 1 & 0 \\[1mm]
+			1 & 0 & 0\\[1mm]
+			0 & 0 & 1
+			\end{array}
+			\right)
+		\]
+
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las matrices ortogonales}
+
+%\begin{defi}{}\justifying
+%	Recordemos que el \textbf{\textit{producto punto}} o \textbf{\textit{producto escalar}} de dos vectores
+%	\[
+%	\mathbf{u}=(u_1,\hdots,u_n) \qquad \text{y} \qquad \mathbf{v}=(v_1,\hdots,v_n)
+%	\]
+%	de $\r^n$ se define como
+%	\[
+%	\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 +  \cdots + u_n v_n.
+%	\]
+%\end{defi}	
+
+\begin{prop}{\textbf{Propiedad 1}}\justifying
+	Una matriz cuadrada $Q$ es ortogonal si y sólo si sus vectores columnas forman un conjunto \textbf{ortonormal}.
+\end{prop}	
+
+\begin{ej}{\textbf{Ejemplo 2}} \justifying
+	Determine si el conjunto de vectores dado a continuación es ortonormal.
+	\[	
+	S = 
+	\left\{ \begin{array}{c@{\hspace{-\tabcolsep}}} \phantom{.}\\ \phantom{.}\\ \phantom{.} \\ \phantom{.} \end{array} \right.
+	\underbrace{\left(\begin{array}{r} \frac{2}{3}\\[1mm] \frac{2}{3}\\[1mm] \frac{1}{3} \\  \end{array} \right)}_{\color{blue}\mathbf{v}_1},\
+	\underbrace{\left(\begin{array}{r} -\frac{2}{3}\\[1mm] \frac{1}{3}\\[1mm] \frac{2}{3} \\  \end{array} \right)}_{\color{blue}\mathbf{v}_1},\
+	\underbrace{\left(\begin{array}{r} \frac{1}{3}\\[1mm] -\frac{2}{3}\\[1mm] \frac{2}{3} \\  \end{array} \right)}_{\color{blue}\mathbf{v}_1}\
+	\left. \begin{array}{c@{\hspace{-\tabcolsep}}} \phantom{.}\\ \phantom{.}\\ \phantom{.} \\ \phantom{.} \end{array} \right\}
+	\]
+\end{ej}	
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo 
+\begin{frame}\frametitle{Propiedades del producto punto}
+	
+	\begin{alertblock}{\textbf{Observación 2}}\justifying
+		Si los vectores $\mathbf{u}=(u_1,\hdots,u_n) $ y $\mathbf{v}=(v_1,\hdots,v_n)$ de $\r^n$ 
+		los representamos como vectores columna, entonces el \textbf{\textit{producto punto}} o \textbf{\textit{producto escalar}} de ellos
+		se puede expresar como el producto de matrices
+		\[
+		\mathbf{u}\cdot \mathbf{v} =
+		\mathbf{u}^T \mathbf{v} =
+		\left(
+		\begin{array}{cccc}
+		u_1 & u_2 & \cdots & u_n \\
+		\end{array}
+		\right) 
+		\left(
+		\begin{array}{c}
+		v_1\\
+		v_2\\
+		\vdots \\[1mm]
+		v_n
+		\end{array}
+		\right)
+		= u_1 v_1 +  \cdots + u_nv_n. 
+		\]
+	\end{alertblock}
+	
+	\begin{prop}{\textbf{Propiedad 2}}
+		\justifying
+		Sea $A$ una matriz $m\times n$ con entradas reales. Entonces para todo vector $\mathbf{x}$ en $\r^n$ y 
+		todo vector $\mathbf{y}$ en $\r^m$,
+		\[
+			\left(A\mathbf{x}\right)\cdot \mathbf{y} = \mathbf{x}\cdot \left(A^T\mathbf{y}\right)
+		\]
+	\end{prop}	
+	
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Isometrías}
+
+	\begin{prop}{\textbf{Propiedad 2}}
+	\justifying
+	Sea $A$ una matriz $m\times n$ con entradas reales. Entonces para todo vector $\mathbf{x}$ en $\r^n$ y 
+	todo vector $\mathbf{y}$ en $\r^m$,
+	
+	\vspace{-2mm}
+	\[
+	\left(A\mathbf{x}\right)\cdot \mathbf{y} = \mathbf{x}\cdot \left(A^T\mathbf{y}\right)
+	\]
+\end{prop}	
+
+\begin{prop}{\textbf{Propiedad 3}}
+	\justifying
+	Sea $Q$ una matriz $n\times n$. Las siguientes afirmaciones son equivalentes (si una es verdadera, todas
+	las otras también son verdaderas). 
+	\begin{enumerate}[$a$]\justifying 
+		\item $Q$ es ortogonal.
+		\item $\Vert Q\mathbf{x}\Vert = \Vert \mathbf{x}\Vert $ para todo $\mathbf{x} $ en $\r^n$.
+		\item $ Q\mathbf{x}\cdot Q\mathbf{y} = \mathbf{x}\cdot \mathbf{y} $ para todo 
+		$\mathbf{x}$ y $\mathbf{y}$ en $\r^n$.
+	\end{enumerate}
+\end{prop}	
+
+%\begin{block}{\textbf{Definición 2 (Isometría) }}
+%	\justifying
+%	Una transformación lineal $T:\r^n\to \r^n$ se dice que es una \textbf{\textit{isometría}} si
+%	para todo vector en $\mathbf{x}$ en $\r^n$,
+%	
+%	\vspace{-4mm}
+%	\[
+%		\Vert T(\mathbf{x})\Vert = \Vert \mathbf{x}\Vert.
+%	\]
+%\end{block}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Isometrías}
+			
+	\begin{block}{\textbf{Definición 2 (Isometría) }}
+		\justifying
+		Una transformación lineal $T:\r^n\to \r^n$ se dice que es una \textbf{\textit{isometría}} si para
+		todo vector $\mathbf{x}$ en $\r^n$,
+		
+		\vspace{-4mm}
+		\[
+		\Vert T(\mathbf{x})\Vert = \Vert \mathbf{x}\Vert.
+		\]
+	\end{block}
+	
+	\begin{alertblock}{\textbf{Observación 3}}
+		Si  $T:\r^n\to \r^n$ es una isometría, entonces para todo vector 
+		$\mathbf{x}$ y $\mathbf{y}$ en $\r^n$,
+		
+		\vspace{-0mm}
+		\[
+		\Vert T(\mathbf{x})-T(\mathbf{y})\Vert = \Vert \mathbf{x}-\mathbf{y}\Vert.
+		\]
+	\end{alertblock}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Isometrías}
+	
+	\begin{block}{\textbf{Definición 2 (Isometría) }}
+		\justifying
+		Una transformación lineal $T:\r^n\to \r^n$ se dice que es una \textbf{\textit{isometría}} si para
+		todo vector $\mathbf{x}$ en $\r^n$,
+		
+		\vspace{-4mm}
+		\[
+		\Vert T(\mathbf{x})\Vert = \Vert \mathbf{x}\Vert.
+		\]
+	\end{block}	
+	
+	\begin{prop}{\textbf{Propiedad 4}}			
+		\justifying
+		Si  $T:\r^n\to \r^n$ es una isometría, entonces para todo vector 
+		$\mathbf{x}$ y $\mathbf{y}$ en $\r^n$,
+		
+		\vspace{-0mm}
+		\[
+			T(\mathbf{x})\cdot T(\mathbf{y}) = \mathbf{x}\cdot \mathbf{y}.
+		\]
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Isometrías}
+	
+%	\begin{prop}{\textbf{Propiedad 3}}
+%		\justifying
+%		Sea $Q$ una matriz $n\times n$. Entonces las siguientes afirmaciones son equivalentes (si una es verdadera, todas
+%		las otras también son verdaderas). 
+%		\begin{enumerate}[$a$]\justifying 
+%			\item $Q$ es ortogonal.
+%			\item $\Vert Q\mathbf{x}\Vert = \Vert \mathbf{x}\Vert $ para todo $\mathbf{x} $ en $\r^n$.
+%			\item $\Vert Q\mathbf{x}\cdot Q\mathbf{y}\Vert = \Vert \mathbf{x}\Vert $ para todo 
+%			$\mathbf{x}$ y $\mathbf{y}$ en $\r^n$.
+%		\end{enumerate}
+%	\end{prop}	
+	
+	\begin{block}{\textbf{Definición 2 (Isometría) }}
+		\justifying
+		Una transformación lineal $T:\r^n\to \r^n$ se dice que es una \textbf{\textit{isometría}} si para 
+		todo vector $\mathbf{x}$ en $\r^n$,
+		
+		\vspace{-4mm}
+		\[
+		\Vert T(\mathbf{x})\Vert = \Vert \mathbf{x}\Vert.
+		\]
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 3}}
+		\justifying
+		Determine si función $T:\r^2\to \r^2$ definida a continuación es isometría.
+		\[
+		T
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		x \\[1mm]
+		y
+		\end{array}
+		\right)
+		= 
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{1.2\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+		\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\[1mm]
+		\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} 
+		\end{array}
+		\right)
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		x \\[2mm]
+		y
+		\end{array}
+		\right).
+		\]		
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Caracterización de las isometrías}
+
+\begin{prop}{\textbf{Propiedad 5}}
+	\justifying
+	Una transformación lineal $T:\r^n\to \r^n$ es una isometría si y sólo si su
+	matriz de representación estándar $A_T$ es ortogonal.	
+\end{prop}	
+
+\begin{alertblock}{\textbf{Observación 4}}
+	Toda isometría es un isomorfismo.
+\end{alertblock}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Construcción de isometrías}
+	
+	\begin{prop}{\textbf{Propiedad 6}}
+		\justifying
+		Sean $\{ \mathbf{u}_1,\hdots, \mathbf{u}_n \}$ y $\{ \mathbf{w}_1,\hdots, \mathbf{w}_n \}$ bases
+		ortogonormales de $\r^n$ y $T:\r^n\to \r^n$ la transformación lineal definida por
+		\[
+			T(\mathbf{u}_i) = \mathbf{w}_i,
+		\]
+		para $i=1,\hdots,n$. Entonces $T$ es una isometría.
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las isometrías}
+		
+	\begin{prop}{\textbf{Propiedad 7}}
+		\justifying
+		Sea $T:\r^n\to \r^n$ una isometría. Si $\{ \mathbf{u}_1,\hdots, \mathbf{u}_n \}$ es una base ortonormal 
+		de $\r^n$, entonces $\{ T(\mathbf{u}_1),\hdots, T(\mathbf{u}_n) \}$ es una base ortonormal de $\r^n$.
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Isometrías en $\r^2$}
+	
+%	\begin{prop}{\textbf{Propiedad 5}}
+%		\justifying
+%		Una transformación lineal $T:\r^n\to \r^n$ es una isometría si y sólo si su
+%		matriz de representación estándar $A_T$ es ortogonal.	
+%	\end{prop}	
+	
+	\begin{prop}{\textbf{Propiedad 8}}
+		\justifying
+		Si $T:\r^2\to \r^2$ es una isometría, entonces $T$ es:
+		\begin{enumerate}[$a$]
+			\item una transformación de rotación, 
+			\[
+			T
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+			x \\[1mm]
+			y
+			\end{array}
+			\right)
+			= 
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{1.2\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			\cos\theta & -\sen\theta \\[1mm]
+			\sen\theta & \cos\theta
+			\end{array}
+			\right)
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+			x \\[2mm]
+			y
+			\end{array}
+			\right),
+			\]		
+			\item o bien una reflexión respecto al eje $x$, 
+			\[		
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{1.2\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			1 & 0 \\[1mm]
+			0 & -1
+			\end{array}
+			\right)
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+			x \\[2mm]
+			y
+			\end{array}
+			\right)
+			=
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+			x \\[1mm]
+			-y
+			\end{array}
+			\right),
+			\]				
+			seguida de una transformación de rotación.
+		\end{enumerate}
+	\end{prop}	
+	
+\end{frame}

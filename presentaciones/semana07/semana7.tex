@@ -1,0 +1,380 @@
+% Este documento LaTeX fue diseñado por profesores  del Instituto de Matemáticas 
+% de la Universidad de Antioquia (https://www.matematicasudea.co/). Usted puede modificarlo
+% y personalizarlo a su gusto bajo los términos de la licencia de documentación libre GNU.
+% http://es.wikipedia.org/w/index.php?title=Licencia_de_documentaci%C3%B3n_libre_de_GNU&oldid=15717448
+
+%\documentclass[envcountsect,serif,9pt,t]{beamer}
+
+\documentclass[envcountsect,serif,9pt,t]{beamer}
+
+%\usepackage{scrextend}
+%\changefontsizes{8pt}
+
+\usepackage{etex}
+
+% \setbeamertemplate{navigation symbols}{}
+
+% \setbeamertemplate{title page}[default][colsep=-4bp,rounded=false,shadow=\beamer@themerounded@shadow]
+
+% \setbeamertemplate{blocks}[rounded][shadow=false]
+
+% \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+
+
+% \setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
+
+\usetheme{Frankfurt}
+
+\usepackage{tcolorbox}
+
+\usepackage{lipsum}
+
+% \hypersetup{pdfpagemode=FullScreen}
+
+% \usecolortheme[rgb={0,0.39,0}]{structure}
+
+%\documentclass[serif,9pt]{beamer}
+%\usepackage[T1]{fontenc} % Needed for Type1 Concrete
+%\usepackage[charter]{mathdesign}
+
+%\usepackage[pdftex]{graphicx}
+
+% https://www.overleaf.com/learn/latex/Spanish
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+
+\usepackage{amsmath,amssymb}
+%\usepackage[dvips]{graphicx}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage[makeroom]{cancel}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{pstricks,pst-plot}
+
+\usepackage{eso-pic}
+
+%\usepackage{subfig}
+\usepackage{xcolor}
+%\usepackage{float}
+
+\usepackage{graphicx}
+
+\usepackage{tikz,tkz-euclide,tikz-3dplot}
+% \usetikzlibrary{shadows,decorations.pathmorphing,shapes,arrows,patterns,matrix,positioning,plotmarks,shapes.geometric,shapes.arrows,arrows.meta}
+\tikzset{>=latex}
+%\usetkzobj{all}
+
+\usepackage{gensymb}
+
+\usepackage{cancel}
+
+% Para las tablas nice
+% \usepackage{tikz}
+% \usepackage{pgfplots}
+% \usetikzlibrary{shadows}
+
+% Para gráficas
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Para justificar texto
+\usepackage{ragged2e}
+% \justifying
+
+% https://ctan.math.illinois.edu/macros/latex/contrib/longfbox/longfbox.html
+\usepackage{longfbox}
+
+\decimalpoint
+
+\definecolor{azul}{RGB}{0,92,162}
+
+\setbeamercolor{structure}{fg=azul}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Definiciones %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% https://tex.stackexchange.com/questions/53781/how-can-i-include-the-logo-in-some-slides-and-remove-in-others-using-beamer/53783
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
+
+% https://tex.stackexchange.com/questions/123924/indexed-letters-inside-circles
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)] 
+	\node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+
+% http://tex.stackexchange.com/questions/161301/latex-beamer-enumerate-with-manual-numbers
+\newcommand{\labelname}[1]{
+	\def\insertenumlabel{#1}%
+	\usebeamertemplate{enumerate item}%
+}
+
+\newenvironment<>{defi}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{}
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{prop}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=green!45!black}
+			\setbeamercolor{block body}{fg=black,bg=green!4} 
+			%        \setbeamercolor{itemize item}{fg=orange!20!black}crist
+			%\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=green!60!black}
+			%        \setbeamercolor{item projected}{fg=white,bg=orange!100}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{obs}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=orange!90!black}
+			\setbeamercolor{block body}{fg=black,bg=orange!5}
+			%        \setbeamercolor{itemize item}{fg=orange!20!black}
+			%\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=orange!80!black}
+			%        \setbeamercolor{item projected}{fg=white,bg=orange!100}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{ejer}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=purpura!40!black}
+			\setbeamercolor{block body}{fg=black,bg=columbia!5}
+			%        \setbeamercolor{itemize item}{fg=orange!20!black}
+			%\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=purpura!40!black}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{ej}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=orange!90!black}
+			\setbeamercolor{block body}{fg=black,bg=orange!5}
+			%        \setbeamercolor{itemize item}{fg=orange!20!black}
+			%\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=orange!80!black}
+			%        \setbeamercolor{item projected}{fg=white,bg=orange!100}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{ejem}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=red!40!black}
+			\setbeamercolor{block body}{fg=black,bg=columbia!5}
+			%        \setbeamercolor{itemize item}{fg=orange!20!black}
+			%\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=purpura!40!black}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+\newenvironment<>{problock}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=white,bg=orange!50!black}
+			\setbeamercolor{block body}{fg=black,bg=olive!30}
+			\setbeamercolor{itemize item}{fg=orange!20!black}
+			\setbeamertemplate{itemize item}[triangle]
+			\setbeamercolor{item projected}{fg=white,bg=orange!20!black}
+		}%
+		\usebeamertemplate{block begin}}
+	{\par\usebeamertemplate{block end}\end{actionenv}
+}
+
+% \definecolor{darkred}{rgb}{0.8,0,0}
+% 
+% \newenvironment<>{ejer}[1]{%
+%   \begin{actionenv}#2%
+%       \def\insertblocktitle{#1}%
+%       \par%
+%       \mode<presentation>{%
+%        \setbeamercolor{block title}{fg=white,bg=orange!20!black}
+% %        \setbeamercolor{block body}{fg=black,bg=olive!50}
+%        \setbeamercolor{block body}{fg=black,bg=darkred}
+%        \setbeamercolor{itemize item}{fg=orange!20!black}
+%        \setbeamertemplate{itemize item}[triangle]
+%      }%
+%       \usebeamertemplate{block begin}}
+%     {\par\usebeamertemplate{block end}\end{actionenv}
+% }
+
+% http://tex.stackexchange.com/questions/66655/numbered-definitions-theorems-in-beamer
+% \setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorems}[ams style] 
+\setbeamertemplate{caption}[numbered]
+
+% \newtheorem{teo}{Teorema}[section]
+% \newtheorem{lema}{Lema}[section]
+% \newtheorem{pro}{Proposición}[section]
+% \newtheorem{defi}{Definici\'on}[section]
+% \newtheorem{ej}{Ejemplo}[section]
+% \newtheorem{obs}{Observación}[section]
+
+%\newtheorem{}{Teorema}[section]
+%\newtheorem{proposition}[theorem]{Proposición}
+
+\def\R{\mathbb{R}}
+\def\r{\mathbb{R}}
+\def\rn{\mathbb{R}^n}
+\def\u{\mathbf{u}}
+\def\u{\mathbf{u}}
+\def\v{\mathbf{v}}
+\def\w{\mathbf{w}}
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\def\p{\mathbb{P}}
+\def\f{\mathbb{F}}
+\def\N{\mathbb{N}}
+\def\n{\mathbb{N}}
+\def\q{\mathbb{Q}}
+\def\Q{\mathbb{Q}}
+\def\c{\mathbb{C}}
+\def\C{\mathbb{C}}
+\def\z{\mathbb{Z}}
+\def\Z{\mathbb{Z}}
+
+\def\sen{\mathop{\mbox{\normalfont sen}}\nolimits}
+\def\sign{\mathop{\mbox{\normalfont sign}}\nolimits}
+\def\intt{\mathop{\mbox{\normalfont int}}\nolimits}
+\def\diag{\mathop{\mbox{\normalfont diag}}\nolimits}
+\def\arcsen{\mathop{\mbox{\normalfont arcsen}}\nolimits}
+\def\ln{\mathop{\mbox{\normalfont ln}}\nolimits}
+\def\tr{\mathop{\mbox{\normalfont tr}}\nolimits}
+\def\erf{\mathop{\mbox{\normalfont erf}}\nolimits}
+\def\erfc{\mathop{\mbox{\normalfont erfc}}\nolimits}
+
+\def\op{\mathop{\mbox{\normalfont op}}\nolimits}
+\def\ady{\mathop{\mbox{\normalfont ady}}\nolimits}
+\def\hip{\mathop{\mbox{\normalfont hip}}\nolimits}
+
+% \def\.{\mathop{\mbox{\normalfont .}}\nolimits}
+\def\rem{\mathop{\mbox{\normalfont rem}}\nolimits}
+\def\divi{\mathop{\mbox{\normalfont div}}\nolimits}
+\def\modd{\mathop{\mbox{\normalfont mod}}\nolimits}
+\def\oo{\mathop{\mbox{ \normalfont O }}\nolimits}
+\def\yy{\mathop{\mbox{ \normalfont Y }}\nolimits}
+\def\no{\mathop{\mbox{\normalfont NO }}\nolimits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpsobject{grilla}{psgrid}{subgriddiv=1,griddots=10,gridlabels=6pt}
+\newpsobject{grillaA}{psgrid}{subgriddiv=1,griddots=6,gridlabels=0pt,gridcolor=grilla-gray}
+\newpsobject{grillaB}{psgrid}{subgriddiv=1,griddots=10,gridlabels=0pt,gridcolor=grilla-gray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\myblue}{\only{\color{blue}}}
+\newcommand{\myred}{\only{\color{red}}}
+\newcommand{\mypurpura}{\only{\color{purpura}}}
+\newcommand{\myorange}{\only{\color{orange}}}
+\newcommand{\mymagenta}{\only{\color{magenta}}}
+\newcommand{\mycyan}{\only{\color{cyan}}}
+\newcommand{\mygreen}{\only{\color{olive}}}
+\newcommand{\myyellow}{\only{\color{yellow}}}
+\newcommand{\mygray}{\only{\color{gray}}}
+\def\colorize<#1>{\temporal<#1>{\color{red!50}}{\color{black}}{\color{black!50}}}
+
+%========================================================
+
+\xdefinecolor{dorado}{cmyk}{0,0.10,0.84,0}
+\xdefinecolor{melon}{cmyk}{0,0.29,0.84,0}
+\xdefinecolor{naranja}{cmyk}{0,0.42,1,0}
+\xdefinecolor{durazno}{cmyk}{0,0.46,0.50,0}
+\xdefinecolor{fresa}{cmyk}{0,1,0.50,0}
+\xdefinecolor{ladrillo}{cmyk}{0,0.77,0.87,0}
+\xdefinecolor{violeta}{cmyk}{0.07,0.90,0,0.34}
+\xdefinecolor{columbia}{cmyk}{0.39, 0.13, 0.00, 0.00}
+\xdefinecolor{purpura}{cmyk}{0.45,0.86,0,0}
+\xdefinecolor{aguamarina}{cmyk}{0.85,0,0.33,0}
+\xdefinecolor{esmeralda}{cmyk}{0.91,0,0.88,0.12}
+\xdefinecolor{pino}{cmyk}{0.92,0,0.59,0.25}
+\xdefinecolor{oliva}{cmyk}{0.64,0,0.95,0.40}
+\xdefinecolor{canela}{cmyk}{0.14,0.42,0.56,0}
+\xdefinecolor{marron}{cmyk}{0,0.72,1,0.45}
+\xdefinecolor{cafe}{cmyk}{0,0.81,1,0.60}
+\xdefinecolor{gris-claro}{cmyk}{0,0,0,0.30}
+\xdefinecolor{gris-oscuro}{cmyk}{0,0,0,0.50}
+\definecolor{darkgreen}{rgb}{0,0.39,0}
+\xdefinecolor{darkblue}{rgb}{0,0,0.55}
+
+\definecolor{verde}{HTML}{006400} % ver8de
+
+\definecolor{light-gray}{gray}{0.94}
+\definecolor{gris}{gray}{0.92}
+\definecolor{grilla-gray}{gray}{0.77}
+
+%========================================================
+
+\def\octave{\mathop{\mbox{\normalfont \hspace{.1em}\texttt{Octave} \hspace{-.3em}\raisebox{.4ex}{}}}\nolimits}
+\def\goctave{\mathop{\mbox{\normalfont \hspace{.1em}\texttt{GNU Octave} \hspace{-.3em}\raisebox{.4ex}{}}}\nolimits}
+
+\beamersetuncovermixins{\opaqueness<1>{10}}{\opaqueness<2->{10}}
+
+\begin{document}
+
+\title{Álgebra lineal -- Semana 7 \\[2mm] Mínimos cuadrados y espacios con producto interno}
+\author{
+	% \href{mailto:alejandro.piedrahita@udea.edu.co}{Alejandro Piedrahita H.} \\[6mm]
+	\texorpdfstring{Grupo EMAC\newline{\footnotesize \url{grupoemac@udea.edu.co} } }{} \\[6mm]
+	Facultad de Ciencias Exactas y Naturales \\[0mm] %\vspace{0.03cm}
+	\href{https://www.matematicasudea.co/}{\color{blue}Instituto de Matemáticas} \\[0mm] %\vspace{0.09cm}
+	Universidad de Antioquia}
+
+\date{\today}
+\logo{\fbox{\includegraphics[scale=0.12]{imagenes/udea}}} 
+%\logo{\fbox{\includegraphics[width=2cm, height=1.4cm]{imagenes/profe}}\phantom{xx} } 
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+% Remueve el logo de la página de inicio:
+% https://tex.stackexchange.com/questions/56966/prevent-logo-from-title-page-in-beamer-class?rq=1
+%\frame[plain]{\titlepage}
+
+%-----------------------------------------------------------------------------------------------------------------
+
+
+% \begin{frame}
+% \frametitle{Contenido}\tableofcontents
+% \end{frame} 
+
+%-----------------------------------------------------------------------------------------------------------------
+
+\include{seccion1}
+
+\include{seccion2}
+
+\include{referencias}
+
+\end{document}

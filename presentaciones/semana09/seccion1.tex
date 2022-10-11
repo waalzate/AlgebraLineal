@@ -1,0 +1,486 @@
+\section{Representación matricial de transformaciones lineales}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Matriz estándar de $T:\r^n\longrightarrow\r^m$}
+
+\vspace{-1mm}
+\begin{prop}{\textbf{Propiedad 1}}
+	\justifying
+	
+	Sea $T:\r^n\longrightarrow\r^m$ una transformación lineal tal que
+    
+    \[
+    T(\mathbf{e}_1)=
+    \left(
+    \begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+    a_{11}  \\[1mm]
+    a_{21}  \\[1mm]
+    \vdots \\[1mm]
+    a_{m1}
+    \end{array}
+    \right)
+    ,  \ T(\mathbf{e}_2)=
+    \left(
+    \begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+    a_{12}  \\[1mm]
+    a_{22}  \\[1mm]
+    \vdots \\[1mm]
+    a_{m2}
+    \end{array}
+    \right),\ \dots\ , 
+    \ T(\mathbf{e}_n)=
+    \left(
+    \begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+    a_{1n}  \\[1mm]
+    a_{2n}  \\[1mm]
+    \vdots \\[1mm]
+    a_{mn}
+    \end{array}
+    \right).
+    \]
+    Entonces la matriz $m\times n$ cuyas columnas son los $T(\mathbf{e}_j)$, 
+    \[
+   A_T=\left(
+   \begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+   a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+   a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+   \vdots & \vdots &        & \vdots \\[0mm]
+   a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+   \end{array}
+   \right)
+    \]
+    es tal que $T(\mathbf{v})=A_T\mathbf{v}$ para todo $\mathbf{v}\in\r^n$. La matriz $A_T$ es llamada \textbf{matriz estándar} 
+    para $T$ o también la \textbf{representación matricial} de $T$.
+\end{prop}	
+
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matriz estándar de $T:\r^n\longrightarrow\r^m$}
+	
+	\begin{alertblock}{\textbf{Observación 1 }}
+		
+		\begin{itemize}
+			\justifying
+			\item[\labelname{$a$}] Se debe tener cuidado con la aplicación de la Propiedad 1. Solamente es válida para transformaciones lineales de $\r^n$ en $\r^m$.
+			\item[\labelname{$b$}] La propiedad anterior nos dice que para hallar la matriz estándar de una transformación lineal que va de $\r^n$ a $\r^m$ basta hallar las imágenes de los vectores de la base estándar de $\r^n$ y ponerlas como columnas de la matriz.
+			\item[\labelname{$c$}] Se puede demostrar que la matriz $A$ de la Propiedad 1 es la \textit{única} matriz que satisface que $T(\mathbf{v})=A\mathbf{v}$ para todo $\mathbf{v}\in\r^n$.
+		\end{itemize}
+		
+	\end{alertblock}
+	
+
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matriz estándar de $T:\r^n\longrightarrow\r^m$}
+
+\begin{ej}{\textbf{Ejemplo 1}}
+	\justifying
+	Determine la matriz estándar $A$ de la transformación lineal  $T:\r^3\longrightarrow\r^2$ definida por 
+		\[
+	T
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	x  \\[1mm]
+	y  \\[1mm]
+	z
+	\end{array}
+	\right)
+	=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	x-2y  \\[1mm]
+	2x+y \\[1mm]
+	\end{array}
+	\right)
+	\]
+	y verifique que $T(\mathbf{v})=A\mathbf{v}$ para todo $\mathbf{v}\in\r^3$.
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Matriz de transformación para bases no estándar}
+
+\vspace{-2mm}
+\begin{prop}{\textbf{Propiedad 2} (Matriz de transformación para bases no estándar)}
+	\justifying
+	Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\mathcal{B}_1$ y $\mathcal{B}_2$, respectivamente, donde $\mathcal{B}_1=\{\mathbf{v}_1, \mathbf{v}_2,\dots, \mathbf{v}_n \}$. Si $T:V\longrightarrow W$ es una transformación lineal tal que
+	 \[
+	\left[T(\mathbf{v_1})\right]_{\mathcal{B}_2}=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	a_{11}  \\[1mm]
+	a_{21}  \\[1mm]
+	\vdots \\[1mm]
+	a_{m1}
+	\end{array}
+	\right)
+	,  \ \left[T(\mathbf{v_2})\right]_{\mathcal{B}_2}=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	a_{12}  \\[1mm]
+	a_{22}  \\[1mm]
+	\vdots \\[1mm]
+	a_{m2}
+	\end{array}
+	\right), \dots, 
+	\ \left[T(\mathbf{v_n})\right]_{\mathcal{B}_2}=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	a_{1n}  \\[1mm]
+	a_{2n}  \\[1mm]
+	\vdots \\[1mm]
+	a_{mn}
+	\end{array}
+	\right),
+	\]
+	entonces la matriz $m\times n$ cuyas $n$ columnas son los vectores $\left[T(\mathbf{v_j})\right]_{\mathcal{B}_2}$,
+	\[
+	A_T=\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+	a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+	\vdots & \vdots &        & \vdots \\[0mm]
+	a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+	\end{array}
+	\right)
+	\]
+	es tal que $\left[T(\mathbf{v})\right]_{\mathcal{B}_2}=A_T\left[\mathbf{v}\right]_{\mathcal{B}_1}$ para todo $\mathbf{v}\in V$. Esta matriz es llamada \textbf{la matriz de $T$ con respecto a las bases $\mathcal{B}_1$ y $\mathcal{B}_2$}.
+\end{prop}	
+
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matriz de transformación para bases no estándar}
+	
+	\begin{ej}{\textbf{Ejemplo 2 }}
+		\justifying
+		Considere la transformación lineal  $T:\r^2\longrightarrow\r^2$ definida por 
+		\[
+		T
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		x  \\[1mm]
+		y  
+		\end{array}
+		\right)
+		=
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		x+y  \\[1mm]
+		2x-y 
+		\end{array}
+		\right)
+		\]
+		Encuentre la matriz de $T$ con respecto a las bases 
+		\[
+		\mathcal{B}_1 = \Big\{ \, \underbrace{(1,2)}_{\color{blue}\mathbf{v}_1}, \ \underbrace{(-1,1)}_{\color{blue}\mathbf{v}_2} \, \Big\} \quad \text{y} \quad 
+		\mathcal{B}_2 = \Big\{ \, \underbrace{(1,0)}_{\color{blue}\mathbf{w}_1}, \ \underbrace{(0,1)}_{\color{blue}\mathbf{w}_2} \, \Big\}.
+		\]
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matriz de transformación para bases no estándar}
+
+\begin{ej}{\textbf{Ejemplo 3 }}
+	\justifying
+	Para la transformación lineal del ejemplo anterior, $T:\r^2\longrightarrow\r^2$ definida por 
+	\[
+	T
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	x  \\[1mm]
+	y  
+	\end{array}
+	\right)
+	=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	x+y  \\[1mm]
+	2x-y 
+	\end{array}
+	\right),
+	\]
+	encuentre $T(\mathbf{v})$, donde $\mathbf{v}=(2,1)$, de dos formas distintas:
+	\begin{enumerate}[1.]
+		\justifying
+		\item[\labelname{$a$}] De manera directa, usando la definición de $T$.
+		\item[\labelname{$b$}] Usando la matriz de $T$ con respecto a las bases $\mathcal{B}_1$ y $\mathcal{B}_2$.
+	\end{enumerate}
+	
+	
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matriz de transformación para otros espacios vectoriales}
+
+\begin{ej}{\textbf{Ejemplo 4 }}
+	\justifying
+	Sea $D_x:P_2\longrightarrow P_1$ el operador direrencial que transforma un polinomio cuadrático $p$ en su derivada $p'$. Ya sabemos que $D_x$ es una transformación lineal. Determine la matriz de $D_x$ con respecto a las bases
+	\[
+	\mathcal{B}_1=\{1,x,x^2\} \quad\text{y}\quad \mathcal{B}_2=\{1,x\}.
+	\]
+	Use la matriz hallada $A_T$ para verificar que $$\left[D_x(p)\right]_{\mathcal{B}_2}=A_T\left[p\right]_{\mathcal{B}_1}$$ con $p=a+bx+cx^2$.
+	
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Rango y nulidad de una transformación lineal}
+	\vspace{-3mm}
+	\begin{prop}{\textbf{Propiedad 3}}
+		\justifying
+		Sean $V$ y $W$ espacios vectoriales de dimensión finita con $\dim V=n$ y sea $T: V\longrightarrow W$ una trasnfomación lineal cuya matriz con respecto a \textit{ciertas} bases de $V$ y $W$, respectivamente, es $A$. Entonces:
+		\begin{enumerate}[1.]
+			\justifying
+			\item[\labelname{$a$}] $\rho(T)=\rho(A)$.
+			\item[\labelname{$b$}] $\nu(T)=\nu(A)$.
+			\item[\labelname{$c$}] $\nu(T)+\rho(T)=n$.
+		\end{enumerate}
+	\end{prop}
+	\begin{alertblock}{\textbf{Observación 2}}
+		\justifying
+		Los ítems (\textit{a}) y (\textit{b}) de la propiedad anterior implican que $\rho(A)$ y $\nu(A)$ son independientes de las bases escogidas para $V$ y $W$.
+	\end{alertblock}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Rango y nulidad de una transformación lineal}
+
+\begin{ej}{\textbf{Ejemplo 5}}
+	\justifying
+	Considere la transformación lineal $T: P_3\longrightarrow P_2$ definida por 
+	\[
+		T\left(a_0+a_1x+a_2x^2+a_3x^3\right)=a_1+a_2x^2.
+	\]
+	Halle $A_T$ y utilícela para determinar el núcleo y la imagen de $T$.
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Rango y nulidad de una transformación lineal}
+	
+	\begin{ej}{\textbf{Ejemplo 6}}
+		\justifying
+		Considere la transformación lineal $T: P_2\longrightarrow P_3$ definida por 
+		\[
+			(Tp)(x)= xp(x).
+		\]
+		Halle $A_T$ y utilícela para determinar el núcleo y la imagen de $T$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Composición de transformaciones lineales}
+
+	%\vspace{-3mm}
+	\begin{block}{\textbf{Definición 1 (Composición de transformaciones lineales)}}
+		\justifying
+		Sean $T:\r^n\longrightarrow\r^m$ y $S:\r^m\longrightarrow\r^p$ transformaciones lineales. La \textbf{composición} de $S$ con $T$, denotada por $S\circ T$, es una función de $\r^n$ en $\r^p$ definida por 
+		\[
+		(S\circ T)(\mathbf{v})=S(T(\mathbf{v}))
+		\]
+		para todo $\mathbf{v}\in \r^n$.
+	\end{block}	
+
+	\begin{ej}{\textbf{Ejemplo 7}}
+		\justifying
+		Considere las transformaciones lineales $T:\r^2\longrightarrow\r^3$ y $S:\r^3\longrightarrow\r^4$ definidas por
+		\[
+			T(x,y) = (x,2x-y,3x+4y) \quad \text{y} \quad S(x,y,z) = (2x+z,3y-z,x-y,x+y+z).
+		\]		
+		Encuentre $S\circ T:\r^2\longrightarrow\r^4$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Composición de transformaciones lineales}
+	
+	\begin{prop}{\textbf{Propiedad 4}}
+		\justifying
+		Sean $T:\r^n\longrightarrow\r^m$ y $S:\r^m\longrightarrow\r^p$ transformaciones lineales. Entonces la composición $S\circ T: \r^n\longrightarrow\r^p$ es una transformación lineal. Más aún, si $A_{T}$ es la matriz estándar para $T$ y 
+		$A_{S}$ es la matriz estándar para $S$, entonces la matriz estándar para $S\circ T$ es $A_{S} A_{T}$, es decir,
+		\[
+		A_{S\circ T} = A_{S} A_{T}
+		\]
+	\end{prop}
+
+	\begin{ej}{\textbf{Ejemplo 8}}
+		\justifying
+		Considere las transformaciones lineales $T_1$ y $T_2$ de $\r^3\longrightarrow\r^3$ definidas por
+		\[
+		T_1(x,y,z) = (2x+y,0,x+z) \quad \text{y} \quad T_2(x,y,z) = (x-y,z,y).
+		\]		
+		Encuentre las matrices estándar para  $T_1\circ T_2$ y $T_2\circ T_1$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+%\begin{frame}\frametitle{Composición de transformaciones lineales}
+%	\begin{prop}{\textbf{Propiedad 4}}
+%		\justifying
+%		Sean $T:\r^n\longrightarrow\r^m$ y $S:\r^m\longrightarrow\r^p$ transformaciones lineales. Entonces la composición $S\circ T: \r^n\longrightarrow\r^p$ es una transformación lineal. Más aún, si $A$ es la matriz estándar para $T$ y $B$ es la matriz estándar para $S$, entonces la matriz estándar para $S\circ T$ es $BA$.
+%	\end{prop}
+%	
+%	\begin{ej}{\textbf{Ejemplo 6}}
+%		\justifying
+%		Considere las transformaciones lineales $T:\r^2\longrightarrow\r^3$ y $S:\r^3\longrightarrow\r^4$ definidas por
+%		$$
+%		\begin{array}{ccc}
+%		T
+%		\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		x  \\[1mm]
+%		y  
+%		\end{array}
+%		\right)
+%		=
+%		\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		x \\[1mm]
+%		2x-y\\[1mm]
+%		3x+4y 
+%		\end{array}
+%		\right)&\text{ y } & S
+%		\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		x  \\[1mm]
+%		y  \\[1mm]
+%		z
+%		\end{array}
+%		\right)
+%		=
+%		\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		2x+z\\[1mm]
+%		3y-z\\[1mm]
+%		x-y \\ [1mm]
+%		x+y+z
+%		\end{array}
+%		\right)
+%		\end{array}
+%		$$
+%		Encuentre $S\circ T:\r^2\longrightarrow\r^4$.
+%	\end{ej}
+%\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Inversa de una transformación lineal}
+	%\vspace{-3mm}
+	\begin{block}{\textbf{Definición 2}}
+		Sea $T:\r^n\longrightarrow\r^n$ una transformación lineal. Decimos que $T$ es \textbf{invertible} si existe una \textit{función} $S:\r^n\longrightarrow\r^n$  tal que
+		\[
+		S\circ T=I \quad\text{y}\quad T\circ S=I
+		\]
+		donde $I$ es la transformación identidad. En este caso se dice que $S$ es la \textbf{inversa} de $T$ o 
+		también que $T$ es la \textbf{inversa} de $S$.
+	\end{block}	
+	
+	\begin{alertblock}{\textbf{Observación 3}}
+		
+		\begin{itemize}
+			\justifying
+			\item[\labelname{$a$}] La condición dada en la definición anterior equivale a 
+			\[
+			S(T(\mathbf{v}))=\mathbf{v} \quad\text{y}\quad T(S(\mathbf{v}))=\mathbf{v} \quad \text{para todo} \quad \mathbf{v}\in\r^n.
+			\] 
+			\item[\labelname{$b$}] No toda transformación lineal $T$ tiene inversa. 
+			\item[\labelname{$c$}] ¿Cuándo una transformación lineal $T$ tiene inversa? 
+			\item[\labelname{$d$}] $S\circ T = I \  \Rightarrow \ A_{S\circ T} = A_SA_T = A_I = I_n
+			\  \Rightarrow \  {A_S}^{-1} = A_T \text{ y } {A_T}^{-1} = A_S$
+%			\item No toda transformación lineal $T$ tiene inversa. 
+%			\item Si $T$ es invertible, su inversa es única y es denotada por $T^{-1}$ (teorema).
+%			\item Una transformación lineal $T:\r^n\longrightarrow\r^n$ es invertible si y sólo si es uno a uno y sobre.
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Inversa de una transformación lineal}
+	
+	\begin{prop}{\textbf{Propiedad 5}}
+		\justifying
+		Sea $T:\r^n\longrightarrow\r^n$ una transformación lineal invertible. Entonces su función inversa $T^{-1}:\r^n\longrightarrow\r^n$ es también una transformación lineal. Más aún, si $A_T$ es la matriz estándar para $T$, entonces $A_T$ es invertible y ${A_T}^{-1}$ es la matriz estándar para $T^{-1}$, es decir, ${A_T}^{-1}=A_{T^{-1}}$.
+	\end{prop}	
+	
+	\begin{ej}{\textbf{Ejemplo 9}}
+		\justifying
+		Considere la transformación lineal $T:\r^3\longrightarrow\r^3$ definida por
+		\[
+			T(x,y,z) = (2x+3y+z,3x+3y+z,2x+4y+z).	
+		\]		
+		Muestre que $T$ es invertible y encuentre su inversa $T^{-1}$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}

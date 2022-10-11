@@ -1,0 +1,304 @@
+\section{Diagonalización ortogonal}
+
+\subsection{}
+
+\begin{frame}\frametitle{Introducción}
+	
+	\begin{ej}{\textbf{Ejemplo 1}}
+		Si es posible, diagonalice la matriz 
+		\[
+		A =
+		\left(
+		\begin{array}{rr}
+		1 & 2 \\[1mm]
+		2 & -2
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matrices diagonalizables ortogonalmente}
+	
+	\begin{defi}{\textbf{Definición 1}}\justifying
+		\justifying
+		Una matriz cuadrada $A$ es \textbf{\textit{diagonalizable ortogonalmente}} si existe una matriz 
+		ortogonal $Q$ y una matriz diagonal $D$ tales que
+		\[
+		Q^TAQ = D.
+		\]
+	\end{defi}	
+	
+	\begin{prop}{\textbf{Propiedad 1}}
+		\justifying
+		Si $A$ es diagonalizable ortogonalmente, entonces $A$ es simétrica.
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedad de las matrices simétricas}
+	
+	\begin{prop}{\textbf{Propiedad 2}}
+		\justifying
+		Si $A$ una matriz simétrica con entradas reales, entonces los valores propios de $A$ son reales.		
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedad de las matrices simétricas}
+	
+	\begin{prop}{\textbf{Propiedad 3}}
+		\justifying
+		Sea $A$ una matriz simétrica. Si $\lambda_1$ y $\lambda_2$ son valores propios \textit{distintos} de $A$,
+		entonces sus correspondientes vectores propios $\mathbf{v}_1$ y $\mathbf{v}_2$ son \textit{ortogonales}.		
+	\end{prop}	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Vectores propios de una matriz simétrica}
+	
+	\begin{ej}{\textbf{Ejemplo 2}}
+		Muestre que cualquier par de vectores propios de 
+		\[
+		A =
+		\left(
+		\begin{array}{rr}
+		3 & 1 \\[1mm]
+		1 & 3
+		\end{array}
+		\right),
+		\]	
+		correspondientes a valores propios \textit{distintos}, son ortogonales.
+	\end{ej}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Teorema espectral}
+	
+	\begin{prop}{\textbf{Propiedad 4 (Teorema espectral)}}
+		\justifying
+		Sea $A$ una matriz cuadrada con entradas reales. Entonces $A$ es simétrica si y sólo si $A$ es 
+		\textit{diagonalizable ortogonalmente}.			
+	\end{prop}	
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matrices diagonalizables ortogonalmente}
+		
+	\begin{ej}{\textbf{Ejemplo 3}} \justifying 
+		Determine cuáles de las siguientes matrices son \textit{diagonalizables ortogonalmente}.
+		\[
+		A_1 =
+		\left(
+		\begin{array}{rrr}
+		 1  & 2 & 3 \\[1mm]
+		 2  & 0 & 1 \\[1mm]
+		 3  & 1 & 1
+		\end{array}
+		\right),\quad
+		A_2 =
+		\left(
+		\begin{array}{rrr}
+		 3 & 2 & 1 \\[1mm]
+		 2 & 1 & 7 \\[1mm]
+		-1 & 7 & 0
+		\end{array}
+		\right),\quad
+		% https://math.stackexchange.com/a/1658399
+		A_3 =
+		\left(
+		\begin{array}{cc}
+		1 & i \\[1mm]
+		i & -1
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo 
+\begin{frame}\frametitle{Procedimiento de diagonalización ortogonal}
+	
+	\vspace{0mm}
+	\begin{defi}{\textbf{Definición 1}}\justifying
+		\justifying
+		Una matriz cuadrada $A$ es \textbf{\textit{diagonalizable ortogonalmente}} si existe una matriz 
+		ortogonal $Q$ y una matriz diagonal $D$ tales que
+		\[
+		Q^TAQ = D.
+		\]
+	\end{defi}	
+	
+	\vspace{-1mm}
+	\begin{ejem}{\textbf{Procedimiento 1}}\justifying
+		\justifying
+		Sea $A$ una matriz simétrica $n\times n$. 
+		\begin{enumerate}\justifying
+			\item Halle los vectores propios de $A$ y la multiplicidad de cada uno.
+			\item Para cada vector propio de multiplicidad 1, elija un vector propio unitario (normalice el vector propio).
+			\item Para cada vector propio de multiplicidad $k\geq 2$, encuentre un conjunto 
+			de $k$ vectores propios linealmente independientes. Si este conjunto no es ortonormal,
+			aplique el proceso de ortonormalización de Gram-Schmidt.			
+			\item La aplicación de los pasos (2) y (3) generan un conjunto ortonormal de $n$ vectores propios.
+			Utilice estos vectores para formar las columnas de $Q$. La matriz $Q^TAQ=D$ será diagonal.
+			%(Los elementos en la diagonal principal son los valores propios de $A$).
+		\end{enumerate}
+	\end{ejem}		
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de una matriz diagonalizable}
+	
+	\begin{ej}{\textbf{Ejemplo 4}}
+		Diagonalice ortogonalmente la matriz
+		\[
+		A =
+		\left(
+		\begin{array}{rrr}
+			2 & 2 & -2 \\[1mm]
+			2 & -1 & 4 \\[1mm]
+			-2 & 4 & -1
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo 
+\begin{frame}\frametitle{Consecuencias del teorema espectral}
+	
+	\begin{itemize}
+		\item Si $A$ es una matriz simétrica, entonces			
+		
+		\[
+		A = QDQ^T 
+		=
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		\mathbf{q}_1 & \cdots & \mathbf{q}_n
+		\end{array}
+		\right)
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		\lambda_1 & \cdots & 0 \\[0mm]
+		        0 & \ddots & 0 \\[1.5mm]
+				0 & 0 & \lambda_n
+		\end{array}
+		\right)
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		\mathbf{q}_1^T \\[1mm]
+		\vdots  \\[1mm]
+		\mathbf{q}_n^T
+		\end{array}
+		\right)
+		\]	
+		
+		\vspace{2mm}
+		\[
+		\phantom{A = QDQ^T} 
+		=		
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		\lambda_1\mathbf{q}_1 & \cdots & \lambda_n\mathbf{q}_n
+		\end{array}
+		\right)		
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		\mathbf{q}_1^T \\[1mm]
+		\vdots  \\[1mm]
+		\mathbf{q}_n^T
+		\end{array}
+		\right) \hspace{1.5cm}
+		\]	
+		
+		\vspace{2mm}
+		\[
+		\phantom{A = QDQ^T} 
+		=		
+		\lambda_1\mathbf{q}_1\mathbf{q}_1^T + \lambda_2\mathbf{q}_2\mathbf{q}_2^T + \cdots + \lambda_n\mathbf{q}_n\mathbf{q}_n^T  		
+		\hspace{3mm}
+		\]	
+
+	\end{itemize}
+	
+	\begin{defi}{\textbf{Definición 2}}\justifying
+		\justifying
+		La \textbf{\textit{descomposición espectral}} de una matriz simétrica $A$ se define como
+		\[
+			A=\lambda_1\mathbf{q}_1\mathbf{q}_1^T + \lambda_2\mathbf{q}_2\mathbf{q}_2^T + \cdots + \lambda_n\mathbf{q}_n\mathbf{q}_n^T
+		\]
+		%se le conoce como la \textbf{\textit{descomposición}} espectral de $A$.
+	\end{defi}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Matrices diagonalizables ortogonalmente}
+	
+	\begin{ej}{\textbf{Ejemplo 5}} \justifying 
+		Encuentre una matriz $2\times 2$ con valores propios $\lambda_1=3$ y $\lambda_2=-2$, y correspondientes vectores propios
+		\[
+		\mathbf{v}_1 =
+		\left(
+		\begin{array}{@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}}
+		3 \\[1mm]
+		4 
+		\end{array}
+		\right)
+		\qquad \text{y} \qquad 
+		\mathbf{v}_2  =
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{0.3\tabcolsep}}}
+		-4 \\[1mm]		
+		 3
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	
+\end{frame}

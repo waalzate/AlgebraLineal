@@ -1,0 +1,434 @@
+\section{Bases}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Base de un espacio vectorial}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{alertblock}{\textbf{Observación 1}}
+Una base $B=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ para un espacio vectorial $V$ debe cumplir dos condiciones:
+\begin{enumerate}	
+	\item[\labelname{$a$}] $B$ no puede tener \textit{tantos} vectores de modo que uno de ellos pueda escribirse
+	como una combinación lineal de los demás vectores en $B$.
+	\item[\labelname{$b$}] $B$ debe tener \textit{suficientes vectores} para generar a $V$.
+\end{enumerate}
+\end{alertblock}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 1 (Base canónica de $\r^3$)}} \justifying
+	Muestre que el conjunto de vectores de $\r^3$,
+	
+	\vspace{-2mm}
+	\[
+	B = \Big\{ \, \underbrace{(1,0,0)}_{\color{blue}\mathbf{e}_1}, \ \underbrace{(0,1,0)}_{\color{blue}\mathbf{e}_2}, \ 
+	\underbrace{(0,0,1)}_{\color{blue}\mathbf{e}_3} \, \Big\},
+	\]
+	
+	\vspace{-2mm}
+	es una base para $\r^3$.
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 2 (Base canónica de $\r^n$)}} \justifying
+	El conjunto de vectores de $\r^n$,
+	
+	\vspace{-2mm}
+	\[
+	\mathbf{e}_1 =
+	\left(
+	\begin{array}{c}
+	1\\
+	0\\
+	\vdots \\[1mm]
+	0
+	\end{array}
+	\right),\ \ 
+	\mathbf{e}_2 =
+	\left(
+	\begin{array}{c}
+	0\\
+	1\\
+	\vdots \\[1mm]
+	0
+	\end{array}
+	\right), \ \ 
+	\hdots \ , \ \
+	\mathbf{e}_n =
+	\left(
+	\begin{array}{c}
+	0\\
+	0\\
+	\vdots \\[1mm]
+	1
+	\end{array}
+	\right).
+	\]
+	
+	\vspace{-0mm}
+	es una base para $\r^n$.
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 3 (Base no estándar de $\r^2$)}} \justifying
+	Muestre que el conjunto de vectores de $\r^2$,
+	
+	\vspace{-2mm}
+	\[
+	B = \Big\{ \, \underbrace{(1,1)}_{\color{blue}\mathbf{v}_1}, \ \underbrace{(1,-1)}_{\color{blue}\mathbf{v}_2} \, \Big\},
+	\]
+	
+	\vspace{-2mm}
+	es una base para $\r^2$.
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 4 (Base canónica para $P_3$)}} \justifying
+	Muestre que el conjunto de vectores de $P_3$,
+	
+	\vspace{-2mm}
+	\[
+	B = \Big\{ \, \underbrace{1}_{\color{blue}\mathbf{v}_1}, \ \underbrace{x}_{\color{blue}\mathbf{v}_2}
+	, \ \underbrace{x^2}_{\color{blue}\mathbf{v}_3}, \ \underbrace{x^3}_{\color{blue}\mathbf{v}_4} \, \Big\},
+	\]
+	
+	\vspace{-2mm}
+	es una base para $P_3$.
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 5 (Base canónica para $P_n$)}} \justifying
+	El conjunto de vectores de $P_n$,
+	
+	\vspace{-2mm}
+	\[
+	B = \left\{ 1, x, x^2, \hdots, x^n \right\},
+	\]
+	
+	\vspace{-2mm}
+	es una base para $P_n$.
+\end{ej}	
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplos de bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 6 (Base canónica para $M_{22}$)}} \justifying
+	Muestre que el conjunto de vectores de $M_{22}$,
+	
+	\vspace{-2mm}
+	\[
+	B = \Bigg\{ \, \underbrace{ \left( \begin{array}{cc}	1 & 0 \\ 0 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_1}}, \ \underbrace{  \left( \begin{array}{cc}	0 & 1 \\ 0 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_2}}, \ 
+	\underbrace{ \left( \begin{array}{rr}  0 & 0 \\ 1 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_3}}, \ 
+	\underbrace{ \left( \begin{array}{rr}  0 & 0 \\ 0 & 1 \end{array} \right) }_{\color{blue}\mathbf{v_4}} \, \Bigg\},
+	\]
+	
+	\vspace{-2mm}
+	es una base para $M_{22}$.
+\end{ej}	
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Propiedades de las bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm}
+
+\begin{prop}{\textbf{Propiedad 1}}
+Sea $B=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ una base para un espacio vectorial $V$. Entonces
+para cada vector $\mathbf{v}\in V$, existen escalares \textit{únicos}
+
+\vspace{-2mm}
+\[
+c_1, c_2,\hdots, c_n
+\]
+
+\vspace{-2mm}
+tales que
+
+\vspace{-2mm}
+\[
+	\mathbf{v} = c_1 \mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_n\mathbf{v}_n
+\]
+\end{prop}	
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las bases}
+
+\begin{block}{\textbf{Definición 1 (Base)}}
+	\justifying
+	Un conjunto de vectores $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ en un espacio vectorial $V$ es 
+	una \textbf{\textit{base}} para $V$ si se cumplen las dos siguientes condiciones:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es linealmente independiente (LI).
+		\item[\labelname{$b$}] $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a V.
+	\end{enumerate}
+\end{block}
+
+%\vspace{5mm} 
+
+\begin{prop}{\textbf{Propiedad 2}}\justifying
+	Si $B=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es una base para un espacio vectorial $V$, entonces
+	cualquier conjunto que tenga más de $n$ vectores en $V$ es linealmente dependiente (LD).
+\end{prop}	
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las bases}
+
+\begin{prop}{\textbf{Propiedad 2}}\justifying
+	Si $B=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es una base para un espacio vectorial $V$, entonces
+	cualquier conjunto que tenga más de $n$ vectores en $V$ es linealmente dependiente (LD).
+\end{prop}	
+
+\vspace{0mm} 
+
+\begin{ej}{\textbf{Ejemplo 7}} \justifying
+	Determine si el conjunto de vectores de $\r^3$,
+	
+	\vspace{-2mm}
+	\[
+	S = \{ \, (1,2,-1),\, (1,1,0),\, (2,3,0),\, (5,9,-1) \, \},
+	\]
+	
+	\vspace{-2mm}
+	es LI o LD.
+\end{ej}	
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las bases}
+	
+	\begin{prop}{\textbf{Propiedad 2}}\justifying
+		Si $B=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es una base para un espacio vectorial $V$, entonces
+		cualquier conjunto que tenga más de $n$ vectores en $V$ es linealmente dependiente (LD).
+	\end{prop}	
+	
+	\vspace{0mm} 
+	
+	\begin{ej}{\textbf{Ejemplo 8}} \justifying
+		Determine si el conjunto de vectores de $P_3$,
+		
+		\vspace{-2mm}
+		\[
+		S = \left\{ \, 1,\, 1+x,\, 1-x,\, 1+x+x^2,\, 1-x+x^2 \, \right\},
+		\]
+		
+		\vspace{-2mm}
+		es LI o LD.
+	\end{ej}	
+	
+\end{frame}
+
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las bases}
+
+\begin{prop}{\textbf{Propiedad 3}}\justifying
+	Si un espacio vectorial $V$ tiene una base con $n$ vectores, entonces cualquier otra base tiene también $n$ vectores.
+\end{prop}	
+
+\begin{ej}{\textbf{Ejemplo 9}} \justifying
+	Determine si el conjunto de vectores de $\r^3$,
+	
+	\vspace{-2mm}
+	\[
+	S = \left\{ \, (3,2,1),\, (7,-1,4) \,\right\},
+	\]
+	
+	\vspace{-2mm}
+	es base para $\r^3$.
+\end{ej}	
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de las bases}
+	
+	\begin{prop}{\textbf{Propiedad 3}}\justifying
+		Si un espacio vectorial $V$ tiene una base con $n$ vectores, entonces cualquier otra base tiene también $n$ vectores.
+	\end{prop}	
+		
+	\begin{ej}{\textbf{Ejemplo 10}} \justifying
+		Determine si el conjunto de vectores de $P_3$,
+		
+		\vspace{-2mm}
+		\[
+		S = \left\{ \, x+2,\, x^2,\, x^3-1,\, 3x+1,\, x^2-2x+3 \, \right\},
+		\]
+		
+		\vspace{-1mm}
+		es base para $P_3$.
+	\end{ej}	
+	
+\end{frame}
+
+

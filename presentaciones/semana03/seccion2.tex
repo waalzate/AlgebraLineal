@@ -1,0 +1,265 @@
+\section{Dimensión de un espacio vectorial}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Dimensión de un espacio vectorial}
+
+\begin{block}{\textbf{Definición 1 (Dimensión)}}
+	\justifying
+	\begin{enumerate}
+		\item[\labelname{$a$}] Si un espacio vectorial $V$ tiene una base con $n$ vectores, entonces al número $n$ se le llama la
+		\textbf{\textit{dimensión}} de $V$ y escribimos
+		\[
+		\dim V = n.
+		\]
+		\item[\labelname{$b$}] Si $V$ es el espacio vectorial que consiste solamente del vector cero ($V=\{\mathbf{0}\}$), definimos
+		la \textbf{\textit{dimensión}} de $V$ como cero.
+	\end{enumerate}		
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 1 }} \justifying
+	En cada uno de los siguientes ejemplos, la dimensión se determina simplemente contando el número de vectores en la 
+	base canónica.
+	
+	\begin{enumerate}
+		\item[\labelname{$a$}] $\dim \r^n = n$.
+		
+		\vspace{1mm}
+		\item[\labelname{$b$}] $\dim P_n = n+1$.
+		
+		\vspace{1mm}
+		\item[\labelname{$c$}] $\dim M_{mn} = m\times n$.
+	\end{enumerate}
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Dimensión de un subespacio}
+
+\begin{block}{\textbf{Definición 1 (Dimensión)}}
+	\justifying
+	\begin{enumerate}
+		\item[\labelname{$a$}] Si un espacio vectorial $V$ tiene una base con $n$ vectores, entonces al número $n$ se le llama la
+		\textbf{\textit{dimensión}} de $V$ y escribimos
+		
+		\vspace{-2mm}
+		\[
+		\dim V = n.
+		\]
+		
+		\vspace{-1mm}
+		\item[\labelname{$b$}] Si $V$ es el espacio vectorial que consiste solamente del vector cero ($V=\{\mathbf{0}\}$), definimos
+		la \textbf{\textit{dimensión}} de $V$ como cero.
+	\end{enumerate}		
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 2 }} \justifying
+	Determine la dimensión de cada uno de los siguientes subespacios de $\r^3$:
+
+	\begin{enumerate}
+		\item[\labelname{$a$}]  $W = \big\{(2c,c,0)\mid c \ \text{es un número real} \big\}$.
+		
+		\vspace{1mm}
+		\item[\labelname{$b$}] $W = \big\{(b,a-b,a)\mid a \ \text{y} \ b \ \text{son números reales} \big\}$.
+	\end{enumerate}
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Dimensión de un subespacio}
+
+\begin{block}{\textbf{Definición 1 (Dimensión)}}
+	\justifying
+	\begin{enumerate}
+		\item[\labelname{$a$}] Si un espacio vectorial $V$ tiene una base con $n$ vectores, entonces al número $n$ se le llama la
+		\textbf{\textit{dimensión}} de $V$ y escribimos
+		
+		\vspace{-2mm}
+		\[
+		\dim V = n.
+		\]
+		
+		\vspace{-1mm}
+		\item[\labelname{$b$}] Si $V$ es el espacio vectorial que consiste solamente del vector cero ($V=\{\mathbf{0}\}$), definimos
+		la \textbf{\textit{dimensión}} de $V$ como cero.
+	\end{enumerate}		
+\end{block}
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 3 }} \justifying
+	Sea $W$ el subespacio de todas las matrices simétricas en $M_{22}$. Halle la dimensión de $W$.
+	
+\end{ej}	
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos LI}
+	
+	\begin{prop}{\textbf{Propiedad 1}}\justifying
+		Sea $V$ un espacio vectorial de dimensión $n$ y $\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_m \}$ es un conjunto de vectores en $V$ linealmente independiente, entonces $m\leq n$.
+	\end{prop}	
+	
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Dimensión de un subesapcio}
+	
+	\begin{prop}{\textbf{Propiedad 2}}\justifying
+		Si $V$ un espacio vectorial de dimensión finita y $H$ es un subespacio vectorial de $V$, entonces $\dim H\leq \dim V$. 
+	\end{prop}	
+	
+	%\vspace{5mm}
+		
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Comprobación de una base en un espacio $n$-dimensional}
+
+\begin{prop}{\textbf{Propiedad 3}}\justifying
+	Sea $V$ un espacio vectorial de dimensión $n$. 
+	\begin{enumerate}
+		\item[\labelname{$a$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es un conjunto de vectores en $V$ 
+		linealmente independiente (LI), entonces $S$ es una base para $V$.
+		\item[\labelname{$b$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a $V$,
+		entonces $S$ es una base para $V$.
+	\end{enumerate}
+\end{prop}	
+
+%\vspace{5mm}
+
+\begin{alertblock}{\textbf{Observación 1}} \justifying
+	Como consecuencia del teorema anterior, para verificar si un conjunto $S$ de $n$ vectores en un
+	espacio vectorial $V$ de dimensión $n$ es una base para $V$, es suficiente con verificar que $S$ es
+	linealmente independiente (LI) o que $S$ genera a $V$.
+\end{alertblock}	
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Comprobación de una base en un espacio $n$-dimensional}
+
+\begin{prop}{\textbf{Propiedad 3}}\justifying
+	Sea $V$ un espacio vectorial de dimensión $n$. 
+	\begin{enumerate}
+		\item[\labelname{$a$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es un conjunto de vectores en $V$ 
+		linealmente independiente (LI), entonces $S$ es una base para $V$.
+		\item[\labelname{$b$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a $V$,
+		entonces $S$ es una base para $V$.
+	\end{enumerate}
+\end{prop}	
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 4}} \justifying
+	Muestre que el conjunto de vectores de $\r^5$,
+	{\small 
+	\[	
+     S = 
+	 \left\{ \begin{array}{c@{\hspace{-\tabcolsep}}} \phantom{.}\\ \phantom{.}\\ \phantom{\vdots} \\[1mm] \phantom{.} \end{array} \right.
+	 \underbrace{\left(\begin{array}{r} 1\\ 2\\ -1 \\ 3 \\ 4 \end{array} \right)}_{\color{blue}\mathbf{v}_1},\
+	 \underbrace{\left(\begin{array}{r} 0\\ 1\\ 3 \\ -2 \\ 3 \end{array} \right)}_{\color{blue}\mathbf{v}_2},\
+	 \underbrace{\left(\begin{array}{r} 0\\ 0\\ 2 \\ -1 \\ 5 \end{array} \right)}_{\color{blue}\mathbf{v}_3},\
+	 \underbrace{\left(\begin{array}{r} 0\\ 0\\ 0 \\ 2 \\ -3 \end{array} \right)}_{\color{blue}\mathbf{v}_4},\
+	 \underbrace{\left(\begin{array}{r} 0\\ 0\\ 0 \\ 0 \\ -2 \end{array} \right)}_{\color{blue}\mathbf{v}_5}
+	 \left. \begin{array}{c@{\hspace{-\tabcolsep}}} \phantom{.}\\ \phantom{.}\\ \phantom{\vdots} \\[1mm] \phantom{.} \end{array} \right\}
+	\]
+	}
+	es una base para $\r^5$.
+\end{ej}	
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Dimensión del espacio solución de un sistema homogéneo}
+
+%\begin{prop}{\textbf{Propiedad 3}}\justifying
+%	Sea $V$ un espacio vectorial de dimensión $n$. 
+%	\begin{enumerate}
+%		\item[\labelname{$a$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es un conjunto de vectores en $V$ 
+%		linealmente independiente (LI), entonces $S$ es una base para $V$.
+%		\item[\labelname{$b$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a $V$,
+%		entonces $S$ es una base para $V$.
+%	\end{enumerate}
+%\end{prop}	
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 5}} \justifying
+	Halle la dimensión del espacio solución del sistema homogéneo
+	\[	
+	\begin{array}{r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}l@{\hspace{0.8\tabcolsep}}} 
+		x & + & 2y & - & z & = & 0 \\[1mm]  
+		2x & - & y & + & 3z & = & 0 
+	\end{array}
+	\]
+\end{ej}	
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Dimensión del espacio solución de un sistema homogéneo}
+
+%\begin{prop}{\textbf{Propiedad 3}}\justifying
+%	Sea $V$ un espacio vectorial de dimensión $n$. 
+%	\begin{enumerate}
+%		\item[\labelname{$a$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ es un conjunto de vectores en $V$ 
+%		linealmente independiente (LI), entonces $S$ es una base para $V$.
+%		\item[\labelname{$b$}] Si $S=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$ genera a $V$,
+%		entonces $S$ es una base para $V$.
+%	\end{enumerate}
+%\end{prop}	
+
+%\vspace{5mm}
+
+\begin{ej}{\textbf{Ejemplo 6}} \justifying
+	Halle la dimensión del espacio solución del sistema homogéneo
+	\[	
+	\begin{array}{r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}r@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}l@{\hspace{0.8\tabcolsep}}} 
+	2x & - & y & + & 3z & = & 0 \\[1mm] 
+	4x & - & 2y & + & 6z & = & 0 \\[1mm] 
+	-6x & + & 3y & - & 9z & = & 0 
+	\end{array}
+	\]
+\end{ej}	
+
+\end{frame}
+

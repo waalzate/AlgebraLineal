@@ -1,0 +1,451 @@
+\section{Espacios con producto interno}
+
+\subsection{}
+
+\begin{frame}\frametitle{Producto interno (real)}
+
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Definición 1 }}	
+	\justifying
+	Un \textit{producto interno} en un espacio vectorial real $V$ es una función que a cada par de vectores 
+	$\mathbf{u}$ y $\mathbf{v}$ en $V$, le asigna un número real denotado por $\langle \mathbf{u}, \mathbf{v}\rangle$.
+	Esta función satisface las siguientes propiedades: si $\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ son vectores y 
+	$c$ es un escalar, entonces
+	
+	\vspace{-3mm}
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+			\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+			      = \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+			\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+			\columnbreak
+			\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+			\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+			\item[]
+		\end{enumerate}		
+	\end{multicols}
+	
+	%\vspace{-8mm}
+\end{block}
+
+\begin{alertblock}{\textbf{Observación 1}}\justifying
+	Un espacio vectorial $V$ en el que hay definido un producto interno se denomina \textbf{espacio con producto interno}.
+\end{alertblock}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de producto interno}
+
+\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+			\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+			= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+			\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+			\columnbreak
+			\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+			\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+			\item[]
+		\end{enumerate}		
+	\end{multicols}
+	
+	%\vspace{-8mm}
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 1}}\justifying
+	Demuestre que en $\rn$ el producto punto de dos vectores $\mathbf{u}=(u_1,\hdots,u_n)$ y 
+	$\mathbf{v}=(v_1,\hdots,v_n)$,
+	
+	\vspace{-4mm}
+	\[
+		\langle \mathbf{u}, \mathbf{v}\rangle = \mathbf{u}\cdot \mathbf{v} = u_1v_1 + \cdots + u_nv_n
+	\]
+	es un producto interno en $\rn$.
+\end{ej}
+\textit{Demostración}.
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de producto interno}
+	
+	\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+		\begin{multicols}{2}		
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+				\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+				= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+				\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+				\columnbreak
+				\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+				\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+				\item[]
+			\end{enumerate}		
+		\end{multicols}
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 2}}\justifying
+		Demuestre que en $\r^2$ la función que a los vectores $\mathbf{u}=(u_1,u_2)$ y 
+		$\mathbf{v}=(v_1,v_2)$ le asigna el número real
+		
+		\vspace{-4mm}
+		\[
+		\langle \mathbf{u}, \mathbf{v}\rangle = u_1v_1 + 2u_2v_2
+		\]
+		es un producto interno en $\r^2$.
+	\end{ej}
+	\textit{Demostración}.
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de una función que no es producto interno}
+	
+	\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+		\begin{multicols}{2}		
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+				\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+				= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+				\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+				\columnbreak
+				\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+				\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+				\item[]
+			\end{enumerate}		
+		\end{multicols}
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 3}}\justifying
+		Demuestre que en $\r^3$ la función que a los vectores $\mathbf{u}=(u_1,u_2,u_3)$ y 
+		$\mathbf{v}=(v_1,v_2,v_3)$ le asigna el número real
+		
+		\vspace{-2mm}
+		\[
+		\langle \mathbf{u}, \mathbf{v}\rangle = u_1v_1 - 2u_2v_2 + u_3v_3
+		\]
+		\textbf{no} es un producto interno en $\r^2$.
+	\end{ej}
+	\textit{Demostración}.
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplo de producto interno en $M_{22}$}
+	
+	\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+		\begin{multicols}{2}		
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+				\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+				= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+				\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+				\columnbreak
+				\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+				\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+				\item[]
+			\end{enumerate}		
+		\end{multicols}
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 4}}\justifying
+		Considere en el espacio vectorial $M_{22}$ las matrices
+		\[
+			A = 
+			\left(
+			\begin{array}{cc}
+				a_{11} & a_{12} \\[1mm]
+				a_{21} & a_{22} \\
+			\end{array}
+			\right)
+			\qquad \text{y} \qquad
+			B = 
+			\left(
+			\begin{array}{cc}
+			b_{11} & b_{12} \\[1mm]
+			b_{21} & b_{22} \\
+			\end{array}
+			\right).
+		\]
+		
+		\vspace{-0mm}
+		La siguiente función es un producto interno en $M_{22}$.
+		\[
+			\langle A, B\rangle = a_{11}b_{11} + a_{21}b_{21} +a_{12}b_{12} +a_{22}b_{22}.
+		\]		
+	\end{ej}
+	\textit{Demostración}.
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Ejemplo de producto interno definido por una integral}
+	
+	\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+		\begin{multicols}{2}		
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+				\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+				= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+				\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+				\columnbreak
+				\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+				\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+				\item[]
+			\end{enumerate}		
+		\end{multicols}
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 5}}\justifying
+		
+		Considere los polinomios
+		\[
+		p(x) = a_0 + a_1x + \cdots + a_nx^n \qquad \text{y} \qquad q(x) = b_0 + b_1x + \cdots + b_nx^n
+		\]
+		en el espacio vectorial $P_n$. Demuestre que 
+		\[
+		\langle p, q\rangle = a_0b_0 + a_1b_1 + \cdots + a_nb_n
+		\]
+		define un producto interno $P_n$.
+	\end{ej}
+	\textit{Demostración}.
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de producto interno definido por una integral}
+	
+	\begin{block}{\textbf{Definición 1 (axiomas del producto interno)}}	
+		\begin{multicols}{2}		
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{v}\rangle = \langle \mathbf{v}, \mathbf{u}\rangle$. \\%[4mm]
+				\item[\labelname{$b$}] $\langle \mathbf{u}, \mathbf{v}+\mathbf{w}\rangle 
+				= \langle \mathbf{u}, \mathbf{v}\rangle + \langle \mathbf{u}, \mathbf{w}\rangle$. \\%[4mm]
+				\item[\labelname{$c$}] $c\langle \mathbf{u}, \mathbf{v}\rangle = \langle c\mathbf{u}, \mathbf{v}\rangle$.\\
+				\columnbreak
+				\item[\labelname{$d$}] $\langle \mathbf{v}, \mathbf{v}\rangle \geq 0 $. 
+				\item[\labelname{$e$}] $\langle \mathbf{v}, \mathbf{v}\rangle = 0 $ si y sólo si $\mathbf{v}=\mathbf{0}$. 
+				\item[]
+			\end{enumerate}		
+		\end{multicols}
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 6}}\justifying
+		Sean $f$ y $g$ son funciones continuas en el espacio vectorial $C[a,b]$. Demuestre que 
+
+		\vspace{-4mm}
+		\[
+		\langle f, g\rangle = \int_{a}^{b} \!f(x)g(x)\,dx
+		\]		
+		define un producto interno en $C[a,b]$.
+	\end{ej}
+	\textit{Demostración}.
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades del producto interno}
+	
+	\begin{prop}{\textbf{Propiedad 1}}
+		\justifying
+		Sean $\mathbf{u},\mathbf{v}$ y $\mathbf{w}$ vectores en un espacio con producto interno $V$ y $c$ un escalar. Entonces:
+		\begin{enumerate}			
+			\justifying
+			\item[\labelname{$a$}] $\langle \mathbf{u}, \mathbf{0}\rangle = \langle \mathbf{0}, \mathbf{u}\rangle = 0$. \\%[4mm]
+			\item[\labelname{$b$}] $\langle \mathbf{u} + \mathbf{v},\mathbf{w}\rangle 
+			= \langle \mathbf{u}, \mathbf{w}\rangle + \langle \mathbf{v}, \mathbf{w}\rangle$. \\%[4mm]
+			\item[\labelname{$c$}] $\langle \mathbf{u}, c\mathbf{v}\rangle = c\langle \mathbf{u}, \mathbf{v}\rangle$.\\
+		\end{enumerate}		
+	\end{prop}
+	
+\end{frame}
+
+%---------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Norma y ángulos en espacios con producto interno}
+	
+	\vspace{-3mm}
+	%\begin{exampleblock}{\textbf{Definición 2}}
+	\begin{block}{\textbf{Definición 2 }}	
+		\justifying
+		Sean $\mathbf{u}$ y $\mathbf{v}$ vectores en un espacio con producto interno $V$.
+		
+		\vspace{-0mm}
+			\begin{enumerate}			
+				\justifying
+				\item[\labelname{$a$}] La \textit{norma} o \textit{longitud} de $\mathbf{u}$ se define como
+				\[
+					\Vert \mathbf{u} \Vert = \sqrt{\langle \mathbf{u}, \mathbf{u}\rangle}.
+				\]
+				\item[\labelname{$b$}] La \textit{distancia} entre $\mathbf{u}$ y $\mathbf{v}$ se 
+				define como
+				\[
+					d(\mathbf{u},\mathbf{v}) = \Vert \mathbf{v}-\mathbf{u} \Vert. 
+				\]
+				\item[\labelname{$c$}] El \textit{ángulo} entre dos vectores $\mathbf{u}$ y $\mathbf{v}$ se 
+				define como
+				
+				\vspace{-2mm}
+				\[
+					\cos\theta = \frac{\langle \mathbf{u}, \mathbf{v}\rangle}{\Vert \mathbf{u} \Vert\Vert \mathbf{v} \Vert}.
+				\]
+				
+				\vspace{0mm}				
+				\item[\labelname{$d$}] Se dice que dos vectores $\mathbf{u}$ y $\mathbf{v}$ son \textit{ortogonales} si $\langle \mathbf{u}, \mathbf{v}\rangle = 0$.
+			\end{enumerate}		
+
+		
+		%\vspace{-8mm}
+	\end{block}
+	
+	\vspace{-1mm}
+	\begin{alertblock}{\textbf{Observación 1}}\justifying
+		Si $\Vert \mathbf{v} \Vert = 1$, se dice que $\mathbf{v}$ es un vector \textit{unitario}.
+		Si $\mathbf{v}$ no es el vector cero, entonces $\mathbf{u}=\mathbf{v}/\Vert \mathbf{v}\Vert$
+		es un vector unitario denominado el \textit{vector unitario en la dirección de} $\mathbf{v}$.
+	\end{alertblock}
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Cálculo de productos internos}
+
+\begin{ej}{\textbf{Ejemplo 7}}\justifying
+	Considere en $P_2$ los polinomios
+	\[
+		p(x) = 1-2x^2, \qquad q(x) = 4-2x+x^2 \qquad \text{y} \qquad r(x) = x+2x^2
+	\]
+	Calcule
+	
+	\vspace{-2mm}
+	\begin{multicols}{4}
+		\begin{itemize}
+			\item[\labelname{$a$}] $\langle p,q \rangle$.
+			\item[\labelname{$b$}] $\langle q,r \rangle$.
+			\item[\labelname{$c$}] $\Vert q \Vert$.
+			\item[\labelname{$d$}] $d(p,q)$.
+		\end{itemize}
+	\end{multicols}	
+	
+	\vspace{-2mm}
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Cálculo de productos internos}
+	
+	\begin{ej}{\textbf{Ejemplo 8}}\justifying
+		Considere las funciones continuas
+		\[
+			f(x) = x \qquad \text{y} \qquad g(x) = x^2
+		\]
+		en el espacio vectorial $C[0,1]$. Calcule
+		
+		\vspace{-2mm}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item[\labelname{$a$}] $\Vert f \Vert$.
+				\item[\labelname{$b$}] $d(f,g)$.
+			\end{itemize}
+		\end{multicols}	
+		
+		\vspace{-2mm}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Propiedades del producto interno}
+	
+	\begin{prop}{\textbf{Propiedad 2 (desigualdad de Cauchy-Schwarz)}}
+		\justifying
+		Para todo par de vectores $\mathbf{u}$ y $\mathbf{v}$ en un espacio con 
+		producto interno $V$,
+		\[
+			|\langle \mathbf{u},\mathbf{v} \rangle| \leq \Vert \mathbf{u} \Vert \Vert \mathbf{v} \Vert.
+		\]
+	\end{prop}
+
+	\begin{prop}{\textbf{Propiedad 3 (desigualdad triangular)}}
+		\justifying
+		Para todo par de vectores $\mathbf{u}$ y $\mathbf{v}$ en un espacio con 
+		producto interno $V$,
+		\[
+			\Vert \mathbf{u} + \mathbf{v} \Vert \leq \Vert \mathbf{u} \Vert + \Vert \mathbf{v} \Vert.
+		\]
+	\end{prop}
+
+	\begin{prop}{\textbf{Propiedad 4 (teorema de Pitágoras)}}
+		\justifying
+		Si $\mathbf{u}$ y $\mathbf{v}$ en un espacio con producto interno $V$, entonces
+		$\mathbf{u}$ y $\mathbf{v}$ son ortogonales si y sólo si
+		\[
+			 {\Vert \mathbf{u} + \mathbf{v} \Vert}^2 = {\Vert \mathbf{u} \Vert}^2 
+			                                           + {\Vert \mathbf{v} \Vert}^2.
+		\]
+	\end{prop}
+	
+\end{frame}
+}

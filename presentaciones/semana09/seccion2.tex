@@ -1,0 +1,611 @@
+\section{Matrices semejantes}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Vimos que\ldots }
+
+\vspace{-2mm}
+\begin{defi}{\textbf{Definición 1}}\justifying
+	Sean $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$. A la matriz $n\times n$ cuyas columnas son los vectores coordenados
+	
+	\vspace{-2mm}
+	\[
+	\left[ \mathbf{u}_1 \right]_{\mathcal{C}}, \left[ \mathbf{u}_2 \right]_{\mathcal{C}}, \hdots, \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+	\]
+	se le llama \textbf{\textit{matriz de cambio de base}} de $\mathcal{B}$ a $\mathcal{C}$ y se denota por $P_{\mathcal{C} \leftarrow\mathcal{B}}$. Es decir,	
+	
+	\vspace{-5mm}
+	\[	
+	P_{\mathcal{C} \leftarrow\mathcal{B}} =
+	\left( 
+	\begin{array}{c|c|c|c} \left[ \mathbf{u}_1 \right]_{\mathcal{C}} & \left[ \mathbf{u}_2 \right]_{\mathcal{C}} & \cdots & \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+	\end{array} 
+	\right)
+	\]
+\end{defi}	
+
+\vspace{-1mm}
+
+\begin{alertblock}{\textbf{Observación 1 }}\justifying 
+Si $\mathcal{B}$ y $\mathcal{C}$ son dos bases de $V$, las columnas de la matriz de cambio de base $P_{\mathcal{C} \leftarrow\mathcal{B}}$ son precisamente los vectores 
+coordenados obtenidos al escribir los vectores de la base $\mathcal{B}$ en términos de los de la base $\mathcal{C}$.
+\end{alertblock}
+
+\vspace{-1mm}
+
+\begin{prop}{\textbf{Propiedad 1}}
+	\justifying
+	Si $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$ y sea $P_{\mathcal{C} \leftarrow\mathcal{B}}$ la matriz de cambio 
+	de base de $\mathcal{B}$ a $\mathcal{C}$, entonces
+	
+	\vspace{-2mm}
+	\[	
+		P_{\mathcal{C} \leftarrow\mathcal{B}}\left[ \mathbf{x} \right]_{\mathcal{B}}=\left[ \mathbf{x} \right]_{\mathcal{C}},
+		\quad \text{para todo }  \mathbf{x} \ \text{en } V.
+	\]	
+\end{prop}	
+
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Vimos que\ldots }
+	
+	\vspace{-3mm}
+	\begin{defi}{\textbf{Definición 1}}\justifying
+		Sean $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$. A la matriz $n\times n$ cuyas columnas son los vectores coordenados
+		\[
+		\left[ \mathbf{u}_1 \right]_{\mathcal{C}}, \left[ \mathbf{u}_2 \right]_{\mathcal{C}}, \hdots, \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+		\]
+		se le llama \textbf{\textit{matriz de cambio de base}} de $\mathcal{B}$ a $\mathcal{C}$ y se denota por $P_{\mathcal{C} \leftarrow\mathcal{B}}$. Es decir,	
+		\[	
+		P_{\mathcal{C} \leftarrow\mathcal{B}} =
+		\left( 
+		\begin{array}{c|c|c|c} \left[ \mathbf{u}_1 \right]_{\mathcal{C}} & \left[ \mathbf{u}_2 \right]_{\mathcal{C}} & \cdots & \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+		\end{array} 
+		\right)
+		\]
+	\end{defi}	
+	
+	\vspace{-1mm}
+	\begin{prop}{\textbf{Propiedad 2}}
+		\justifying
+		Sean $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$. Sean
+		\[
+		B = \left( 
+		\begin{array}{c|c|c} \left[ \mathbf{u}_1 \right]_{\mathcal{E}}  & \cdots & \left[ \mathbf{u}_n \right]_{\mathcal{E}}
+		\end{array} 
+		\right)
+		\qquad \text{y} \qquad 
+		C = \left( 
+		\begin{array}{c|c|c} \left[ \mathbf{v}_1 \right]_{\mathcal{E}}  & \cdots & \left[ \mathbf{v}_n \right]_{\mathcal{E}}
+		\end{array} 
+		\right),
+		\]
+		donde $\mathcal{E}$ es cualquier base para $V$. Entonces al aplicar eliminación de Gauss-Jordan a la matriz aumentada $(\ C\ |\ B\ )$, se obtiene
+		\[	
+		\left( 
+		\begin{array}{c|c} C & B
+		\end{array} 
+		\right)
+		\longrightarrow
+		\left( 
+		\begin{array}{c|c} I & P_{\mathcal{C} \leftarrow\mathcal{B}}
+		\end{array} 
+		\right).
+		\]
+	\end{prop}	
+	
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Cambio de base}
+	
+%	\begin{prop}{\textbf{Propiedad 2}}
+%		\justifying
+%		Sean $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$. Sean
+%		\[
+%		B = \left( 
+%		\begin{array}{c|c|c} \left[ \mathbf{u}_1 \right]_{\mathcal{E}}  & \cdots & \left[ \mathbf{u}_n \right]_{\mathcal{E}}
+%		\end{array} 
+%		\right)
+%		\qquad \text{y} \qquad 
+%		C = \left( 
+%		\begin{array}{c|c|c} \left[ \mathbf{v}_1 \right]_{\mathcal{E}}  & \cdots & \left[ \mathbf{v}_n \right]_{\mathcal{E}}
+%		\end{array} 
+%		\right),
+%		\]
+%		donde $\mathcal{E}$ es cualquier base para $V$. Entonces al aplicar eliminación de Gauss-Jordan a la matriz aumentada $(\ C\ |\ B\ )$, se obtiene
+%		\[	
+%		\left( 
+%		\begin{array}{c|c} C & B
+%		\end{array} 
+%		\right)
+%		\longrightarrow
+%		\left( 
+%		\begin{array}{c|c} I & P_{\mathcal{C} \leftarrow\mathcal{B}}
+%		\end{array} 
+%		\right).
+%		\]
+%	\end{prop}	
+	
+	\begin{ej}{\textbf{Ejemplo 1}}
+		\justifying
+		Sea $T:\r^2\to \r^2$ la transformación lineal $T(x,y)=(x+3y,2x+2y)$ y considere en $\r^2$ las bases
+		$\mathcal{B} = \{(1,0), (0,1)\}$ y $\mathcal{B}' = \{(1,1), (3,-2)\}$. Halle:
+		
+		%\vspace{-3mm}
+		%\begin{multicols}{2}
+			\begin{itemize}
+				\item[\labelname{$a$}] La matriz de cambio de base $P_{\mathcal{B}' \leftarrow\mathcal{B}}$.
+				\item[\labelname{$b$}] $A_T$ respecto a la base $\mathcal{B}$. 
+				\item[\labelname{$c$}] $A'_T$ respecto a la base $\mathcal{B}'$.
+			\end{itemize}
+		%\end{multicols}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Problema de diagonalización }
+	
+	\begin{alertblock}{\textbf{Observación 2 }}\justifying 
+		Sea $V$ es un espacio vectorial de dimensión finita con base $\mathcal{B}$ y sea
+		\[
+			T:V\to V
+		\]
+		es una transformación lineal, con matriz $A_T$ respecto a la base $\mathcal{B}$. ¿Cómo hallar una base
+		$\mathcal{B}'$ de $V$ para la cual ${A'}_T$ sea una matriz diagonal?		
+	\end{alertblock}
+	
+	
+\end{frame}
+
+%% ---------------------------------------------------------------------------------------------------
+%
+%
+%\subsection{}
+%
+%\begin{frame}%\frametitle{Cambio de base}
+%	
+%	\begin{defi}{\textbf{Definición 1}}\justifying
+%		Sean $\mathcal{B}=\{\mathbf{u}_1, \mathbf{u}_2, \hdots , \mathbf{u}_n \}$ y $\mathcal{C}=\{\mathbf{v}_1, \mathbf{v}_2, \hdots , \mathbf{v}_n \}$  bases para un espacio  vectorial $V$. A la matriz $n\times n$ cuyas columnas son los vectores coordenados
+%		\[
+%		\left[ \mathbf{u}_1 \right]_{\mathcal{C}}, \left[ \mathbf{u}_2 \right]_{\mathcal{C}}, \hdots, \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+%		\]
+%		se le llama \textbf{\textit{matriz de cambio de base}} de $\mathcal{B}$ a $\mathcal{C}$ y se denota por $P_{\mathcal{C} \leftarrow\mathcal{B}}$. Es decir,	
+%		\[	
+%		P_{\mathcal{C} \leftarrow\mathcal{B}} =
+%		\left( 
+%		\begin{array}{c|c|c|c} \left[ \mathbf{u}_1 \right]_{\mathcal{C}} & \left[ \mathbf{u}_2 \right]_{\mathcal{C}} & \cdots & \left[ \mathbf{u}_n \right]_{\mathcal{C}}
+%		\end{array} 
+%		\right)
+%		\]
+%	\end{defi}	
+%	
+%	\begin{ej}{\textbf{Ejemplo 1}}
+%		\justifying
+%		Encuentre la matriz de cambio de base de $\mathcal{B}$ a $\mathcal{C}$ para las siguientes bases de $\r^2$: 
+%		\[
+%			\mathcal{B} = \{(-3,2), (4,-2)\} \qquad \text{y} \qquad 
+%			\mathcal{C} = \{(-1,2), (2,-2)\}.
+%		\]
+%	\end{ej}
+%	\textit{Solución.}
+%	
+%\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Cambio de base}
+	
+	\vspace{-2mm}
+	\begin{prop}{\textbf{Propiedad 3 }}
+		\justifying
+		Sea $V$ un un espacio vectorial de dimensión finita con bases $\mathcal{B}$ y $\mathcal{B}'$ y sea $T:V\longrightarrow V$ una transformación lineal. Si $A_T$ la matriz de $T$ con respecto la base $\mathcal{B}$ y ${A'}_T$ la matriz de $T$ con respecto a la base $\mathcal{B}'$, entonces
+		\[
+			{A'}_T=P^{-1}A_TP,
+		\]
+		donde  $P=P_{\mathcal{B} \leftarrow\mathcal{B}'}$ es la matriz de cambio de base de $\mathcal{B}'$ a $\mathcal{B}$.
+	\end{prop}	
+	
+	\vspace{-1mm}
+	\begin{alertblock}{\textbf{Observación 3 }}\justifying 
+		
+		\begin{center}		
+		\begin{tikzpicture}[node distance=1.6cm, auto]
+			\node at (0,0.5) {$V$};			
+			\node at (3,0.5) {$V$};
+			\node (A) {$\mathbf{x}$};
+			\node (B) [ right=2.3cm  of A] {$T(\mathbf{x})$};
+			\draw[->](A) to node {$T$}(B);
+			%\pause \pause 
+			\node (C) [below of=A] {$[\mathbf{x}]_{\mathcal{B}'}$};
+			\draw[->](A) to node [left] {}(C);
+			%\pause \pause 
+			\node (D) [below of=B] {$[T(\mathbf{x})]_{\mathcal{B}'}$};
+			\draw[->](B) to node [left] {}(D);
+			%\pause \pause 
+			\draw[->](C) to node {${A'}_T$}(D);						
+			%\pause \pause 
+			\node at (4.4,-1.6) {$= A'_T[\mathbf{x}]_{\mathcal{B}'}$};
+			%\pause \pause 
+			\node (E) [below of=C] {$P[\mathbf{x}]_{\mathcal{B}'}$};
+			\draw[->](C) to node [left] {$P$}(E);
+			%\pause \pause 
+			\node (F) [below of=D] {$A_TP[\mathbf{x}]_{\mathcal{B}'}$};
+			\draw[->](E) to node [above] {$A_T$}(F);
+			%\pause \pause 
+			\draw[->](F) to node [right] {$P^{-1}$}(D);
+			%\pause \pause 
+			\node at (6.4,-1.6) {$=P^{-1}A_TP[\mathbf{x}]_{\mathcal{B}'}$};
+		\end{tikzpicture}
+		\end{center}
+	
+	\end{alertblock}
+
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}%\frametitle{Cambio de base}
+
+\begin{ej}{\textbf{Ejemplo 2}}
+	Considere la transformación lineal $T:\r^2\longrightarrow\r^2$ dada por
+	\[
+	T\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	x  \\[1mm]
+	y  
+	\end{array}
+	\right)
+	=
+	\left(
+	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+	2x-2y  \\[1mm]
+	-x+3y 
+	\end{array}
+	\right)
+	\]
+	y las bases de $\r^2$, $\mathcal{B}=\{(1,0), (0,1)\}$ y $\mathcal{B}'=\{(1,0), (1,1)\}$.
+%	\[
+%		\mathcal{B}_1=\{(1,0), (0,1)\} \quad \text{y} \quad \mathcal{B}_2=\{(1,0), (1,1)\}.
+%	\]
+	
+	%\vspace{-2mm}
+	\begin{enumerate}[$a$]
+		\justifying
+		\item Encuentre la matriz de representación $A_T$ respecto a la base  $\mathcal{B}$.
+		\item Halle la matriz de cambio de base $P=P_{\mathcal{B} \leftarrow\mathcal{B}'}$.
+		%\item Considere la base $\mathcal{B}_2=\{(1,0), (1,1)\}$ de $\r^2$. Halle la matriz $P$ de cambio de base de $\mathcal{B}_2$ a $\mathcal{B}_1$. 
+		%\item Encuentre $P^{-1}$.
+		\item Use la propiedad 3 para hallar ${A'}_T$ respecto a la base $\mathcal{B}'$.
+	\end{enumerate}
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}%\frametitle{Cambio de base}
+
+\begin{ej}{\textbf{Ejemplo $3(a)$ }}
+	Sea $T:\r^2\longrightarrow\r^2$ un transformación lineal y considere en $\r^2$ las bases
+	\[
+	\mathcal{B}=\{(-3,2), (4,-2)\} \qquad \text{y} \qquad \mathcal{B}'=\{(-1,2), (2,-2)\}. 
+ 	\]
+ 	Suponga que la matriz de representación $A_T$ respecto a la base 
+ 	$\mathcal{B}$ es 
+ 	\[
+ 	A_T = 
+ 	\left( 
+ 	\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+ 	-2 & 7 \\[2mm] 
+ 	-3 & 7
+ 	\end{array} 
+ 	\right).
+ 	\]
+ 	
+ 	\vspace{-2mm}
+	\begin{enumerate}[$a$]
+		\justifying
+		\item Encuentre la matriz de representación ${A'}_T$ respecto a la base $\mathcal{B}'$.
+%		\item Calcule $\left[\mathbf{v}\right]_{\mathcal{B}}$, $\left[T(\mathbf{v})\right]_{\mathcal{B}}$ y $\left[T(\mathbf{v})\right]_{\mathcal{B}'}$, para el vector $\mathbf{v}$ cuyo vector de coordenadas es 
+%		\[
+%		[\mathbf{v}]_{\mathcal{B}'}=\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		-3  \\[1mm]
+%		-1  
+%		\end{array}
+%		\right)
+%		\]
+%		\item Encuentre una fórmula para $T\left(
+%		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%		x  \\[1mm]
+%		y  
+%		\end{array}
+%		\right)$.
+	\end{enumerate}
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}%\frametitle{Cambio de base}
+	
+	\begin{ej}{\textbf{Ejemplo $3(b)$ }}
+		Sea $T:\r^2\longrightarrow\r^2$ un transformación lineal y considere en $\r^2$ las bases
+		\[
+		\mathcal{B}=\{(-3,2), (4,-2)\} \qquad \text{y} \qquad \mathcal{B}'=\{(-1,2), (2,-2)\}. 
+		\]
+		Suponga que la matriz de representación $A_T$ respecto a la base 
+		$\mathcal{B}$ es 
+		\[
+		A_T = 
+		\left( 
+		\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+		-2 & 7 \\[2mm] 
+		-3 & 7
+		\end{array} 
+		\right).
+		\]
+		
+		\vspace{-2mm}
+		\begin{enumerate}[$b$]
+			\justifying
+%			\item Encuentre la matriz de representación ${A'}_T$ respecto a la base $\mathcal{B}'$.
+			\item Calcule $\left[\mathbf{v}\right]_{\mathcal{B}}$, $\left[T(\mathbf{v})\right]_{\mathcal{B}}$ y $\left[T(\mathbf{v})\right]_{\mathcal{B}'}$, para el vector $\mathbf{v}$ cuyo vector de coordenadas es 
+			\[
+			[\mathbf{v}]_{\mathcal{B}'}=\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+			-3  \\[1mm]
+			-1  
+			\end{array}
+			\right)
+			\]
+%			\item Encuentre una fórmula para $T\left(
+%			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%			x  \\[1mm]
+%			y  
+%			\end{array}
+%			\right)$.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}%\frametitle{Cambio de base}
+	
+	\begin{ej}{\textbf{Ejemplo $3(c)$ }}
+		Sea $T:\r^2\longrightarrow\r^2$ un transformación lineal y considere en $\r^2$ las bases
+		\[
+		\mathcal{B}=\{(-3,2), (4,-2)\} \qquad \text{y} \qquad \mathcal{B}'=\{(-1,2), (2,-2)\}. 
+		\]
+		Suponga que la matriz de representación $A_T$ respecto a la base 
+		$\mathcal{B}$ es 
+		\[
+		A_T = 
+		\left( 
+		\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+		-2 & 7 \\[2mm] 
+		-3 & 7
+		\end{array} 
+		\right).
+		\]
+		
+		\vspace{-2mm}
+		\begin{enumerate}[$c$]
+			\justifying
+%			\item Encuentre la matriz de representación ${A'}_T$ respecto a la base $\mathcal{B}'$.
+%			\item Calcule $\left[\mathbf{v}\right]_{\mathcal{B}}$, $\left[T(\mathbf{v})\right]_{\mathcal{B}}$ y $\left[T(\mathbf{v})\right]_{\mathcal{B}'}$, para el vector $\mathbf{v}$ cuyo vector de coordenadas es 
+%			\[
+%			[\mathbf{v}]_{\mathcal{B}'}=\left(
+%			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%			-3  \\[1mm]
+%			-1  
+%			\end{array}
+%			\right)
+%			\]
+			\item Encuentre una fórmula para $T\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+			x  \\[1mm]
+			y  
+			\end{array}
+			\right)$.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%% ---------------------------------------------------------------------------------------------------
+%
+%\subsection{}
+%%
+%\begin{frame}\frametitle{Cambio de base}
+%
+%\begin{problock}{\textbf{Ejercicio 1}}
+%	\justifying
+%	Encuentre una fórmula para $T\left(
+%	\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+%	x  \\[1mm]
+%	y  
+%	\end{array}
+%	\right)$, donde $T$ es la transformación lineal del ejemplo anterior.
+%\end{problock}
+%
+%\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}\frametitle{Matrices similares}
+	
+	\begin{block}{\textbf{Definición 1 (matrices semejantes)}}
+		\justifying
+		Sean $A$ y $B$ matrices cuadradas $n\times n$. Se dice que $B$ es \textbf{semejante } a $A$ (o que $B$ es \textbf{similar} a $A$) si existe una matriz invertible $P$ tal que $B=P^{-1}AP$.
+	\end{block}
+	
+	\begin{alertblock}{\textbf{Observación 4 }}		
+		\begin{enumerate}[$a$]\justifying
+			\item Si $A$ es semejante a $B$, entonces  $B$ es semejante a $A$. 
+			\item Si $A$ es semejante a $B$,  entonces se dice que $A$ y $B$ son semejantes. 
+			\item $A$ y $B$ son semejantes si existe una matriz invertible $P$ tal que $AP=PB$.
+			\item De acuerdo a la definición anterior y la propiedad 3, las matrices de una transformación lineal $T:V\longrightarrow V$ con respecto a bases distintas de $V$, son semejantes.
+		\end{enumerate}		
+	\end{alertblock}
+	
+
+\end{frame}
+
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}\frametitle{Matrices similares}
+	
+	\begin{block}{\textbf{Definición 1 (matrices semejantes)}}
+		\justifying
+		Sean $A$ y $B$ matrices cuadradas $n\times n$. Se dice que $B$ es \textbf{semejante } a $A$ (o que $B$ es \textbf{similar} a $A$) si existe una matriz invertible $P$ tal que $B=P^{-1}AP$.
+	\end{block}
+	
+	
+	\begin{ej}{\textbf{Ejemplo 4}}
+		\justifying
+		Considere las matrices
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+		1 & 2 \\[2mm] 
+		0 & -1
+		\end{array} 
+		\right),\ \
+		B = 
+		\left( 
+		\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+		1 & 0 \\[2mm] 
+		-2 & -1		
+		\end{array} 
+		\right)
+		\quad \text{y} \quad
+		P = 
+		\left( 
+		\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+		1 & -1 \\[2mm] 
+		1 & 1		
+		\end{array} 
+		\right).
+		\]
+		Muestre que la matriz $B$ es semejante a la matriz $A$.
+	\end{ej}
+
+	\textit{Solución.}
+	
+\end{frame}
+
+
+%% ---------------------------------------------------------------------------------------------------
+%
+%\subsection{}
+%%
+%\begin{frame}\frametitle{Matrices semejantes}
+%
+%\begin{block}{\textbf{Definición 1 (matrices semejantes)}}
+%	\justifying
+%	Sean $A$ y $B$ matrices cuadradas $n\times n$. Se dice que $B$ es \textbf{semejante } a $A$ (o que $B$ es \textbf{similar} a $A$) si existe una matriz invertible $P$ tal que $B=P^{-1}AP$.
+%\end{block}
+%
+%\begin{prop}{\textbf{Propiedad 4 (propiedades de las matrices similares)}}
+%	\justifying
+%	Sean $A, B$ y $C$ matrices cuadradas de $n\times n$. Entonces:
+%	\begin{enumerate}[$a$]
+%		\justifying
+%		\item $A$ es semejante a $A$.
+%		\item Si $A$ es semejante a $B$, entonces $B$ es semejante a $A$.
+%		\item Si $A$ es semejante a $B$ y $B$ es semejante a $C$, entonces $A$ es semejante a $C$.		
+%	\end{enumerate}
+%\end{prop}
+%
+%\begin{alertblock}{\textbf{Observación 5 }}
+%	\justifying
+%	Si $B$ es semejante a $A$, entonces $A$ es semejante a $B$ y en tal caso simplemente se dice que 
+%	$A$ y $B$ son semejantes.
+%\end{alertblock}
+%
+%\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}\frametitle{Matrices semejantes}
+
+\begin{prop}{\textbf{Propiedad 5 (propiedades de las matrices similares)}}
+	\justifying
+	Sean $A$ y $B$ matrices $n\times n$. Si $A$ y $B$ son semejantes, entonces:
+	\begin{enumerate}[$a$]
+		\justifying		
+		\item $\det A = \det B$.
+		\item $A$ es invertible si y sólo si $B$ es invertible.
+		\item $A$ y $B$ tienen el mismo rango ($\rho(A)=\rho(B)$).
+	\end{enumerate}
+\end{prop}
+
+\begin{ej}{\textbf{Ejemplo 5}}
+	\justifying
+	Muestre que las matrices $A$ y $B$ dadas a continuación no son semejantes.
+	\[
+	A = 
+	\left( 
+	\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+	1 & 2 \\[2mm] 
+	2 & 1
+	\end{array} 
+	\right)
+	\quad \text{y} \quad
+	B = 
+	\left( 
+	\begin{array}{@{\hspace{1\tabcolsep}}rr}	
+	2 & 1 \\[2mm] 
+	1 & 2
+	\end{array} 
+	\right).
+	\]
+\end{ej}
+\textit{Solución.}
+
+\end{frame}

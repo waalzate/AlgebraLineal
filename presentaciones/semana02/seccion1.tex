@@ -1,0 +1,429 @@
+\section{Conjuntos generadores}
+
+\subsection{}
+
+\begin{frame}\frametitle{Combinación lineal}
+
+\begin{block}{\textbf{Definición 1 (Combinación lineal)}}
+	\justifying
+	Un vector $\mathbf{v}$ en un espacio vectorial $V$ se dice que es \textbf{\textit{combinación lineal}} 
+	de los vectores
+	\[
+		\mathbf{v_1}, \mathbf{v_2}, \hdots, \mathbf{v_k}
+	\]
+	de $V$, si existen escalares $c_1,c_2, \hdots,c_k$ tales que
+	\[
+		\mathbf{v} = c_1\mathbf{v_1} + c_2\mathbf{v_2} + \hdots + c_k\mathbf{v_k}.
+	\]
+\end{block}
+
+%\vspace{5mm}
+%
+%\begin{ej}{\textbf{Ejemplo 1 }} \justifying
+%	Muestre que en el conjunto de vectores de $\r^3$,
+%	\[
+%		S = \{ \, \underbrace{(1,3,1)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+%		       \underbrace{(1,0,-5)}_{\color{blue}\mathbf{v_3}} \, \},
+%	\]
+%	el vector $\mathbf{v_1}$ es \textbf{\textit{combinación lineal}} de los vectores $\mathbf{v_2}$ y $\mathbf{v_3}$.
+%\end{ej}	
+
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Combinación lineal}
+
+\begin{block}{\textbf{Definición 1 (Combinación lineal)}}
+	\justifying
+	Un vector $\mathbf{v}$ en un espacio vectorial $V$ se dice que es \textbf{\textit{combinación lineal}} 
+	de los vectores $\mathbf{v_1}, \mathbf{v_2}, \hdots, \mathbf{v_k}$ de $V$ si existen escalares $c_1,c_2, \hdots,c_k$ tales que
+	
+	\vspace{-2mm}
+	\[
+	\mathbf{v} = c_1\mathbf{v_1} + c_2\mathbf{v_2} + \hdots + c_k\mathbf{v_k}
+	\]
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 1 }} \justifying
+	Muestre que en el conjunto de vectores de $\r^3$,
+	\[
+	S = \{ \, \underbrace{(1,3,1)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+	\underbrace{(1,0,-5)}_{\color{blue}\mathbf{v_3}} \, \},
+	\]
+	el vector $\mathbf{v_1}$ es \textbf{\textit{combinación lineal}} de los vectores $\mathbf{v_2}$ y $\mathbf{v_3}$.
+\end{ej}	
+
+\textit{Solución.}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Combinación lineal}
+
+\begin{ej}{\textbf{Ejemplo 2}} \justifying
+	Muestre que en el conjunto de vectores de $M_{22}$,
+	\[
+	S = \Bigg\{ \, \underbrace{ \left( \begin{array}{cc}	0 & 8 \\ 2 & 1 \end{array} \right) }_{\color{blue}\mathbf{v_1}}, \ \underbrace{  \left( \begin{array}{cc}	0 & 2 \\ 1 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_2}}, \ 
+	\underbrace{ \left( \begin{array}{rr}  -1 & 3 \\ 1 & 2 \end{array} \right) }_{\color{blue}\mathbf{v_3}}, \ 
+	\underbrace{ \left( \begin{array}{rr}  -2 & 0 \\ 1 & 3 \end{array} \right) }_{\color{blue}\mathbf{v_4}} \, \Bigg\},
+	\]
+	el vector $\mathbf{v_1}$ es \textbf{\textit{combinación lineal}} de los vectores $\mathbf{v_2},\mathbf{v_3}$ y $\mathbf{v_4}$.
+\end{ej}	
+
+\textit{Solución.}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Combinación lineal}
+
+\begin{ej}{\textbf{Ejemplo 3}} \justifying
+	En $V=\r^3$, escriba al vector $\mathbf{v}=(1,1,1)$ como combinación lineal de los vectores en el conjunto
+	\[
+		S = \{ \, \underbrace{(1,2,3)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+		\underbrace{(-1,0,1)}_{\color{blue}\mathbf{v_3}} \, \}.
+	\]
+\end{ej}	
+
+\textit{Solución.}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Combinación lineal}
+
+\begin{ej}{\textbf{Ejemplo 4}} \justifying
+	En $V=\r^3$, escriba al vector $\mathbf{w}=(1,-2,2)$ como combinación lineal de los vectores en el conjunto
+	\[
+	S = \{ \, \underbrace{(1,2,3)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+	\underbrace{(-1,0,1)}_{\color{blue}\mathbf{v_3}} \, \}.
+	\]
+\end{ej}	
+
+\textit{Solución.}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos generadores}
+
+\begin{block}{\textbf{Definición 2 (Conjunto generador)}}
+	\justifying
+	Se dice que un conjunto de vectores $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ en un espacio 
+	vectorial $V$ \textbf{\textit{genera}} a $V$ si todo vector en $V$ se puede escribir como combinación lineal
+	de los vectores en $S$. Es decir, para todo vector $\mathbf{v}\in V$, existen escalares $c_1,c_2,\hdots,c_k$
+	tales que 
+	
+	\vspace{-3mm}
+	\[
+		\mathbf{v} = c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k
+	\]
+	
+\end{block}
+
+\vspace{0mm}
+
+\begin{ej}{\textbf{Ejemplo 5}} \justifying
+	El conjunto de vectores
+	
+	\vspace{-2mm}
+	\[
+	S = \{ \, \underbrace{(1,0,0)}_{\mathbf{i}}, \ \underbrace{(0,1,0)}_{\mathbf{j}}, \ 
+	\underbrace{(0,0,1)}_{\mathbf{k}} \, \}.
+	\]
+	
+	\vspace{-3mm}
+	\textbf{\textit{genera}} a $\r^3$.
+\end{ej}
+
+\textit{Solución.}	
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos generadores de polinomios}
+
+\begin{block}{\textbf{Definición 2 (Conjunto generador)}}
+	\justifying
+	Se dice que un conjunto de vectores $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ en un espacio 
+	vectorial $V$ \textbf{\textit{genera}} a $V$ si todo vector en $V$ se puede escribir como combinación lineal
+	de los vectores en $S$. Es decir, para todo vector $\mathbf{v}\in V$, existen escalares $c_1,c_2,\hdots,c_k$
+	tales que 
+	
+	\vspace{-3mm}
+	\[
+	\mathbf{v} = c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k
+	\]
+	
+\end{block}
+
+\vspace{0mm}
+
+\begin{ej}{\textbf{Ejemplo 6}} \justifying
+	El conjunto de vectores
+	\[
+	S = \left\{ \, 1, x, x^2 \right\}
+	\]
+	\textbf{\textit{genera}} a $P_2$.
+\end{ej}	
+
+\textit{Solución}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos generadores de polinomios}
+
+\begin{block}{\textbf{Definición 2 (Conjunto generador)}}
+	\justifying
+	Se dice que un conjunto de vectores $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ en un espacio 
+	vectorial $V$ \textbf{\textit{genera}} a $V$ si todo vector en $V$ se puede escribir como combinación lineal
+	de los vectores en $S$. Es decir, para todo vector $\mathbf{v}\in V$, existen escalares $c_1,c_2,\hdots,c_k$
+	tales que 
+	
+	\vspace{-3mm}
+	\[
+	\mathbf{v} = c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k
+	\]
+	
+\end{block}
+
+\vspace{0mm}
+
+\begin{ej}{\textbf{Ejemplo 7}} \justifying
+	Ningún conjunto finito de polinomios genera a $P$.
+\end{ej}	
+
+\textit{Solución}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos generador de $\r^3$}
+
+\begin{ej}{\textbf{Ejemplo 8}} \justifying
+	El conjunto de vectores
+	\[
+		S = \{ \, \underbrace{(1,2,3)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+		\underbrace{(-2,0,1)}_{\color{blue}\mathbf{v_3}} \, \},
+	\]
+	\textbf{\textit{genera}} a $\r^3$.
+\end{ej}	
+
+\textit{Solución}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos generador de $M_{22}$}
+
+\begin{ej}{\textbf{Ejemplo 9}} \justifying
+	El conjunto de vectores
+	\[
+		S = \Bigg\{ \, \underbrace{ \left( \begin{array}{cc} 1 & 0 \\ 0 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_1}}, \ \underbrace{  \left( \begin{array}{cc}	0 & 1 \\ 0 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_2}}, \ 
+		\underbrace{ \left( \begin{array}{rr}   0 & 0 \\ 1 & 0 \end{array} \right) }_{\color{blue}\mathbf{v_3}}, \ 
+		\underbrace{ \left( \begin{array}{rr}   0 & 0 \\ 0 & 1 \end{array} \right) }_{\color{blue}\mathbf{v_4}} \, \Bigg\},
+	\]
+	\textbf{\textit{genera}} a $M_{22}$.
+\end{ej}	
+
+\textit{Solución}.
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio generado por un conjunto de vectores}
+
+\begin{block}{\textbf{Definición 3 (Espacio generado)}}
+	\justifying
+	El \textbf{\textit{espacio generado}} por un conjunto de vectores 
+	\[
+	S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+	\]
+	en un espacio vectorial $V$, se define como el conjunto de TODAS las combinaciones lineales de $S$.
+	Al \textbf{\textit{espacio generado}} por $S$ se le denota por 
+	\[
+	\text{gen}\,(S) \qquad \text{ó} \qquad \text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}.
+	\]
+	\[
+	\text{gen}\,(S) = \Big\{ \, c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k \mid c_1, c_2,\hdots,c_k  
+	\text{ son números reales } \, \Big\}.
+	\]
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 10}} \justifying
+	Halle el espacio generado por el vector $\mathbf{v}=(2,1)$ de $\r^2$.
+\end{ej}	
+
+\textit{Solución}.
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio generado por un conjunto de vectores}
+
+\begin{block}{\textbf{Definición 3 (Espacio generado)}}
+	\justifying
+	El \textbf{\textit{espacio generado}} por un conjunto de vectores 
+	\[
+	S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+	\]
+	en un espacio vectorial $V$, se define como el conjunto de TODAS las combinaciones lineales de $S$.
+	Al \textbf{\textit{espacio generado}} por $S$ se le denota por 
+	\[
+	\text{gen}\,(S) \qquad \text{ó} \qquad \text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}.
+	\]
+	\[
+	\text{gen}\,(S) = \Big\{ \, c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k \mid c_1, c_2,\hdots,c_k  
+	\text{ son números reales } \, \Big\}.
+	\]
+\end{block}
+
+\begin{prop}{\textbf{Propiedad 1}}
+	Si $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k$ son vectores en un espacio vectorial $V$, entonces 
+	\[
+		\text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+	\]
+	es un subespacio vectorial de $V$.
+\end{prop}	
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio generado por un conjunto de vectores}
+
+\vspace{-2mm}	
+
+	\begin{block}{\textbf{Definición 3 (Espacio generado)}}
+		\justifying
+		El \textbf{\textit{espacio generado}} por un conjunto de vectores 
+		\[
+		S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+		\]
+		en un espacio vectorial $V$, se define como el conjunto de TODAS las combinaciones lineales de $S$.
+		Al \textbf{\textit{espacio generado}} por $S$ se le denota por 
+		\[
+		\text{gen}\,(S) \qquad \text{ó} \qquad \text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}.
+		\]
+		\[
+		\text{gen}\,(S) = \Big\{ \, c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k \mid c_1, c_2,\hdots,c_k  
+		\text{ son números reales } \, \Big\}.
+		\]
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 11}} \justifying
+		Demuestre que si $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$ son vectores que generan un espacio vectorial $V$, entonces para todo vector $\mathbf{w}$ en $V$, los vectores
+		$\mathbf{w}, \mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$  también generan a $V$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio generado por un conjunto de vectores}
+	
+	\vspace{-2mm}
+	\begin{block}{\textbf{Definición 3 (Espacio generado)}}
+		\justifying
+		El \textbf{\textit{espacio generado}} por un conjunto de vectores 
+		\[
+		S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+		\]
+		en un espacio vectorial $V$, se define como el conjunto de TODAS las combinaciones lineales de $S$.
+		Al \textbf{\textit{espacio generado}} por $S$ se le denota por 
+		\[
+		\text{gen}\,(S) \qquad \text{ó} \qquad \text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}.
+		\]
+		\[
+		\text{gen}\,(S) = \Big\{ \, c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k \mid c_1, c_2,\hdots,c_k  
+		\text{ son números reales } \, \Big\}.
+		\]
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 12}} \justifying
+		Demuestre que si $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$ son vectores que generan un espacio vectorial $V$ y que si uno de los vectores $\mathbf{v}_k$ es combinación lineal del resto, entonces los vectores $\mathbf{v}_1,\hdots,\mathbf{v}_m$ sin el vector $\mathbf{v}_k$ también generan a $V$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio generado por un conjunto de vectores}
+	
+	\vspace{-2mm}
+	\begin{block}{\textbf{Definición 3 (Espacio generado)}}
+		\justifying
+		El \textbf{\textit{espacio generado}} por un conjunto de vectores 
+		\[
+		S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}
+		\]
+		en un espacio vectorial $V$, se define como el conjunto de TODAS las combinaciones lineales de $S$.
+		Al \textbf{\textit{espacio generado}} por $S$ se le denota por 
+		\[
+		\text{gen}\,(S) \qquad \text{ó} \qquad \text{gen}\, \{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}.
+		\]
+		\[
+		\text{gen}\,(S) = \Big\{ \, c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k \mid c_1, c_2,\hdots,c_k  
+		\text{ son números reales } \, \Big\}.
+		\]
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 13}} \justifying
+		Demuestre que si $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$ son vectores que generan un espacio vectorial $V$ y que si uno de los vectores $\mathbf{v}_k$ es el vector cero, entonces los vectores $\mathbf{v}_1,\hdots,\mathbf{v}_m$ sin el vector cero también generan a $V$.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+}

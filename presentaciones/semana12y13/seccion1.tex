@@ -1,0 +1,343 @@
+\section{Diagonalización}
+
+\subsection{}
+
+{\nologo 
+\begin{frame}\frametitle{Recordemos que\ldots }
+	
+	\begin{prop}{\textbf{Propiedad 1 }}
+		\justifying
+		Sea $V$ un un espacio vectorial de dimensión finita con bases $\mathcal{B}$ y $\mathcal{B}'$ y sea $T:V\longrightarrow V$ una transformación lineal. Si $A_T$ la matriz de $T$ con respecto la base $\mathcal{B}$ y ${A'}_T$ la matriz de $T$ con respecto a la base $\mathcal{B}'$, entonces
+		\[
+		{A'}_T=P^{-1}A_TP,
+		\]
+		donde  $P=P_{\mathcal{B} \leftarrow\mathcal{B}'}$ es la matriz de cambio de base de $\mathcal{B}'$ a $\mathcal{B}$.
+	\end{prop}	
+	
+	\begin{alertblock}{\textbf{Observación 1 }}
+		\justifying
+		Por la propiedad 1, las matrices que representan a una transformación lineal 
+		\[
+			T:V\longrightarrow V
+		\]
+		con respecto a bases distintas de $V$, son semejantes.
+	\end{alertblock}
+	
+\end{frame}
+}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}\frametitle{Matriz semejante a una matriz diagonal}
+	
+	\begin{ej}{\textbf{Ejemplo 1}}
+		Considere la transformación lineal $T:\r^2\longrightarrow\r^2$ dada por
+		\[
+		T\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		x  \\[1mm]
+		y  
+		\end{array}
+		\right)
+		=
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.3\tabcolsep}}}
+		3x+2y  \\[1mm]
+		3x+4y 
+		\end{array}
+		\right)
+		\]
+		y las bases de $\r^2$, $\mathcal{B}=\{(1,0), (0,1)\}$ y $\mathcal{B}'=\{(1,-1), (2,3)\}$.
+		%	\[
+		%		\mathcal{B}_1=\{(1,0), (0,1)\} \quad \text{y} \quad \mathcal{B}_2=\{(1,0), (1,1)\}.
+		%	\]
+		
+		%\vspace{-2mm}
+		\begin{enumerate}[$a$]
+			\justifying
+			\item Encuentre la matriz de representación $A_T$ respecto a la base  $\mathcal{B}$.
+			\item Encuentre la matriz de representación ${A'}_T$ respecto a la base  $\mathcal{B}'$.
+			\item ¿Qué relación existe entre $A_T$ y ${A'}_T$?
+			%\item Halle la matriz de cambio de base $P=P_{\mathcal{B} \leftarrow\mathcal{B}'}$.
+			%\item Considere la base $\mathcal{B}_2=\{(1,0), (1,1)\}$ de $\r^2$. Halle la matriz $P$ de cambio de base de $\mathcal{B}_2$ a $\mathcal{B}_1$. 
+			%\item Encuentre $P^{-1}$.
+			%\item Use la propiedad 3 para hallar ${A'}_T$ respecto a la base $\mathcal{B}'$.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Valores propios de matrices semejantes}
+
+\begin{defi}{\textbf{Definición 1}}\justifying
+	\justifying
+	Una matriz $A$ de $n\times n$ se dice que \textbf{\textit{diagonalizable}} si es semejante a una matriz
+	diagonal $D$. Es decir, existe una matriz invertible $P$  de $n\times n$  tal que 
+	\[
+		P^{-1}AP = D.
+	\]
+\end{defi}	
+
+\begin{prop}{\textbf{Propiedad 2}}
+	\justifying
+	Si $A$ y $B$ son matrices semejantes, entonces tienen los mismos valores propios.
+\end{prop}	
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Valores propios de matrices semejantes}
+	
+	\begin{prop}{\textbf{Propiedad 2}}
+		\justifying
+		Si $A$ y $B$ son matrices semejantes, entonces tienen los mismos valores propios.
+	\end{prop}	
+	
+	\begin{ej}{\textbf{Ejemplo 2}}
+		Las matrices $A$ y $D$ son semejantes. Halle los valores propios de $A$.
+		\[
+		A =
+		\left(
+		\begin{array}{rrr}
+		1  &  0 & \phantom{-}0 \\[1mm]
+		-1 &  1 & 1 \\[1mm]
+		-1 & -2 & 4
+		\end{array}
+		\right),\quad
+		D =
+		\left(
+		\begin{array}{rrr}
+		1 & 0 & 0 \\[1mm]
+		0 & 2 & 0 \\[1mm]
+		0 & 0 & 3
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Condiciones para que una matriz sea diagonalizable}
+	
+	\begin{prop}{\textbf{Propiedad 3}}
+		\justifying
+		Una matriz $A$ de $n\times n$ es diagonalizable si y sólo si tiene $n$ vectores propios 
+		linealmente independientes.
+	\end{prop}	
+	
+	\begin{alertblock}{\textbf{Observación 2}}\justifying
+		Cuando $A$ es diagonalizable, $P^{-1}AP=D$, con $D$ una matriz diagonal cuyos elementos  
+		de la diagonal son los valores propios de $A$ y $P$ una matriz cuyas columnas son 
+		respectivamente los $n$ vectores propios LI de A.
+	\end{alertblock}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de una matriz diagonalizable}
+			
+	\begin{ej}{\textbf{Ejemplo 3}}
+		Si es posible, encuentre una matriz $P$ que diagonalice a 
+		\[
+		A =
+		\left(
+		\begin{array}{rrr}
+		-1 & \phantom{-}0 & 1 \\[1mm]
+		 3 &            0 & -3 \\[1mm]
+		 1 &            0 & -1
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Procedimiento para diagonalizar una matriz cuadrada}
+	
+	\begin{ejem}{\textbf{Procedimiento}}\justifying
+		\justifying
+		Sea $A$ una matriz $n\times n$. 
+		\begin{enumerate}\justifying
+			\item Halle $n$ vectores propios linealmente independientes $\mathbf{p}_1,\hdots,\mathbf{p}_n$ de $A$,
+			con valores propios correspondientes $\lambda_1,\hdots,\lambda_n$. Si no existen $n$ vectores 
+			propios linealmente independientes, entonces $A$ \textit{no} es diagonalizable.
+			\item Si $A$ tiene $n$ vectores propios linealmente $\mathbf{p}_1,\mathbf{p}_2,\hdots,\mathbf{p}_n$,
+			entonces defina
+			\[
+				P = (\ \mathbf{p}_1 \ | \ \mathbf{p}_2 \ | \ \cdots \ | \ \mathbf{p}_n \ ).
+			\]
+			\item La matriz diagonal $D=P^{-1}AP$ tendrá los valores propios $\lambda_1,\hdots,\lambda_n$
+			en su diagonal principal. El orden de los vectores propios usados para formar a $P$, determina
+			el orden en que aparecen los valores propios en la diagonal de $D$.
+		\end{enumerate}
+	\end{ejem}		
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de una matriz no diagonalizable}
+	
+	\begin{ej}{\textbf{Ejemplo 4}}
+		Determine si la matriz $A$ es diagonalizable.
+		\[
+		A =
+		\left(
+		\begin{array}{rr}
+		1 & 2 \\[1mm]
+		0 & 1
+		\end{array}
+		\right)
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de una matriz diagonalizable}
+	
+	\begin{ej}{\textbf{Ejemplo 5}}
+		Si es posible, encuentre una matriz $P$ que diagonalice a 
+		\[
+		A =
+		\left(
+		\begin{array}{rrr}
+		 1 & -1 & -1 \\[1mm]
+		 1 &  3 &  1 \\[1mm]
+		-3 & 1 & -1
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+%{\nologo 
+\begin{frame}\frametitle{Condiciones para que una matriz sea diagonalizable}
+		
+%	\begin{prop}{\textbf{Propiedad 4}}
+%		\justifying
+%		Si $A$ es una matriz $n\times n$ que tiene $n$ valores propios distintos, entonces los respectivos vectores 
+%		propios son linealmente independientes.
+%	\end{prop}	
+		
+	\begin{prop}{\textbf{Propiedad 4}}
+		\justifying
+		Si $A$ es una matriz $n\times n$ que tiene $n$ valores propios distintos, entonces $A$ es diagonalizable.
+	\end{prop}		
+	%\textit{Demostración.}
+	
+	\vspace{0cm}
+	
+	\begin{ej}{\textbf{Ejemplo 6}}
+		Determine si la matriz $A$ es diagonalizable.
+		\[
+		A =
+		\left(
+		\begin{array}{rrr}
+		1 & -2 &  1 \\[1mm]
+		0 &  0 &  1 \\[1mm]
+		0 &  0 & -3
+		\end{array}
+		\right)
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+%}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Potencia de una matriz}
+	
+	\begin{ej}{\textbf{Ejemplo 7}}
+		Calcule $A^{10}$ si
+		\[
+		A =
+		\left(
+		\begin{array}{cc}
+			0 & 1 \\[1mm]
+			2 & 1 
+		\end{array}
+		\right).
+		\]	
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Condiciones para que una matriz sea diagonalizable}
+	
+	\begin{prop}{\textbf{Propiedad 5}}
+		\justifying
+		Sea $A$ una matriz $n\times n$, con $n$ vectores propios $\lambda_1,\hdots,\lambda_n$.
+		Los siguientes enunciados son equivalentes:
+		\begin{enumerate}[$a$]\justifying
+			\item $A$ es diagonalizable.
+			\item La multiplicidad algebraica de $\lambda_i$ es igual a su multiplicidad geométrica de $\lambda_i$,
+			para $i=1,\hdots,m$, donde $m$ es el número de raíces distintas del polinomio característico $p(\lambda)$.
+		\end{enumerate}
+	\end{prop}	
+	
+	
+	
+\end{frame}
+
+% ---------------------------------------------------------------------------------------------------
+
+\subsection{}
+%
+\begin{frame}\frametitle{Diagonalización de un operador}
+	
+	\begin{ej}{\textbf{Ejemplo 8}}\justifying
+		Considere la transformación lineal $T:\r^3\longrightarrow\r^3$ dada por
+		\[
+			T(x,y,z) = (x-y-z,x+3y+z,-3x+y-z).
+		\]
+		Si es posible, encuentre una base $\mathcal{B}$ para $\r^3$ tal que la matriz de representación
+		de $T$ relativa a $\mathcal{B}$ sea diagonal.
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}

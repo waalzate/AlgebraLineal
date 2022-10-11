@@ -1,0 +1,726 @@
+\section{Espacio renglón y espacio columna de una matriz}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Vectores renglón (fila) y vectores columna}
+
+\begin{columns}[c]
+	\begin{column}{1.15\textwidth}
+		\[
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{2\tabcolsep}}c@{\hspace{2\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		\text{\textbf{Matriz }} A & \text{\textbf{Vectores renglón de }} A & \text{\textbf{Vectores columna de} } A \\[-8mm] 
+		{\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+		a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+		\vdots & \vdots &        & \vdots \\[0mm]
+		a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+		\end{array}
+		\right)
+		\atop		
+		}
+		& 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}l@{\hspace{0.1\tabcolsep}}}
+		\mathbf{r}_1 & = & (a_{11},a_{12},\hdots, a_{1n})\\[1mm]
+		\mathbf{r}_2 & = & (a_{21},a_{22},\hdots, a_{2n})\\
+		& \vdots & \\[1mm]
+		\mathbf{r}_m  & = & (a_{m1},a_{m2},\hdots, a_{mn})\\[1.1cm]
+		\end{array}
+		& 
+		{
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}\\[8mm]
+		\underbrace{\!\!
+		\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		a_{11}\\[1mm]
+		a_{21}\\[1mm]
+		\vdots \\[0mm]
+		a_{m1}
+		\end{array}
+		\right)
+		\!\!}_{\mathbf{c}_1}
+		& 
+		\underbrace{\!\!
+		\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		a_{12}\\[1mm]
+		a_{22}\\[1mm]
+		\vdots \\[0mm]
+		a_{m2}
+		\end{array}
+		\right)
+		\!\!}_{\mathbf{c}_2}
+		& 
+		\cdots
+		& 
+		\underbrace{\!\!
+		\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		a_{1n}\\[1mm]
+		a_{2n}\\[1mm]
+		\vdots \\[0mm]
+		a_{mn}
+		\end{array}
+		\right)
+		\!\!}_{\mathbf{c}_n}
+		\end{array}
+		\atop
+		}				
+		\end{array}		
+		\]
+	\end{column}
+\end{columns}
+
+\vspace{-2mm}
+
+\begin{ej}{\textbf{Ejemplo 1}}
+	
+	\vspace{-2mm}
+	
+	\[
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{4\tabcolsep}}c@{\hspace{4\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	A & \text{\textbf{Vectores renglón}} & \text{\textbf{Vectores columna} }  \\[-8mm] 
+	{\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}r@{\hspace{1.5\tabcolsep}}r@{\hspace{1.5\tabcolsep}}r@{\hspace{0.1\tabcolsep}}}
+		 0 & \phantom{-}1 & -1 \\[1mm]
+		-2 & 3 & 4 \\[1mm]
+		\end{array}
+		\right)
+		\atop		
+	}
+	& 
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}l@{\hspace{0.1\tabcolsep}}}
+	\mathbf{r}_1 & = & (0,1,-1)\\[1mm]
+	\mathbf{r}_2 & = & (-2,3,4)\\[6mm]
+	\end{array}
+	& 
+	{
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}\\[8mm]
+		\underbrace{\!\!
+			\left(
+			\begin{array}{@{\hspace{0.1\tabcolsep}}r@{\hspace{0.1\tabcolsep}}}
+			0\\[1mm]
+			-2
+			\end{array}
+			\right)
+			\!\!}_{\mathbf{c}_1}
+		& 
+		\underbrace{\!\!
+			\left(
+			\begin{array}{@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}}
+			1\\[1mm]
+			3
+			\end{array}
+			\right)
+			\!\!}_{\mathbf{c}_2}
+		& 
+		\underbrace{\!\!
+			\left(
+			\begin{array}{@{\hspace{0.1\tabcolsep}}r@{\hspace{0.1\tabcolsep}}}
+			-1\\[1mm]
+			4
+			\end{array}
+			\right)
+			\!\!}_{\mathbf{c}_3}
+		\end{array}
+		\atop
+	}				
+	\end{array}		
+	\]
+\end{ej}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacio renglón y espacio columna de una matriz}
+
+\begin{columns}[c]
+	\begin{column}{1.15\textwidth}
+		\[
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{2\tabcolsep}}c@{\hspace{2\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		\text{\textbf{Matriz }} A & \text{\textbf{Vectores renglón de }} A & \text{\textbf{Vectores columna de} } A \\[-8mm] 
+		{\left(
+			\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+			a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+			a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+			\vdots & \vdots &        & \vdots \\[0mm]
+			a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+			\end{array}
+			\right)
+			\atop		
+		}
+		& 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}l@{\hspace{0.1\tabcolsep}}}
+		\mathbf{r}_1 & = & (a_{11},a_{12},\hdots, a_{1n})\\[1mm]
+		\mathbf{r}_2 & = & (a_{21},a_{22},\hdots, a_{2n})\\
+		& \vdots & \\[1mm]
+		\mathbf{r}_m  & = & (a_{m1},a_{m2},\hdots, a_{mn})\\[1.1cm]
+		\end{array}
+		& 
+		{
+			\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{1.3\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}\\[8mm]
+			\underbrace{\!\!
+				\left(
+				\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+				a_{11}\\[1mm]
+				a_{21}\\[1mm]
+				\vdots \\[0mm]
+				a_{m1}
+				\end{array}
+				\right)
+				\!\!}_{\mathbf{c}_1}
+			& 
+			\underbrace{\!\!
+				\left(
+				\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+				a_{12}\\[1mm]
+				a_{22}\\[1mm]
+				\vdots \\[0mm]
+				a_{m2}
+				\end{array}
+				\right)
+				\!\!}_{\mathbf{c}_2}
+			& 
+			\cdots
+			& 
+			\underbrace{\!\!
+				\left(
+				\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+				a_{1n}\\[1mm]
+				a_{2n}\\[1mm]
+				\vdots \\[0mm]
+				a_{mn}
+				\end{array}
+				\right)
+				\!\!}_{\mathbf{c}_n}
+			\end{array}
+			\atop
+		}				
+		\end{array}		
+		\]
+	\end{column}
+\end{columns}
+
+\vspace{-5mm}
+
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	\begin{enumerate}
+		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+		\[
+			R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+		\]
+		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+		\[
+			C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+		\]
+	\end{enumerate}
+\end{defi}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	\begin{enumerate}
+		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+		\[
+		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+		\]
+		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+		\[
+		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+		\]
+	\end{enumerate}
+\end{defi}	
+
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo  2}}
+	Determine el \textit{espacio renglón} y el \textit{espacio columna} de la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{cc}	
+		1 & 2 \\ 
+		3 & 6 
+		\end{array} 
+		\right)
+		\]
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	\begin{enumerate}
+		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+		\[
+		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+		\]
+		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+		\[
+		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+		\]
+	\end{enumerate}
+\end{defi}	
+
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo  3}}
+	Halle una base para el \textit{espacio renglón} de la matriz
+	\[
+	A = 
+	\left( 
+	\begin{array}{rrrr}	
+	1 & -2 & \phantom{-}5 & \phantom{-}3 \\ 
+	-3 & 4 & 0 & 1 \\
+	0 & 0 & 0 & 0
+	\end{array} 
+	\right)
+	\]
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+	
+	%\begin{defi}{\textbf{Definición 1}}
+	%	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	%	\begin{enumerate}
+	%		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+	%		\[
+	%		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+	%		\]
+	%		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+	%		\[
+	%		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+	%		\]
+	%	\end{enumerate}
+	%\end{defi}	
+	
+	\vspace{0mm}
+	
+	\begin{ej}{\textbf{Ejemplo  4}}
+		Considere la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{rr}	
+		1 & -1  \\
+		0 &  1 \\
+		3 & -3
+		\end{array} 
+		\right).
+		\]
+		\begin{enumerate}
+			\item[\labelname{$a$}] Determine si $\mathbf{b} = 
+			\left( 
+			\begin{array}{r}	
+			1 \\
+			2 \\
+			3 
+			\end{array} 
+			\right)$ está en $C_A$ y describa a $C_A$.
+			%\item[\labelname{$b$}] Determine si $\mathbf{w} = (4, 5)$ está en $R_A$ y describa a $R_A$.
+			%\item[\labelname{$c$}] Describa a $R_A$ y a $C_A$.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución.}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+
+%\begin{defi}{\textbf{Definición 1}}
+%	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+%	\begin{enumerate}
+%		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+%		\[
+%		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+%		\]
+%		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+%		\[
+%		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+%		\]
+%	\end{enumerate}
+%\end{defi}	
+
+\vspace{0mm}
+
+\begin{ej}{\textbf{Ejemplo  4}}
+	Considere la matriz
+	\[
+	A = 
+	\left( 
+	\begin{array}{rr}	
+	1 & -1  \\
+	0 &  1 \\
+	3 & -3
+	\end{array} 
+	\right).
+	\]
+	\begin{enumerate}
+%		\item[\labelname{$a$}] Determine si $\mathbf{b} = 
+%		\left( 
+%		\begin{array}{r}	
+%		1 \\
+%		2 \\
+%		3 
+%		\end{array} 
+%		\right)$ está en $C_A$ y describa a $C_A$.
+		\item[\labelname{$b$}] Determine si $\mathbf{w} = (4, 5)$ está en $R_A$ y describa a $R_A$.
+		%\item[\labelname{$c$}] Describa a $R_A$ y a $C_A$.
+	\end{enumerate}
+\end{ej}
+\textit{Solución.}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	\begin{enumerate}
+		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+		\[
+		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+		\]
+		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+		\[
+		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+		\]
+	\end{enumerate}
+\end{defi}	
+
+\vspace{-1mm}
+
+\begin{prop}{\textbf{Propiedad 1 (base para el espacio renglón)}}
+	\justifying
+	Si $A$ y $B$ son matrices $m\times n$ equivalentes por renglones, entonces el espacio
+	renglón de $A$ es igual al espacio renglón de $B$, es decir, $R_A = R_B$.
+\end{prop}	
+
+\vspace{-1mm}
+
+\begin{alertblock}{\textbf{Observación 1}}
+	\begin{enumerate}
+		\item[\labelname{$a$}] La propiedad 1 establece que el \textit{espacio renglón} de una matriz
+		no se modifica por la aplicación de operaciones elementales en los renglones.	
+		\item[\labelname{$b$}] La aplicación de operaciones elementales en los renglones de una matriz
+		\textit{puede} modificar el \textit{espacio columna}.	
+	\end{enumerate}
+\end{alertblock}
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Base para el espacio renglón de una matriz}
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz ${\color{blue}m}\times {\color{red}n}$.
+	\begin{enumerate}
+		\item[\labelname{$a$}] El \textbf{\textit{espacio renglón}} de $A$ es el subespacio de $\r^{\color{red}n}$ generado por los renglones de $A$:
+		\[
+		R_A = \text{gen}\, \{ \mathbf{r}_1, \mathbf{r}_2, \hdots,\mathbf{r}_{\color{blue}m} \}
+		\]
+		\item[\labelname{$b$}] El \textbf{\textit{espacio columna}} de $A$ es el subespacio de $\r^{\color{blue}m}$ generado por las columnas de $A$:
+		\[
+		C_A = \text{gen}\, \{ \mathbf{c}_1, \mathbf{c}_2, \hdots,\mathbf{c}_{\color{red}n} \}
+		\]
+	\end{enumerate}
+\end{defi}	
+
+%\vspace{3mm}
+
+\begin{prop}{\textbf{Propiedad 2 (base para el espacio renglón)}}
+	\justifying
+%	Si $A$ es una matriz $m\times n$ y $B$ es la matriz que resulta al reducir $A$ a su forma escalonada reducida, 
+%	entonces los renglones no nulos de $B$ forman una base para el espacio renglón de $A$.
+	Si una matriz $A$ es equivalente por renglones a una matriz $B$ que está en forma escalonada,
+	entonces los renglones no nulos de $B$ forman una base para el espacio renglón de $A$.
+\end{prop}	
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Base para el espacio renglón de una matriz}
+
+\begin{prop}{\textbf{Propiedad 2 (base para el espacio renglón)}}
+	\justifying
+	Si una matriz $A$ es equivalente por renglones a una matriz $B$ que está en forma escalonada,
+	entonces los renglones no nulos de $B$ forman una base para el espacio renglón de $A$.
+\end{prop}	
+
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo  5}}
+	Halle una base para el \textit{espacio renglón} de la matriz
+	\[
+	A = 
+	\left( 
+	\begin{array}{rrrr}	
+	1 & -1 & \phantom{-}1 & -1 \\[1mm]
+	2 &  0 & 0 & 1 \\[1mm]
+	4 & -2 & 2 & 1 \\[1mm]
+	7 & -3 & 3 & -1
+	\end{array} 
+	\right)
+	\]
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Base para el espacio renglón de una matriz}
+
+\begin{prop}{\textbf{Propiedad 2 (base para el espacio renglón)}}
+	\justifying
+	Si una matriz $A$ es equivalente por renglones a una matriz $B$ que está en forma escalonada,
+	entonces los renglones no nulos de $B$ forman una base para el espacio renglón de $A$.
+\end{prop}	
+
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo  6}}
+	Halle una base para el subespacio de $\r^3$ generado por
+	\[
+	S = \Big\{ \, \underbrace{(-1,2,5)}_{\color{blue}\mathbf{v}_1}, \ \underbrace{(3,0,3)}_{\color{blue}\mathbf{v}_2}, \ 
+	\underbrace{(5,1,8)}_{\color{blue}\mathbf{v}_3} \, \Big\},
+	\]
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Base para el espacio columna de una matriz}
+	
+	\begin{prop}{\textbf{Propiedad 3}}
+		\justifying
+		Si $A$ es una matriz $m\times n$, entonces $C_A = R_{A^T}$.
+	\end{prop}	
+	
+	%\vspace{3mm}
+	
+	\begin{alertblock}{\textbf{Observación 2}}
+		Para hallar una base del espacio columna de una matriz $A$ podemos aplicar la propiedad 2 a la matriz $A^T$.
+	\end{alertblock}
+	
+	%\vspace{3mm}
+	
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Base para el espacio columna de una matriz}
+
+\begin{prop}{\textbf{Propiedad 3}}
+	\justifying
+	Si $A$ es una matriz $m\times n$, entonces $C_A = R_{A^T}$.
+\end{prop}	
+
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo  7}}
+	Halle una base para el \textit{espacio columna} de la matriz
+	\[
+	A = 
+	\left( 
+	\begin{array}{@{\hspace{0.1\tabcolsep}}rrrr}	
+	 1 & \phantom{-}3 & 1 &  3 \\[1mm] 
+	 0 & 1 & 1 &  0 \\[1mm] 
+	-3 & 0 & 6 & -1 \\[1mm] 
+	 3 & 4 & -2 & 1 \\[1mm] 
+	 2 & 0 & -4 & -2
+	\end{array} 
+	\right)
+	\]
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Base para el espacio columna de una matriz}
+
+\begin{ej}{\textbf{Ejemplo  8}}
+	Compare las relaciones de dependencia entre las columnas de la matriz $A$ y 
+	las columnas de una matriz escalonada de $A$.
+	\[
+	A = 
+	\left( 
+	\begin{array}{@{\hspace{0.1\tabcolsep}}rrrr}	
+	1 & \phantom{-}3 & 1 &  3 \\[1mm] 
+	0 & 1 & 1 &  0 \\[1mm] 
+	-3 & 0 & 6 & -1 \\[1mm] 
+	3 & 4 & -2 & 1 \\[1mm] 
+	2 & 0 & -4 & -2
+	\end{array} 
+	\right)
+	\]
+\end{ej}
+\textit{Solución}
+
+
+%\begin{alertblock}{\textbf{Observación 3}}
+%	\begin{enumerate}\justifying
+%		\item[\labelname{$a$}] La aplicación de operaciones elementales en los renglones de una matriz
+%		\textit{puede} cambiar el \textit{espacio columna}.	
+%		\item[\labelname{$b$}] La aplicación de operaciones elementales en los renglones de una matriz
+%		\textit{no} cambia las relaciones de dependencia entre las columnas.
+%		\item[\labelname{$b$}] Una base para $C_A$ está formada por las columnas de $A$ que correspondan 
+%		a las columnas que contienen los 1 pivote en la matriz escalonada.
+%	\end{enumerate}
+%\end{alertblock}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Base para el espacio columna de una matriz}
+
+\begin{alertblock}{\textbf{Observación 3}}
+	\begin{enumerate}\justifying
+		\item[\labelname{$a$}] La aplicación de operaciones elementales en los renglones de una matriz
+		\textit{puede} cambiar el \textit{espacio columna}.	
+		\item[\labelname{$b$}] La aplicación de operaciones elementales en los renglones de una matriz
+		\textit{no} cambia las relaciones de dependencia entre las columnas.
+		\item[\labelname{$b$}] Una base para $C_A$ está formada por las columnas de $A$ que correspondan 
+		a las columnas que contienen los 1 pivote en la matriz escalonada.
+	\end{enumerate}
+\end{alertblock}
+
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Base para el espacio columna de una matriz}
+		
+	\begin{ej}{\textbf{Ejemplo  9}}
+		Halle una base para el espacio columna de 
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}rrrr}	
+		1 & \phantom{-}3 & 1 &  3 \\[1mm] 
+		0 & 1 & 1 &  0 \\[1mm] 
+		-3 & 0 & 6 & -1 \\[1mm] 
+		3 & 4 & -2 & 1 \\[1mm] 
+		2 & 0 & -4 & -2
+		\end{array} 
+		\right)
+		\]
+	\end{ej}
+	\textit{Solución}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Rango de una matriz}
+
+\begin{prop}{\textbf{Propiedad 4}}
+	\justifying
+	Si $A$ es una matriz $m\times n$, entonces el espacio renglón de $A$ y el espacio columna de $A$
+	tienen la misma dimensión.
+\end{prop}	
+
+%\vspace{3mm}
+
+\begin{defi}{\textbf{Definición 2 (rango de una matriz)}}
+	La dimensión del espacio renglón (o columna) de una matriz se llama el \textbf{\textit{rango}}
+	de $A$ y se denota por $\rho(A)$.
+\end{defi}	
+
+%\vspace{3mm}
+
+%\begin{alertblock}{\textbf{Observación 2}}
+%	Para hallar una base del espacio columna de una matriz $A$ podemos aplicar la propiedad 2 a la matriz $A^T$.
+%\end{alertblock}
+%
+%\vspace{3mm}
+
+\begin{ej}{\textbf{Ejemplo 10}}
+	Halle el rango de la matriz
+	\[
+	A = 
+	\left( 
+	\begin{array}{@{\hspace{\tabcolsep}}rrrr}	
+	1 & -2 & \phantom{-}0 & 1 \\[1mm] 
+	0 &  1 & 5 &  -3 \\[1mm] 
+	0 &  1 & 3 & 5
+	\end{array} 
+	\right)
+	\]
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+}

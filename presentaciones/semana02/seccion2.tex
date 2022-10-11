@@ -1,0 +1,425 @@
+\section{Independencia lineal}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Independencia lineal}
+
+\begin{alertblock}{\textbf{Observación 1}}
+	\begin{enumerate}\justifying
+		\item[\labelname{$a$}] Dado un conjunto de vectores $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$,
+		la ecuación
+		\[
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\]
+		siempre tiene la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\medskip
+		\item[\labelname{$b$}] En el ejemplo 1 vimos que  $\mathbf{v}_1=3\mathbf{v}_2+\mathbf{v}_3$, donde  
+		\[
+		\mathbf{v_1}=(1,3,1),\ \mathbf{v_2}=(0,1,2) \ \text{ y } \  \mathbf{v_3}=(1,0,-5)
+		\]
+		y por tanto la ecuación
+		\[
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+c_3\mathbf{v}_3 = \mathbf{0}	
+		\]
+		tiene la \textbf{solución NO trivial}
+		\[
+		c_1 =1,\ c_2 =-3,\  c_3=-1.
+		\]
+		
+	\end{enumerate}
+\end{alertblock}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Independencia lineal}
+
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+\justifying
+Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+en un espacio vectorial $V$.
+
+\begin{enumerate}%\justifying
+	\item[\labelname{$a$}] Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+	la ecuación vectorial
+	\begin{equation}\label{LI}
+	c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+	\end{equation}
+	tiene solamente la \textbf{solución trivial}
+	\[
+	c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+	\]
+	
+	\item[\labelname{$b$}] Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+\end{enumerate}		
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+
+\vspace{-2mm}
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+	\justifying
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$.
+	
+	\begin{enumerate}%\justifying
+		\item[\labelname{$a$}] Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+		la ecuación vectorial
+		\begin{equation}\tag{1}
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\end{equation}
+		tiene solamente la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\item[\labelname{$b$}] Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+	\end{enumerate}		
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 1}} \justifying
+Muestre que el conjunto de vectores $S=\{ (1,2), (2,4) \}$ en $\r^2$ es linealmente dependiente (LD).
+\end{ej}	
+\textit{Solución}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+
+\vspace{-2mm}
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+	\justifying
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$.
+	
+	\begin{enumerate}%\justifying
+		\item[\labelname{$a$}] Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+		la ecuación vectorial
+		\begin{equation}\tag{1}
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\end{equation}
+		tiene solamente la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\item[\labelname{$b$}] Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+	\end{enumerate}		
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 2}} \justifying
+	Muestre que el conjunto de vectores $S=\{ (0,0), (1,2) \}$ en $\r^2$ es linealmente dependiente (LD).
+\end{ej}	
+\textit{Solución}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+
+\vspace{-2mm}
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+	\justifying
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$.
+	
+	\begin{enumerate}%\justifying
+		\item[\labelname{$a$}] Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+		la ecuación vectorial
+		\begin{equation}\tag{1}
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\end{equation}
+		tiene solamente la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\item[\labelname{$b$}] Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+	\end{enumerate}		
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 3}} \justifying
+	Muestre que el conjunto de vectores $S=\{ (1,0), (0,1), (-2,5) \}$ en $\r^2$ es linealmente dependiente (LD).
+\end{ej}	
+\textit{Solución}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+	\justifying
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$.
+	
+	\begin{enumerate}%\justifying
+		\item[\labelname{$a$}] Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+		la ecuación vectorial
+		\begin{equation}\tag{1}
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\end{equation}
+		tiene solamente la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\item[\labelname{$b$}] Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+	\end{enumerate}		
+\end{block}
+
+\begin{prop}{\textbf{Propiedad 1}}
+	Dos vectores en un espacio vectorial son linealmente dependientes si y sólo si uno de ellos es un múltiplo escalar del otro.
+\end{prop}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Conjuntos linealmente independientes}
+
+\begin{ej}{\textbf{Ejemplo 4}} \justifying
+Determine si el conjunto de vectores
+\[
+S = \{ \, \underbrace{(1,2,3)}_{\color{blue}\mathbf{v_1}}, \ \underbrace{(0,1,2)}_{\color{blue}\mathbf{v_2}}, \ 
+\underbrace{(-2,0,1)}_{\color{blue}\mathbf{v_3}} \, \}
+\]
+en $V=\r^3$ es linealmente dependiente (LD) o independiente (LI).
+\end{ej}	
+\textit{Solución.}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Test para la independencia lineal}
+
+\begin{ejem}{\textbf{Procedimiento 1}}
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$. Para determinar si $S$ es LI o LD efectúe los siguientes pasos:
+	\begin{enumerate}
+		\item[\labelname{$a$}] A partir de la ecuación vectorial
+		\[
+			c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\]
+		escriba un sistema homogéneo de ecuaciones lineales en las variables $c_1,\hdots,c_k$.
+		\item[\labelname{$b$}] Utilice eliminación gaussiana para resolver el sistema.
+		\item[\labelname{$c$}] Si el sistema tiene solamente la solución trivial 
+		\[	
+			c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0,
+		\]
+		entonces el conjunto $S$ es linealmente independiente (LI).
+		\item[\labelname{$d$}] Si el sistema tiene soluciones no triviales, entonces el conjunto $S$ es linealmente dependiente (LD). 
+	\end{enumerate}
+\end{ejem}	
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Test para la independencia lineal}
+
+\begin{ej}{\textbf{Ejemplo 5}} \justifying
+	Determine si el siguiente conjunto de vectores en $P_2$ es LI o LD.
+	
+	\vspace{-2mm}
+	\[
+		\bigg\{ \underbrace{1+x-2x^2}_{\color{blue}\mathbf{v_1}},\ \underbrace{2+5x-x^2}_{\color{blue}\mathbf{v_2}},
+		\ \underbrace{x+x^2}_{\color{blue}\mathbf{v_3}} \bigg\}
+	\]
+\end{ej}	
+\textit{Solución.}
+
+\end{frame}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+
+\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+	\justifying
+	Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+	en un espacio vectorial $V$.
+	
+	\begin{enumerate}[$a$]%\justifying
+		\item Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+		la ecuación vectorial
+		\begin{equation}\tag{1}
+		c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+		\end{equation}
+		tiene solamente la \textbf{solución trivial}
+		\[
+		c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+		\]
+		
+		\item Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+	\end{enumerate}		
+\end{block}
+
+\begin{prop}{\textbf{Propiedad 2}}\justifying
+	Un conjunto de vectores $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ es linealmente dependiente (LD)
+	si y sólo si al menos uno de los vectores $\mathbf{v}_j$ puede escribirse como combinación lineal de los otros
+	vectores en $S$.
+\end{prop}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+	
+	\vspace{-2mm}
+	\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+		\justifying
+		Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+		en un espacio vectorial $V$.
+		
+		\begin{enumerate}[$a$]%\justifying
+			\item Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+			la ecuación vectorial
+			\begin{equation}\tag{1}
+			c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+			\end{equation}
+			tiene solamente la \textbf{solución trivial}
+			\[
+			c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+			\]
+			
+			\item Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+		\end{enumerate}		
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 6}} \justifying
+		Suponga que $\mathbf{v}$ es un vector de un espacio vectorial $V$.
+		Determine si el conjunto $\{\mathbf{v}\}$ es LI o LD.		
+	\end{ej}	
+	\textit{Solución.}
+	
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+	
+	\vspace{-2mm}
+	\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+		\justifying
+		Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+		en un espacio vectorial $V$.
+		
+		\begin{enumerate}[$a$]%\justifying
+			\item Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+			la ecuación vectorial
+			\begin{equation}\tag{1}
+			c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+			\end{equation}
+			tiene solamente la \textbf{solución trivial}
+			\[
+			c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+			\]
+			
+			\item Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+		\end{enumerate}		
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 7}} \justifying
+		Suponga que $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$ son vectores en un espacio 
+		vectorial $V$ y que $\mathbf{v}_1$ es el vector cero. Determine si el conjunto 
+		$\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m\}$ es LI o LD.		
+	\end{ej}	
+	\textit{Solución.}
+	
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Conjuntos linealmente dependientes}
+	
+	\vspace{-2mm}
+	\begin{block}{\textbf{Definición 1 (Independencia lineal)}}
+		\justifying
+		Sea $S=\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_k\}$ un conjunto de vectores
+		en un espacio vectorial $V$.
+		
+		\begin{enumerate}[$a$]%\justifying
+			\item Se dice que $S$ es \textbf{\textit{linealmente independiente}} (LI) si
+			la ecuación vectorial
+			\begin{equation}\tag{1}
+			c_1\mathbf{v}_1+c_2\mathbf{v}_2+\hdots+c_k\mathbf{v}_k = \mathbf{0}
+			\end{equation}
+			tiene solamente la \textbf{solución trivial}
+			\[
+			c_1 =0,\ c_2 =0,\ \hdots,\ c_k=0.
+			\]
+			
+			\item Si existen soluciones no triviales de \eqref{LI}, se dice que $S$ es \textbf{\textit{linealmente dependiente}} (LD).
+		\end{enumerate}		
+	\end{block}
+	
+	\begin{ej}{\textbf{Ejemplo 8}} \justifying
+		Suponga que en el listado de vectores $\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m$ uno de ellos
+		es múltiplo escalar de otro. Determine si el conjunto 
+		$\{\mathbf{v}_1,\mathbf{v}_2,\hdots,\mathbf{v}_m\}$ es LI o LD.		
+	\end{ej}	
+	\textit{Solución.}
+	
+\end{frame}
+}

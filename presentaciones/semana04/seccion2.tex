@@ -1,0 +1,425 @@
+\section{Espacio nulo de una matriz}
+
+\subsection{}
+
+\begin{frame}\frametitle{Soluciones de un sistema lineal homogéneo}
+
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz $m\times n$. Al conjunto de todas las soluciones del sistema lineal
+	homogéneo
+	\[
+		A \mathbf{x} =  \mathbf{0}
+	\]
+	se le denomina el \textbf{\textit{espacio nulo}} de $A$ y se denota por $N_A$:
+	\[
+    	N_A = \{ \mathbf{x}\in \r^n \mid A \mathbf{x} =  \mathbf{0} \}	
+	\]
+	A la dimensión del espacio nulo de $A$ se le denomina \textbf{\textit{nulidad}} de $A$ y se denota por $\nu(A)$:
+	\[
+		\nu(A) = \dim N_A
+	\]
+\end{defi}	
+
+%\begin{ej}{\textbf{Ejemplo 1}}
+%	Encuentre el espacio nulo de la matriz
+%	\[
+%	A = 
+%	\left( 
+%	\begin{array}{@{\hspace{\tabcolsep}}rrrr}	
+%	1 & \phantom{-}2 & -2 & \phantom{-}1 \\[1mm] 
+%	3 & 6 & -5 & 4 \\[1mm] 
+%	1 &  2 & 0 & 3
+%	\end{array} 
+%	\right)
+%	\]
+%\end{ej}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Soluciones de un sistema lineal homogéneo}
+			
+	\begin{ej}{\textbf{Ejemplo 1}}
+		Encuentre el espacio nulo de la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{\tabcolsep}}rrrr}	
+		1 & \phantom{-}2 & -2 & \phantom{-}1 \\[1mm] 
+		3 & 6 & -5 & 4 \\[1mm] 
+		1 &  2 & 0 & 3
+		\end{array} 
+		\right)
+		\]
+	\end{ej}
+	\textit{Solución}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Rango y nulidad de una matriz}
+
+\vspace{-3mm}
+\begin{defi}{\textbf{Definición 1}}
+	Sea $A$ una matriz $m\times n$. Al conjunto de todas las soluciones del sistema lineal
+	homogéneo
+	\[
+	A \mathbf{x} =  \mathbf{0}
+	\]
+	se le denomina el \textbf{\textit{espacio nulo}} de $A$ y se denota por $N_A$:
+	\[
+	N_A = \{ \mathbf{x}\in \r^n \mid A \mathbf{x} =  \mathbf{0} \}	
+	\]
+	A la dimensión del espacio nulo de $A$ se le denomina \textbf{\textit{nulidad}} de $A$ y se denota por $\nu(A)$:
+	\[
+	\nu(A) = \dim N_A
+	\]
+\end{defi}	
+
+\vspace{-2mm}
+
+\begin{prop}{\textbf{Propiedad 1}}
+	\justifying
+	Sea $A$ una matriz $m\times n$. Entonces
+	\[
+		\rho(A) + \nu(A) = n
+	\]
+\end{prop}	
+
+\vspace{-2mm}
+
+\begin{alertblock}{\textbf{Observación 1}}
+	La propiedad 4 nos dice que ``rango $+$ nulidad $=$ número de columnas''.
+\end{alertblock}
+
+\end{frame}
+}
+
+% ------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+
+\begin{ej}{\textbf{Ejemplo 2}}
+	Considere la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}rrrrr}	
+		 1 & \phantom{-1}0 & \phantom{1}-2 & \phantom{-1}1 & 0 \\[2mm] 
+		 0 & -1 & -3 & 1 & 3 \\[2mm] 
+		-2 & -1 & 1 & -1 & 3 \\[2mm] 
+		 0 & 3 & 9 & 0 & -12 
+		\end{array} 
+		\right)
+		\]
+	
+	\vspace{-1mm}	
+	\begin{enumerate}
+		\item[\labelname{$a$}] Encuentre el rango y la nulidad de $A$. \\[2mm]
+		%\item[\labelname{$b$}] Encuentre un subconjunto de vectores columna de $A$ que formen una base para $C_A$.\\[2mm]
+		%\item[\labelname{$c$}] Si es posible, escriba la tercera columna de $A$ como combinación lineal de las dos primeras.
+	\end{enumerate}
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+	
+	\begin{ej}{\textbf{Ejemplo 2}}
+		Considere la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}rrrrr}	
+		1 & \phantom{-1}0 & \phantom{1}-2 & \phantom{-1}1 & 0 \\[2mm] 
+		0 & -1 & -3 & 1 & 3 \\[2mm] 
+		-2 & -1 & 1 & -1 & 3 \\[2mm] 
+		0 & 3 & 9 & 0 & -12 
+		\end{array} 
+		\right)
+		\]
+		
+		\vspace{-1mm}	
+		\begin{enumerate}
+			%\item[\labelname{$a$}] Encuentre el rango y la nulidad de $A$. \\[2mm]
+			\item[\labelname{$b$}] Encuentre un subconjunto de vectores columna de $A$ que formen una base para $C_A$.\\[2mm]
+			%\item[\labelname{$c$}] Si es posible, escriba la tercera columna de $A$ como combinación lineal de las dos primeras.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución}
+	
+\end{frame}
+
+% ------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Espacio renglón y espacio columna de una matriz}
+	
+	\begin{ej}{\textbf{Ejemplo 2}}
+		Considere la matriz
+		\[
+		A = 
+		\left( 
+		\begin{array}{@{\hspace{0.1\tabcolsep}}rrrrr}	
+		1 & \phantom{-1}0 & \phantom{1}-2 & \phantom{-1}1 & 0 \\[2mm] 
+		0 & -1 & -3 & 1 & 3 \\[2mm] 
+		-2 & -1 & 1 & -1 & 3 \\[2mm] 
+		0 & 3 & 9 & 0 & -12 
+		\end{array} 
+		\right)
+		\]
+		
+		\vspace{-1mm}	
+		\begin{enumerate}
+			%\item[\labelname{$a$}] Encuentre el rango y la nulidad de $A$. \\[2mm]
+			%\item[\labelname{$b$}] Encuentre un subconjunto de vectores columna de $A$ que formen una base para $C_A$.\\[2mm]
+			\item[\labelname{$c$}] Si es posible, escriba la tercera columna de $A$ como combinación lineal de las dos primeras.
+		\end{enumerate}
+	\end{ej}
+	\textit{Solución}
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Consistencia de un sistema de ecuaciones lineales}
+
+\vspace{-3mm}
+
+\begin{columns}[c]
+	\begin{column}{1.15\textwidth}
+
+\[
+	A\mathbf{x} = \mathbf{b} 
+	\qquad \Longleftrightarrow \qquad 
+	{\color{blue} 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+	a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+	\vdots & \vdots &        & \vdots \\[0mm]
+	a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+	\end{array}
+	\right)
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	x_{1} \\[1mm]
+	x_{2} \\[1mm]
+	\vdots \\[0mm]
+	x_{m} \\[1mm]
+	\end{array}
+	\right)
+	}
+	=
+	{\color{red}
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	b_{1} \\[1mm]
+	b_{2} \\[1mm]
+	\vdots \\[0mm]
+	b_{m} \\[1mm]
+	\end{array}
+	\right)
+}
+\]
+
+\vspace{1mm}
+
+\[
+{\color{blue}
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+a_{11} & a_{12} & \cdots & a_{1n} \\[1mm]
+a_{21} & a_{22} & \cdots & a_{2n} \\[1mm]
+\vdots & \vdots &        & \vdots \\[0mm]
+a_{m1} & a_{m2} & \cdots & a_{mn} \\[1mm]
+\end{array}
+\right)
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+x_{1} \\[1mm]
+x_{2} \\[1mm]
+\vdots \\[0mm]
+x_{m} \\[1mm]
+\end{array}
+\right)}\ 
+=\ 
+x_1
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+a_{11} \\[1mm]
+a_{21} \\[1mm]
+\vdots \\[0mm]
+a_{m1} \\[1mm]
+\end{array}
+\right)\ 
++\ 
+%x_2
+%\left(
+%\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+%a_{12} \\[1mm]
+%a_{22} \\[1mm]
+%\vdots \\[0mm]
+%a_{m2} \\[1mm]
+%\end{array}
+%\right)\ 
+%+\ 
+\cdots\ 
++\ 
+x_n
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+a_{1n} \\[1mm]
+a_{2n} \\[1mm]
+\vdots \\[0mm]
+a_{mn} \\[1mm]
+\end{array}
+\right)
+=
+{\color{red}
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+b_{1} \\[1mm]
+b_{2} \\[1mm]
+\vdots \\[0mm]
+b_{m} \\[1mm]
+\end{array}
+\right)
+}
+\]
+
+\vspace{2mm}
+\[
+A\mathbf{x} = \mathbf{b} 
+\quad \Longleftrightarrow \quad 
+{\color{red}
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+b_{1} \\[1mm]
+b_{2} \\[1mm]
+\vdots \\[0mm]
+b_{m} \\[1mm]
+\end{array}
+\right)
+}
+\in 
+\text{ gen}
+\left\{
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+a_{11} \\[1mm]
+a_{21} \\[1mm]
+\vdots \\[0mm]
+a_{m1} \\[1mm]
+\end{array}
+\right)%\ 
+%,
+%\left(
+%\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+%a_{12} \\[1mm]
+%a_{22} \\[1mm]
+%\vdots \\[0mm]
+%a_{m2} \\[1mm]
+%\end{array}
+%\right)\ 
+,
+\hdots\ 
+,
+\left(
+\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+a_{1n} \\[1mm]
+a_{2n} \\[1mm]
+\vdots \\[0mm]
+a_{mn} \\[1mm]
+\end{array}
+\right)
+\right\}
+\quad \Longleftrightarrow \quad 
+\mathbf{b} \in C_A
+\]
+
+\end{column}
+\end{columns}
+
+%	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+%	a_{11}x_1 & + & a_{12}x_2 & + & \cdots & + & a_{1n}x_n & = & b_1 \\[1mm]
+%	a_{21}x_1 & + & a_{22}x_2 & + & \cdots & + & a_{2n}x_n & = & b_2 \\[1mm]
+%	\vdots          &  & \vdots          &  &  &  & \vdots          &   & \vdots \\[1mm]
+%	a_{m1}x_1 & + & a_{m2}x_2 & + & \cdots & + & a_{mn}x_n & = & b_m 
+%	\end{array}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Consistencia de un sistema de ecuaciones lineales}
+
+\begin{prop}{\textbf{Propiedad 2}}
+	\justifying
+	Un sistema de ecuaciones lineales $A\mathbf{x}=\mathbf{b}$ es consistente si y sólo si $\mathbf{b}$ está en el espacio columna de $A$.
+	Esto ocurrirá si y sólo si $A$ y la matriz aumentada $(A,b)$ tiene el mismo rango.
+\end{prop}	
+
+\vspace{-1mm}
+
+\begin{ej}{\textbf{Ejemplo 3}}
+	Determine si el sistema de ecuaciones lineales
+	\[
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}r@{\hspace{0.1\tabcolsep}}}
+		x_1 &  + & x_2  & - & x_3 & = & -1 \\[1mm]
+		x_1 &    &      & + & x_3 & = & 3 \\[1mm]
+		3x_1 & + & 2x_2 & - & x_3 & = & 1 \\[1mm]
+		\end{array}
+	\]
+	
+	\vspace{-2mm}
+	tiene solución.
+\end{ej}
+\textit{Solución}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Sistema de ecuaciones lineales con matriz de coeficientes cuadrada}
+
+\begin{prop}{\textbf{Propiedad 3}}
+	%\justifying
+	Sea $A$ una matriz $n\times n$. Entonces las siguientes afirmaciones son equivalentes:
+	\begin{enumerate}[$a$]
+		\item $A$ es no singular (invertible).
+		\item $A\mathbf{x}=\mathbf{b}$ tiene solución única para cada $\mathbf{b}$.
+		\item $A\mathbf{x}=\mathbf{0}$ tiene solamente la solución trivial.
+		\item $A$ es equivalente (por renglones) a $I_n$.
+		\item $\det A \neq 0$.
+		\item $\rho(A) = n$.
+		\item Los $n$ vectores renglones de $A$ son linealmente independientes.
+		\item Los $n$ vectores columna de $A$ son linealmente independientes.
+	\end{enumerate}
+\end{prop}	
+
+\end{frame}

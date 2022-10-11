@@ -1,0 +1,623 @@
+\section{Jordan}
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Introducción}
+
+\begin{block}{\textbf{Definición 1 (Matriz de bloques de Jordan)}}
+	\justifying
+	Por $N_k$ denotamos a la matriz $k\times k$ que tiene unos arriba de la diagonal principal y ceros en las demás
+	posiciones:
+	\[
+	N_k = 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	     0 & {\color{red}1} & 0 & \cdots & 0 \\[2mm]
+	     0 & 0              & {\color{red}1} & \cdots & 0 \\[0mm]
+	\vdots & \vdots         &  \ddots         & \ddots & \vdots \\[1mm]
+  		 0 & 0              & \cdots  & 0 & {\color{red}1} \\[2mm]
+  		 0 & 0              & \cdots  & 0 & 0 \\[0mm]
+	\end{array}
+	\right) 	
+	\]
+	
+	Con la matriz $N_k$ definimos la \textit{matriz de bloques de Jordan}
+	\[
+	B(\lambda) = \lambda I + N_k = 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	\lambda & {\color{red}1} & 0 & \cdots & 0 \\[2mm]
+	0 & \lambda              & {\color{red}1} & \cdots & 0 \\[0mm]
+	\vdots & \vdots         &  \ddots         & \ddots & \vdots \\[1mm]
+	0 & 0              & \cdots  & \lambda & {\color{red}1} \\[2mm]
+	0 & 0              & \cdots  & 0 & \lambda \\[0mm]
+	\end{array}
+	\right) 	
+	\]
+\end{block}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{Introducción}
+	
+	\begin{block}{\textbf{Definición 2 (Matriz de Jordan)}}
+		\justifying	
+		Definimos la \textit{matriz de Jordan}
+		\[
+		J = 
+		\left(
+		\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{1.5\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+		B_1(\lambda_1) & 0  & \cdots  & 0 \\[2mm]
+		           0 & B_2(\lambda_2) & \cdots & 0 \\[0mm]
+		      \vdots &     \vdots   & \ddots & \vdots \\[1mm]
+		           0 &          0   & \cdots       & B_r(\lambda_r)  \\[2mm]
+		\end{array}
+		\right),
+		\]
+		donde cada $B_j(\lambda_j)$ es una matriz de bloques de Jordan.
+	\end{block}
+	
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de matrices de Jordan}
+	
+	\[
+	J = 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	3 & {\color{red}1} & \vdots & 0 \\[0mm]
+	0 & 3 & \vdots & 0 \\[-0mm]
+	\cdots & \cdots  & \cdot & \cdots \\[-2mm]
+	0 & 0 & \vdots & 4 \\
+	\end{array}
+	\right) 	
+	\]
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de matrices de Jordan}
+	
+	\[
+	J = 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{0.5\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}l@{\hspace{\tabcolsep}}l@{\hspace{0.1\tabcolsep}}}
+	-2 & \vdots & 0 & 0 & 0 & 0 & 0\\[0mm]
+	\cdots & \cdot & \cdots  & \cdots & \cdots & \cdot & & \\[-2mm]
+	0 & \vdots & -2 & {\color{red}1}   & 0 & \vdots  & 0\\[-0mm]
+	0 & \vdots & 0  & -2               & {\color{red}1} & \vdots  & 0\\[-0mm]
+	0 & \vdots & 0  & 0                & -2 & \vdots  & 0\\[-0mm]
+	& \cdot & \cdots  & \cdots & \cdots & \cdots  & \cdots & \\[-2mm]
+	-2 &  & 0 & 0 & 0 & \vdots & 7\\[0mm]
+	\end{array}
+	\right) 	
+	\]
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de matrices de Jordan}
+	
+	\[
+	J = 
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{0.8\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}l@{\hspace{\tabcolsep}}r@{\hspace{1.5\tabcolsep}}r@{\hspace{0.1\tabcolsep}}}
+	3 & {\color{red} 1} & \vdots & 0 & 0 & 0 &  & 0 & 0 \\[0mm]
+	0 & 3 & \vdots & 0 & 0 & 0 &  & 0 & 0 \\[0mm]
+	\cdots & \cdots & \cdot & \cdots & \cdots & \cdots & \cdot &  &  \\[-2mm]
+	0 & 0 & \vdots & 4 & {\color{blue} 1} & 0 & \vdots & 0 & 0 \\[0mm]
+	0 & 0 & \vdots & 0 & 4 & {\color{blue} 1} & \vdots & 0 & 0 \\[0mm]
+	0 & 0 & \vdots & 0 & 0 & 4 & \vdots & 0 & 0 \\[0mm]
+	 & & \cdot & \cdots & \cdots & \cdots & \cdot & \cdots & \cdots \\[-2mm]	
+	0 & 0 &  & 0 & 0 & 0 & \vdots & 2 & {\color{green} 1} \\[0mm]
+	0 & 0 &  & 0 & 0 & 0 & \vdots & 0 & 2 \\[0mm]
+	\end{array}
+	\right) 	
+	\]
+	
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{Matrices de Jordan}
+
+\vspace{-3mm}
+\begin{prop}{\textbf{Propiedad 1 (Matrices de Jordan $2\times2$)}}
+	Las únicas matrices de Jordan de $2\times 2$ son de la forma
+	\[
+	J =
+	\left(
+		\begin{array}{cc}
+			\lambda_1 & 0\\[1mm]
+			0 & \lambda_2
+		\end{array}
+	\right)
+	\quad \text{ó} \qquad
+	J =
+	\left(
+	\begin{array}{cc}
+	\lambda & {\color{red}1}\\[1mm]
+	0 & \lambda
+	\end{array}
+	\right)
+	\]
+\end{prop}
+
+\vspace{-1mm}
+\begin{prop}{\textbf{Propiedad 2 (Matrices de Jordan $3\times 3$)}}
+	Las únicas matrices de Jordan de $3\times 3$ son de la forma
+	\[
+	J =
+	\left(
+	\begin{array}{ccc}
+	\lambda_1 & 0 & 0\\[1mm]
+	0 & \lambda_2 & 0\\[1mm]
+	0 & 0 & \lambda_3
+	\end{array}
+	\right)
+	\quad \text{ó} \qquad
+	J =
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.8\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	\lambda_1 & \vdots & 0 & 0 \\[0mm]
+	\cdots & \cdot  & \cdots & \cdots \\[-2mm]
+	0 & \vdots & \lambda_2 & {\color{red}1} \\[-0.5mm]		
+	0 & \vdots & 0 & \lambda_2 \\
+	\end{array}
+	\right)
+	\]
+	
+	\vspace{-2mm}
+	ó
+	\[
+	J =
+	\left(
+	\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+	\lambda_1 & {\color{red}1} & \vdots & 0 \\[0mm]
+	0 & \lambda_1 & \vdots & 0 \\[-0mm]
+	\cdots & \cdots  & \cdot & \cdots \\[-2mm]
+	0 & 0 & \vdots & \lambda_2 \\
+	\end{array}
+	\right) 	
+	\quad \text{ó} \qquad
+	J =
+	\left(
+	\begin{array}{ccc}
+	\lambda_1 & {\color{red}1} & 0\\[1mm]
+	0 & \lambda_1 & {\color{red}1}\\[1mm]
+	0 & 0 & \lambda_1
+	\end{array}
+	\right)
+	\]
+\end{prop}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{} 
+
+{\nologo
+\begin{frame}%\frametitle{Forma canónica de Jordan}
+
+	\vspace{-2mm}
+	\begin{prop}{\textbf{Propiedad 3} (Forma canónica de Jordan)}\justifying
+	Sea $A$ una matriz $n\times n$ con entradas reales o complejas. Entonces existe una matriz invertible $C$ de 
+	$n\times n$ con entradas complejas tal que
+	\[
+		C^{-1}AC = J,
+	\]
+	donde $J$ es una matriz de Jordan cuyos elementos en la diagonal son los valores propios de $A$. 
+	Más aún, la matriz de Jordan $J$ es única, excepto por el orden en el que aparecen los bloques de Jordan.
+	\end{prop}
+	
+	\vspace{-1mm}
+	\begin{alertblock}{\textbf{Observación 1}}
+	
+		\begin{enumerate}[$a$]
+			\item Las entradas de $C$ en la propiedad 3 pueden ser reales.
+			\item La matriz $C$ en la propiedad 3 no necesariamente es única.
+			
+			\item En la propiedad 3, si por ejemplo $A$ es semejante a
+			\[
+			J = 
+			\left(
+			\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+			3 & {\color{red}1} & \vdots & 0 \\[0mm]
+			0 & 3 & \vdots & 0 \\[-0mm]
+			\cdots & \cdots  & \cdot & \cdots \\[-2mm]
+			0 & 0 & \vdots & 4 \\
+			\end{array}
+			\right), 	
+			\quad \text{también lo es } \quad 
+			J = 
+			\left(
+			\begin{array}{@{\hspace{0.1\tabcolsep}}c@{\hspace{0.8\tabcolsep}}c@{\hspace{0.8\tabcolsep}}c@{\hspace{\tabcolsep}}c@{\hspace{0.1\tabcolsep}}}
+			4 & \vdots & 0 & 0 \\[0mm]
+			\cdots & \cdot  & \cdots & \cdots \\[-2mm]
+			0 & \vdots & 3 & {\color{red}1} \\[-0mm]		
+			0 & \vdots & 0 & 3 \\
+			\end{array}
+			\right) 	
+			\]
+		\end{enumerate}
+	\end{alertblock}	
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{} 
+
+{\nologo 
+\begin{frame}\frametitle{Forma canónica de Jordan}
+	
+	\begin{prop}{\textbf{Propiedad 3}}\justifying
+		Sea $A$ una matriz $n\times n$ con entradas reales o complejas. Entonces existe una matriz invertible $C$ de 
+		$n\times n$ con entradas complejas tal que
+		\[
+		C^{-1}AC = J,
+		\]
+		donde $J$ es una matriz de Jordan cuyos elementos en la diagonal son los valores propios de $A$. 
+		Más aún, la matriz de Jordan $J$ es única, excepto por el orden en el que aparecen los bloques de Jordan.
+	\end{prop}
+	
+	\vspace{5mm}
+	\begin{block}{\textbf{Definición 2 (Forma canónica de Jordan)}}
+	La matriz $J$ en la propiedad 3 se denomina la \textbf{\textit{forma canónica de Jordan}} de $A$.
+	\end{block}
+		
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{} 
+
+{\nologo 
+\begin{frame}\frametitle{Vector propio generalizado}
+	
+	\begin{prop}{\textbf{Propiedad 4}}\justifying
+		Suponga que $A$ es una matriz de $2\times 2$ que tiene un valor propio $\lambda$ de multiplicidad 
+		algebraica 2 y de multiplicidad geométrica 1. Si $\mathbf{v}_1$ un vector propio correspondiente a
+		$\lambda$, entonces existe un vector $\mathbf{v}_2$ que satisface la ecuación
+		\[
+			(A-\lambda I) \mathbf{v}_2 = \mathbf{v}_1
+		\]
+	\end{prop}
+	
+	\vspace{0mm}
+	\begin{block}{\textbf{Definición 3 (Vector propio generalizado)}}
+		Sea $A$ es una matriz de $2\times 2$ con un solo valor propio $\lambda$ de multiplicidad 
+		geométrica 1. Un vector $\mathbf{v}_2$ que satisfaga la ecuación
+		\[
+		(A-\lambda I) \mathbf{v}_2 = \mathbf{v}_1
+		\]
+		se denomina \textbf{\textit{vector propio generalizado}} de $A$.
+	\end{block}
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de vector propio generalizado}
+
+\begin{ej}{\textbf{Ejemplo 1}} \justifying
+	Halle un vector propio generalizado de
+	\[
+	A = 
+	\left(
+	\begin{array}{cc}
+	3 & -2 \\[1mm]
+	8 & -5
+	\end{array}
+	\right)
+	\]
+\end{ej}
+
+\textit{Solución.}
+
+\vspace{2mm}
+\begin{itemize}
+	\item Polinomio característico de $A$:
+	
+	\vspace{2mm}	
+	\[
+		p(\lambda) = |P-\lambda I| =
+		\left|	
+		\begin{array}{@{\hspace{0.2\tabcolsep}}c@{\hspace{1.2\tabcolsep}}c@{\hspace{0.2\tabcolsep}}}
+		3-\lambda & -2 \\[1mm]
+		8 & -5-\lambda
+		\end{array}
+		\right| 
+		=
+		\lambda^2 +2\lambda + 1
+	\]
+	
+	\vspace{5mm}	
+	\item Valores propios de $A$:
+	
+	\vspace{0mm}
+	\[
+	p(\lambda)  = \lambda^2 +2\lambda + 1 = (\lambda+1)^2=0
+	\quad \Longrightarrow \quad 
+	\lambda_1=\lambda_2=-1.
+	\]
+	
+\end{itemize}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Ejemplo de vector propio generalizado}
+	
+	\begin{itemize}
+		\item Espacio propio $E_{\lambda_1}=E_{-1}=N_{A+I}$:
+		
+		\[				
+		(A+I \ | \ \mathbf{0})
+		=
+		\left(
+		\begin{array}{@{\hspace{0.2\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{\tabcolsep}}|r@{\hspace{0.2\tabcolsep}}}
+		4 & -2 & 0  \\[1mm]
+		8 & -4 & 0
+		\end{array}
+		\right) 
+		\xrightarrow[]{\phantom{xx} }		
+		\left(
+		\begin{array}{@{\hspace{0.2\tabcolsep}}r@{\hspace{\tabcolsep}}r@{\hspace{\tabcolsep}}|r@{\hspace{0.2\tabcolsep}}}
+		1 & -\frac{1}{2} & 0  \\[1mm]
+		0 &    0 & 0
+		\end{array}
+		\right) 
+		\quad \Rightarrow \quad 
+		\mathbf{v}_1 = 
+		\left(
+		\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.5\tabcolsep}}}
+		1   \\[1mm]
+		2 
+		\end{array}
+		\right) 
+		\]
+		
+		\vspace{8mm}
+		\item  Para el vector propio generalizado $\mathbf{v}_2$, resolvemos $(A-\lambda I)\mathbf{v}_2= \mathbf{v}_1$:
+		
+		\[				
+		(A+I \ | \ \mathbf{v}_1)
+		=
+		\left(
+		\begin{array}{@{\hspace{0.2\tabcolsep}}r@{\hspace{1.2\tabcolsep}}r@{\hspace{\tabcolsep}}|r@{\hspace{0.2\tabcolsep}}}
+		4 & -2 & 1  \\[1mm]
+		8 & -4 & 2
+		\end{array}
+		\right) 
+		\xrightarrow[]{\phantom{xx} }		
+		\left(
+		\begin{array}{@{\hspace{0.2\tabcolsep}}r@{\hspace{1.2\tabcolsep}}r@{\hspace{\tabcolsep}}|r@{\hspace{0.2\tabcolsep}}}
+		1 & -\frac{1}{2} & \frac{1}{4}\\[1mm]
+		0 &    0 & 0
+		\end{array}
+		\right) 
+		\quad \Rightarrow \quad 
+		\begin{array}{@{\hspace{0.3\tabcolsep}}r@{\hspace{0.5\tabcolsep}}c@{\hspace{0.5\tabcolsep}}l@{\hspace{0.5\tabcolsep}}}
+		x & = & \frac{1}{4} + \frac{1}{2}y   \\[1mm]
+		y & = & y
+		\end{array}		
+		\]
+		
+		\vspace{3mm}
+		\[
+			\mathbf{v}_2 = 
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.5\tabcolsep}}}
+			x   \\[1mm]
+			y 
+			\end{array}
+			\right) 
+			=
+			\left(
+			\begin{array}{@{\hspace{0.3\tabcolsep}}c@{\hspace{0.5\tabcolsep}}}
+			\frac{1}{4}   \\[1mm]
+			0 
+			\end{array}
+			\right) 
+		\]
+		
+	\end{itemize}
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------ 
+
+\subsection{} 
+
+\begin{frame}\frametitle{Forma canónica de Jordan para matrices $2\times 2$}
+	
+	\begin{prop}{\textbf{Propiedad 5}}\justifying
+		Suponga que $A$ es una matriz de $2\times 2$ que tiene un valor propio $\lambda$ de multiplicidad 
+		algebraica 2 y de multiplicidad geométrica 1. Si $\mathbf{v}_1$ un vector propio correspondiente a
+		$\lambda$ y $\mathbf{v}_2$ es un \textit{vector propio generalizado} de $A$, entonces
+		\[
+		C^{-1} A C = J,
+		\qquad \text{donde} \qquad
+		J =
+		\left(
+		\begin{array}{@{\hspace{0.2\tabcolsep}}c@{\hspace{1.2\tabcolsep}}c@{\hspace{0.2\tabcolsep}}}
+		\lambda & 1 \\[1mm]
+		0 & \lambda
+		\end{array}
+		\right)
+		\]
+		es la forma canónica de Jordan de $A$ y $C$ es la matriz cuyas columnas son los vectores $\mathbf{v}_1$
+		y  $\mathbf{v}_2$.
+	\end{prop}
+		
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Forma canónica de Jordan para matrices $2\times 2$}
+	
+	\begin{ej}{\textbf{Ejemplo 2}} \justifying
+		Halle la forma canónica de Jordan de
+		\[
+		A = 
+		\left(
+		\begin{array}{cc}
+		3 & -2 \\[1mm]
+		8 & -5
+		\end{array}
+		\right)
+		\]
+	\end{ej}
+	
+	\textit{Solución.}
+	
+	\vspace{2mm}
+	\begin{itemize}
+		\item Valores y vectores propios de $A$ obtenidos:
+		
+		\vspace{1mm}	
+		\[
+		\lambda = -1,
+		\quad \
+		\mathbf{v}_1 = 
+		\left(
+		\begin{array}{c}
+		1 \\[1mm]
+		2
+		\end{array}
+		\right),
+		\quad \
+		\mathbf{v}_2 = 
+		\left(
+		\begin{array}{c}
+		\frac{1}{4} \\[1mm]
+		0
+		\end{array}
+		\right),
+		\quad \
+		C = 
+		\left(
+		\begin{array}{cc}
+		1 & \frac{1}{4} \\[1mm]
+		2 & 0
+		\end{array}
+		\right).
+		\]
+								
+		\vspace{3mm}	
+		\item Forma canónica de Jordan de $A$:
+		
+		\vspace{0mm}	
+		\[
+		C^{-1}AC
+		= 
+		\left(
+		\begin{array}{rr}
+		-1 & 1 \\[1mm]
+		 0 & -1
+		\end{array}
+		\right)
+		= J
+		\]
+		
+	\end{itemize}
+	
+\end{frame}
+
+%------------------------------------------------------------------------------------------------ 
+
+\subsection{} 
+
+{\nologo 
+\begin{frame}\frametitle{Forma canónica de Jordan para matrices $3\times 3$}
+	
+	\vspace{-2mm}	
+	\begin{prop}{\textbf{Propiedad 6}}\justifying
+		Suponga que $A$ es una matriz $3\times 3$ que tiene un valor propio $\lambda$ de multiplicidad 
+		algebraica 3 y de multiplicidad geométrica 1. Si $\mathbf{v}_1$ un vector propio correspondiente a
+		$\lambda$, entonces:
+		\begin{enumerate}[$a$]
+			\item Existe un vector $\mathbf{v}_2$ tal que 
+			\[
+				(A-\lambda I) \mathbf{v}_2 = \mathbf{v}_1,
+			\]
+			con $\mathbf{v}_1$ y $\mathbf{v}_2$ LI.
+			\item Existe un vector $\mathbf{v}_3$ tal que 
+			\[
+			(A-\lambda I) \mathbf{v}_3 = \mathbf{v}_2,
+			\]
+			con $\mathbf{v}_1$, $\mathbf{v}_2$ y $\mathbf{v}_3$ LI.
+			\item La matriz $C$ cuyas columnas son los vectores $\mathbf{v}_1$, $\mathbf{v}_2$ y $\mathbf{v}_3$ satisface
+			\[
+			C^{-1} A C = J =
+			\left(
+			\begin{array}{@{\hspace{0.2\tabcolsep}}c@{\hspace{1.2\tabcolsep}}c@{\hspace{1.2\tabcolsep}}c@{\hspace{0.2\tabcolsep}}}
+				\lambda & 1  & 0 \\[1mm]
+				0 & \lambda  & 1 \\[1mm]
+				0 & 0  & \lambda
+			\end{array}
+			\right).
+			\]
+		\end{enumerate}
+				
+	\end{prop}
+	
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Forma canónica de Jordan para matrices $3\times 3$}
+	
+	\begin{ej}{\textbf{Ejemplo 3}} \justifying
+		Halle la forma canónica de Jordan de
+		\[
+		A = 
+		\left(
+		\begin{array}{cr@{\hspace{2\tabcolsep}}r}
+			0 &  1 & 0 \\[1mm]
+			0 &  0 & 1 \\[1mm]
+			1 & -3 & 3
+		\end{array}
+		\right)
+		\]
+	\end{ej}
+	
+	\textit{Solución.}	
+	
+\end{frame}

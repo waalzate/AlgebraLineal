@@ -1,0 +1,362 @@
+\section{Espacios vectoriales}
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Espacios vectoriales (reales)}
+
+\vspace{-3mm}
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Definición 5 (Espacio vectorial)}}	
+	\justifying
+	Sea $V$ un conjunto (no vacío) en el que están definidas dos operaciones (\textbf{suma de vectores} y 
+	\textbf{multiplicación por escalar}). Se dice que $V$ es un {\color{red} espacio vectorial (real)} si para todo
+	$\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ en $V$ y todo escalar (número real) $c$ y $d$ en $\r$, se 
+	cumplen las siguientes propiedades: 
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item $\mathbf{u}+\mathbf{v}$ está en $V$. \\[4mm]			
+			\item $\mathbf{u}+\mathbf{v} = \mathbf{v}+\mathbf{u}$. \\[3mm]			
+			\item $(\mathbf{u}+\mathbf{v})+\mathbf{w} = \mathbf{u}+(\mathbf{v}+\mathbf{w})$. \\[4mm]			
+			\item Existe en $V$ un vector cero $\mathbf{0}$ tal que
+			\[
+			\mathbf{u}+\mathbf{0} = \mathbf{u}.
+			\]
+			
+			\vspace{2mm}	
+			\item Para cada $\mathbf{u}$, existe en $V$ un vector denotado por $-\mathbf{u}$ tal que
+			\[
+			\mathbf{u}+(-\mathbf{u}) = \mathbf{0}.
+			\]	
+			\columnbreak
+			\item $c\mathbf{u}$ está en $V$. \\[4mm]			
+			\item $c(\mathbf{u}+\mathbf{v}) = c\mathbf{u} + c\mathbf{v}$. \\[3mm]
+			\item $(c+d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}$. \\[4mm]
+			\item $c(d\mathbf{u}) = (cd)\mathbf{u}$. \\[1.1cm]
+			\item $1\mathbf{u} = \mathbf{u}$.
+		\end{enumerate}		
+	\end{multicols}
+	
+	\vspace{-8mm}
+\end{block}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{$\rn$ con las operaciones estándar es un espacio vectorial}
+
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Axiomas de un espacio vectorial (real) $V$}}	
+	\justifying
+	Para todo $\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ en $V$ y todo escalar $c$ y $d$ en $\r$, se 
+	cumplen las siguientes propiedades: 
+	
+	\vspace{-3mm}
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item $\mathbf{u}+\mathbf{v}$ está en $V$. %\\[4mm]			
+			\item $\mathbf{u}+\mathbf{v} = \mathbf{v}+\mathbf{u}$. %\\[3mm]			
+			\item $(\mathbf{u}+\mathbf{v})+\mathbf{w} = \mathbf{u}+(\mathbf{v}+\mathbf{w})$. %\\[4mm]			
+			\item Existe en $V$ un vector cero $\mathbf{0}$ tal que $\mathbf{u}+\mathbf{0} = \mathbf{u}$.		
+			\item Para cada $\mathbf{u}$, existe un vector $-\mathbf{u}$ tal que
+			$ \mathbf{u}+(-\mathbf{u}) = \mathbf{0}$.
+			\columnbreak
+			\item $c\mathbf{u}$ está en $V$. 
+			\item $c(\mathbf{u}+\mathbf{v}) = c\mathbf{u} + c\mathbf{v}$.
+			\item $(c+d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}$.
+			\item $c(d\mathbf{u}) = (cd)\mathbf{u}$.
+			\item $1\mathbf{u} = \mathbf{u}$.
+		\end{enumerate}		
+	\end{multicols}
+	
+	\vspace{-2mm}
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 1}}\justifying
+	$\rn$ con las operaciones de \textit{suma} y \textit{multiplicación por escalar} estándar es un espacio vectorial.
+\end{ej}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{El espacio vectorial de todas las matrices $2\times 3$}
+
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Axiomas de un espacio vectorial (real) $V$}}	
+	\justifying
+	Para todo $\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ en $V$ y todo escalar $c$ y $d$ en $\r$, se 
+	cumplen las siguientes propiedades: 
+	
+	\vspace{-3mm}
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item $\mathbf{u}+\mathbf{v}$ está en $V$. %\\[4mm]			
+			\item $\mathbf{u}+\mathbf{v} = \mathbf{v}+\mathbf{u}$. %\\[3mm]			
+			\item $(\mathbf{u}+\mathbf{v})+\mathbf{w} = \mathbf{u}+(\mathbf{v}+\mathbf{w})$. %\\[4mm]			
+			\item Existe en $V$ un vector cero $\mathbf{0}$ tal que $\mathbf{u}+\mathbf{0} = \mathbf{u}$.		
+			\item Para cada $\mathbf{u}$, existe un vector $-\mathbf{u}$ tal que
+			$ \mathbf{u}+(-\mathbf{u}) = \mathbf{0}$.
+			\columnbreak
+			\item $c\mathbf{u}$ está en $V$. 
+			\item $c(\mathbf{u}+\mathbf{v}) = c\mathbf{u} + c\mathbf{v}$.
+			\item $(c+d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}$.
+			\item $c(d\mathbf{u}) = (cd)\mathbf{u}$.
+			\item $1\mathbf{u} = \mathbf{u}$.
+		\end{enumerate}		
+	\end{multicols}
+	
+	\vspace{-2mm}
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 2}}\justifying
+	El conjunto $M_{23}$ de todas las matrices $2\times 3$, con las operaciones de suma de matrices
+	y multiplicación por escalares es un espacio vectorial.
+\end{ej}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}%\frametitle{El espacio vectorial de todos los poliomios de grado menor o igual que 2}
+
+\vspace{-2.5mm}
+\begin{ej}{\textbf{Ejemplo 3}}\justifying
+	Considere el conjunto $P_2$ de todos los poliomios de la forma 
+	\[
+		p(x) = a_2x^2 + a_1x + a_0,
+	\]
+	donde $a_0,a_1,a_2$ son números reales. La \textit{suma} de dos polinomios 
+	\[
+		p(x) = a_2x^2 + a_1x + a_0 \qquad \text{y} \qquad q(x) = b_2x^2 + b_1x + b_0
+	\]
+	se define como
+	\[
+		(p + q)(x) = (a_2+b_2)x^2 + (a_1+b_1)x + (a_0+b_0)
+	\]
+	y la \textit{multiplicación por escalar} del polinomio $p(x) = a_2x^2 + a_1x^1 + a_0$ por el escalar $c$ se define como
+	\[
+		(cp)(x) = ca_2x^2 + ca_1x + ca_0.
+	\]
+	Demuestre que $P_2$ es un espacio vectorial.
+\end{ej}
+
+\vspace{-2mm}
+\begin{alertblock}{\textbf{Observación 1}}
+	$P_n$ se define como el conjunto de todos los polinomios de grado menor o igual que $n$, junto con el 
+	polinomio cero.
+\end{alertblock}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}%\frametitle{El espacio vectorial de todos los poliomios de grado menor o igual que 2}
+
+
+\vspace{-2mm}
+\begin{ej}{\textbf{Ejemplo 4}}\justifying
+	Considere el conjunto $\mathcal{F}$ de todas las funciones de valor real definidas en la recta numérica.
+	La \textit{suma} de dos funciones $f$ y $g$ en $\mathcal{F}$ se define como
+	\[
+		(f+g)(x) = f(x) + g(x)
+	\]
+	y la \textit{multiplicación por escalar} de una función $f$ en $\mathcal{F}$ por el escalar $c$ se define como
+	\[
+		(cf)(x) = cf(x).
+	\]
+	Demuestre que $\mathcal{F}$ es un espacio vectorial.
+\end{ej}
+
+\vspace{-1mm}
+
+\begin{figure}	
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}[thick,scale=0.4, every node/.style={scale=0.6}]%[scale=.8,font=\scriptsize]
+		% axis
+		\draw[help lines,black,dotted] (-5,-3) grid (5,5);
+		\draw[thick,-latex] (-5,0) -- (5,0) node[below] {\large $x$};
+		\draw[thick,-latex] (0,-3) -- (0,5) node[above] {\large $y$};
+		% Ticks
+		\foreach \x in {1,...,4}
+		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};
+		\foreach \x in {-4,...,-1}		
+		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};	
+		\foreach \y in {1,...,4}
+		\draw (1pt,\y) -- (-3pt,\y) node[anchor=east] {\y}; 		
+		\foreach \y in {-2,...,-1}
+		\draw (1pt,\y) -- (-3pt,\y) node[anchor=east] {\y}; 
+		% f
+		\draw[line width=0.2mm,samples=200,draw=blue,domain=-5:5] plot(\x,{cos(2\x r)-sin(2*\x r)-cos(3*\x r)+0.5});
+		\fill[color=blue,draw] (-1,3) node[above] { $f$};	
+		% 0.5f
+		\draw[line width=0.2mm,samples=200,draw=verde,domain=-5:5] plot(\x,{0.5*(cos(2\x r)-sin(2*\x r)-cos(3*\x r)+0.5)});	
+		\fill[color=verde,draw] (-3,2.5) node[above] { $0.5f$};	
+		\draw [line width=0.1mm,color=verde,->] (-2.5,2.7) -- (-1,1.5);
+		% 1.5f
+		\draw[line width=0.2mm,samples=200,draw=red,domain=-5:5] plot(\x,{1.5*(cos(2\x r)-sin(2*\x r)-cos(3*\x r)+0.5))});		
+		\fill[color=red,draw] (-1,4.5) node[left] { $1.5f$};	
+		\end{tikzpicture}
+		\caption{${\color{blue}f}, {\color{verde}0.5f}, {\color{red}1.5f}$}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}[thick,scale=0.4, every node/.style={scale=0.6}]%[scale=.8,font=\scriptsize]
+		% axis
+		\draw[help lines,black,dotted] (-5,-3) grid (5,5);
+		\draw[thick,-latex] (-5,0) -- (5,0) node[below] {\large $x$};
+		\draw[thick,-latex] (0,-3) -- (0,5) node[above] {\large $y$};
+		% Ticks
+		\foreach \x in {1,...,4}
+		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};
+		\foreach \x in {-4,...,-1}		
+		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};	
+		\foreach \y in {1,...,4}
+		\draw (1pt,\y) -- (-3pt,\y) node[anchor=east] {\y}; 		
+		\foreach \y in {-2,...,-1}
+		\draw (1pt,\y) -- (-3pt,\y) node[anchor=east] {\y}; 	
+		% f
+		\draw[line width=0.2mm,samples=200,draw=blue,domain=-5:5] plot(\x,{cos(\x r)-sin(2*\x r)-cos(3*\x r)});		
+		\fill[color=blue,draw] (1,0.6) node[above] { $f$};	
+		% g
+		\draw[line width=0.2mm,samples=200,draw=verde,domain=-5:5] plot(\x,{sin(\x r)+cos(\x r)+1});
+		\fill[color=verde,draw] (2.2,1.5) node[above] { $g$};	
+		% f+g
+		\draw[line width=0.2mm,samples=200,draw=red,domain=-5:5] plot(\x,{cos(\x r)-sin(2*\x r)-cos(3*\x r)+sin(\x r)+cos(\x r)+1});		
+		\fill[color=red,draw] (1,3) node[above] { $f+g$};	
+		\end{tikzpicture}
+		\caption{${\color{blue} f}, {\color{verde} g}, {\color{red} f+g}$}
+	\end{subfigure}
+	%	\caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+
+\end{frame}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Un conjunto que no es espacio vectorial}
+
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Axiomas de un espacio vectorial (real) $V$}}	
+	\justifying
+	Para todo $\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ en $V$ y todo escalar $c$ y $d$ en $\r$, se 
+	cumplen las siguientes propiedades: 
+	
+	\vspace{-3mm}
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item $\mathbf{u}+\mathbf{v}$ está en $V$. %\\[4mm]			
+			\item $\mathbf{u}+\mathbf{v} = \mathbf{v}+\mathbf{u}$. %\\[3mm]			
+			\item $(\mathbf{u}+\mathbf{v})+\mathbf{w} = \mathbf{u}+(\mathbf{v}+\mathbf{w})$. %\\[4mm]			
+			\item Existe en $V$ un vector cero $\mathbf{0}$ tal que $\mathbf{u}+\mathbf{0} = \mathbf{u}$.		
+			\item Para cada $\mathbf{u}$, existe un vector $-\mathbf{u}$ tal que
+			$ \mathbf{u}+(-\mathbf{u}) = \mathbf{0}$.
+			\columnbreak
+			\item $c\mathbf{u}$ está en $V$. 
+			\item $c(\mathbf{u}+\mathbf{v}) = c\mathbf{u} + c\mathbf{v}$.
+			\item $(c+d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}$.
+			\item $c(d\mathbf{u}) = (cd)\mathbf{u}$.
+			\item $1\mathbf{u} = \mathbf{u}$.
+		\end{enumerate}		
+	\end{multicols}
+	
+	\vspace{-2mm}
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 5}}\justifying
+	El conjunto $\z$ de todos los números enteros con las operaciones usuales de suma
+	y multiplicación por escalar (producto de enteros) \textbf{no} es un espacio vectorial.
+\end{ej}
+
+\end{frame}
+}
+
+%%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+{\nologo
+\begin{frame}\frametitle{Un conjunto que no es espacio vectorial}
+
+%\begin{exampleblock}{\textbf{Definición 2}}
+\begin{block}{\textbf{Axiomas de un espacio vectorial (real) $V$}}	
+	\justifying
+	Para todo $\mathbf{u}, \mathbf{v}$ y $\mathbf{w}$ en $V$ y todo escalar $c$ y $d$ en $\r$, se 
+	cumplen las siguientes propiedades: 
+	
+	\vspace{-3mm}
+	\begin{multicols}{2}		
+		\begin{enumerate}			
+			\justifying
+			\item $\mathbf{u}+\mathbf{v}$ está en $V$. %\\[4mm]			
+			\item $\mathbf{u}+\mathbf{v} = \mathbf{v}+\mathbf{u}$. %\\[3mm]			
+			\item $(\mathbf{u}+\mathbf{v})+\mathbf{w} = \mathbf{u}+(\mathbf{v}+\mathbf{w})$. %\\[4mm]			
+			\item Existe en $V$ un vector cero $\mathbf{0}$ tal que $\mathbf{u}+\mathbf{0} = \mathbf{u}$.		
+			\item Para cada $\mathbf{u}$, existe un vector $-\mathbf{u}$ tal que
+			$ \mathbf{u}+(-\mathbf{u}) = \mathbf{0}$.
+			\columnbreak
+			\item $c\mathbf{u}$ está en $V$. 
+			\item $c(\mathbf{u}+\mathbf{v}) = c\mathbf{u} + c\mathbf{v}$.
+			\item $(c+d)\mathbf{u} = c\mathbf{u} + d\mathbf{u}$.
+			\item $c(d\mathbf{u}) = (cd)\mathbf{u}$.
+			\item $1\mathbf{u} = \mathbf{u}$.
+		\end{enumerate}		
+	\end{multicols}
+	
+	\vspace{-2mm}
+\end{block}
+
+\begin{ej}{\textbf{Ejemplo 6}}\justifying
+	Sea $V=\r^2$ con la definición usual de suma, pero la multiplicación por escalar es la siguiente:
+	\[
+		c(x_1,x_2) = (cx_1,0).
+	\]
+	Demuestre que $V$ \textbf{no} es espacio vectorial.
+\end{ej}
+
+\end{frame}
+}
+
+%------------------------------------------------------------------------------------------------------
+
+\subsection{}
+
+\begin{frame}\frametitle{Propiedades de la multiplicación escalar}
+
+\begin{prop}{\textbf{Propiedad 3}}
+	\justifying
+	Sea $\mathbf{v}$ un vector de un espacio vectorial $V$ y $c$ un escalar. Entonces:
+	\begin{enumerate}
+		\item[\labelname{$a$}] $0\mathbf{v} = \mathbf{0}$.
+		\item[\labelname{$b$}] $c \mathbf{0} = \mathbf{0}$.
+		\item[\labelname{$c$}] Si $c \mathbf{v} = \mathbf{0}$, entonces $c=0$ ó $\mathbf{v} = \mathbf{0}$.
+		\item[\labelname{$d$}] $(-1)\mathbf{v} = -\mathbf{v}$.
+	\end{enumerate}
+\end{prop}
+
+\end{frame}
